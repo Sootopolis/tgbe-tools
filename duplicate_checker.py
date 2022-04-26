@@ -58,3 +58,5 @@ while True:
                 file.write('\n'.join(invited))
             print(f'{len(new)} players invited')
             print('DO NOT FORGET TO ACTUALLY INVITE THEM')
+        else:
+            print('confirmation failed')
