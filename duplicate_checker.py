@@ -57,3 +57,4 @@ while True:
             with open('invited.txt', 'w') as file:
                 file.write('\n'.join(invited))
             print(f'{len(new)} players invited')
+            print('DO NOT FORGET TO ACTUALLY INVITE THEM')
