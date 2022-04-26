@@ -36,9 +36,9 @@ archive_datetime = current_datetime - timedelta(days=90)
 try:
     with open('scanned.json', 'r') as scanned_json:
         scanned = json.load(scanned_json)
-        for key in list(scanned.keys()):
-            if scanned[key] <= current_datetime.timestamp():
-                del scanned[key]
+    for key in list(scanned.keys()):
+        if scanned[key] <= current_datetime.timestamp():
+            del scanned[key]
     with open('scanned.json', 'w') as scanned_json:
         json.dump(scanned, scanned_json)
 except json.JSONDecodeError:
@@ -60,30 +60,31 @@ response = requests.get(f'https://api.chess.com/pub/club/{club_name}/members', t
 if response.status_code != 200:
     raise Exception('connection error')
 candidates = []
-with open('membership.json') as membership_json, \
-        open('lost_members.json') as lost_members_json, \
-        open('invited.txt') as invited_txt:
+with open('membership.json') as membership_json:
     membership = json.load(membership_json)
+with open('lost_members.json') as lost_members_json:
     lost_members = json.load(lost_members_json)
-    invited = set(invited_txt.read().strip().split())
-    for category in ('weekly', 'monthly', 'all_time'):
-        for member in response.json()[category]:
-            # skip existing members
-            if member['username'].lower() in membership:
+with open('invited.txt') as invited_txt:
+    invited = set(invited_txt.read().strip(' \n').split('\n'))
+for category in ('weekly', 'monthly', 'all_time'):
+    for member in response.json()[category]:
+        # skip existing members
+        if member['username'].lower() in membership:
+            continue
+        # skip former members
+        if member['username'].lower() in lost_members:
+            continue
+        # skip already invited players
+        if member['username'].lower() in invited:
+            continue
+        # skip cached uninvitable players
+        if member['username'].lower() in scanned:
+            continue
+        # skip admins
+        if avoid_admins:
+            if f'https://api.chess.com/pub/player/{member["username"].lower()}' in club_admins:
                 continue
-            # skip former members
-            if member['username'].lower() in lost_members:
-                continue
-            # skip already invited players
-            if member['username'].lower() in invited:
-                continue
-            # skip cached uninvitable players
-            if member['username'].lower() in scanned:
-                continue
-            # skip admins
-            if avoid_admins and f'https://api.chess.com/pub/player/{member["username"]}' in club_admins:
-                continue
-            candidates.append(member['username'].lower())
+        candidates.append(member['username'].lower())
 
 
 try:
