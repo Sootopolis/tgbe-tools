@@ -45,22 +45,23 @@ if response.status_code == 200:
         print('departures:')
         for i in range(len(went)):
             print(went[i][0], datetime.fromtimestamp(went[i][1]))
-        with open('lost_members.json', 'r') as lost_members:
+        with open('lost_members.json', 'r') as lost_members_json:
             try:
-                lost_members_json = json.load(lost_members)
+                lost_members = json.load(lost_members_json)
             except JSONDecodeError:
-                lost_members_json = {}
-        with open('lost_members.json', 'w') as lost_members:
+                lost_members = {}
+        with open('lost_members.json', 'w') as lost_members_json:
             for i in range(len(went)):
-                lost_members_json[went[i][0]] = went[i][1]
-            json.dump(lost_members_json, lost_members)
+                lost_members[went[i][0]] = went[i][1]
+            lost_members = dict(sorted(lost_members))
+            json.dump(lost_members, lost_members_json)
 
     if changed:
         print('NAME CHANGES:')
         for i in range(len(changed)):
             print(f'{changed[i][0]} is now known as {changed[i][1]}')
 
-    new_members = {key: value for key, value in sorted(new_members.items())}
+    new_members = dict(sorted(new_members.items()))
     with open('membership.json', 'w') as file:
         json.dump(new_members, file)
     print(f'total members: {len(new_members)}')

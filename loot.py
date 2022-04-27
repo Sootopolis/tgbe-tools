@@ -247,6 +247,7 @@ end = time()
 
 # update cache
 if enter_cache:
+    scanned = dict(sorted(scanned.items()))
     with open('scanned.json', 'w') as scanned_json:
         json.dump(scanned, scanned_json)
 
