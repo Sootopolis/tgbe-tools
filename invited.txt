@@ -5,17 +5,20 @@
 19andrew64
 1wille
 20gblum
+2blackrooks
 4king_knight
 4knights50
 501soldier
 64shadesofgrey
 67chessgames
 777_s_777
+9988tom
 99mark99
 _magus
 a_bloom
 a_engel
 a_lielvalodis
+aaaceshigh
 aaaronuk
 aaronchristopher96
 aaronleckinger
@@ -32,6 +35,7 @@ adamgraham83
 adamowls
 adamratak
 adrian_dorantes_c
+advancedpawn6
 aepaez
 aeqetes
 aethelstan
@@ -63,6 +67,7 @@ alexandrenogueira
 alexfickey
 alexkuehn
 alfie_beamish
+alfonsed
 alfonzo87
 aliboron
 aliceband
@@ -78,6 +83,7 @@ alytrel
 alzubaidi66
 amadeus68
 ambuzzuk
+amelvin
 amerleb
 amiakr8
 amtsi
@@ -151,6 +157,7 @@ barryjconnor
 bart_l
 bartholomaeus
 batomp00
+battleman
 bauernsalat72
 bbtandn
 beachstud
@@ -164,6 +171,7 @@ benztoyzii
 bernie1980
 beryslav-kyiv
 beyond_dark
+bha1983
 big_man62
 bigbertha
 bigeasymike
@@ -173,6 +181,7 @@ bill2
 bill3347
 billforchess
 billgraynotes
+bioinformagician
 bionrd
 birdmenace
 bishoppair00
@@ -184,9 +193,11 @@ black_root
 blackdog317
 blackjack83
 blazejohnson
+blazeroe
 blithesprit
 bloomie246
 bluebluecow
+bluenoseralph
 bluepuppy
 bluesparx
 blunderseeker
@@ -197,9 +208,11 @@ bobbyedge
 boeddha50
 bogano1980
 bogvera
+boilingbunny
 bombertank
 bonfireofthevanities
 borgarfjordureystri
+boringlovechild
 boriquito
 boris_altman
 bossinchess1
@@ -221,6 +234,7 @@ briboy1
 brit_fk
 britesorb
 broadskins
+broadsword79
 brucelyn
 brun38
 bsa65
@@ -235,6 +249,7 @@ calm_and_curious
 cameronc09
 camgilmour
 canadachess2015
+canaryhammer
 capablanca24
 captainthai
 captaintsuina
@@ -275,6 +290,7 @@ cheapciggies
 check10179
 checkjosh
 chekuss
+chelseasteve
 chequeredlife
 cherhan
 cherry_na
@@ -324,6 +340,7 @@ conkai
 conspiranoic
 contessaserbelloni
 couldchuck
+countrylife123
 couwke
 cpalexander
 cputech
@@ -332,6 +349,7 @@ crazyswimmerman
 crispy2ba
 crnjak1
 croftangry20
+crookedcrozier
 csmith1281
 cssa
 culraven
@@ -365,12 +383,15 @@ daruma52
 dave_agadir
 davenunn
 daveyboy04
+davidantonyclarke1
 davideranalli
 davidlondon
 davidsfm
 davidtoebast
+davrosftm
 dd1104
 deathabove
+deepicex
 defgecd69
 deglobalsam
 dejande69
@@ -442,6 +463,7 @@ dungpusher
 duschgel
 dutchgalego
 duviel84
+dwredmill
 dysonator69
 eagle116
 earlpsyches
@@ -486,6 +508,7 @@ ernestsmith1
 escipion1974
 eslaimer
 eslam13888
+essexdave
 ethandw
 ethelredtheunready
 etherealfiend
@@ -497,6 +520,7 @@ ewingwr
 exmexicano
 fabricelopezillac
 factotuma
+faescobar
 fakebeil91
 faridah_carpio
 farmpieterse
@@ -528,6 +552,7 @@ florida_man
 fluxman
 fm_khairoshevn
 fmcdali
+folkie
 fotherz
 frankem51
 franpedre
@@ -1673,14 +1698,17 @@ waelmr
 wagner_godoi
 waialex
 walsamh
+waltyboy
 warnefrit
 waterbend3r
 wbz403
 wearsider
 wessexgambit
+westonknight
 westy77
 whiskyrick
 whiteknight065
+whiteknightscantjump
 whitenerdy53
 wigoogle
 wikkua
@@ -1690,6 +1718,7 @@ will14n5
 willem100
 william_t
 willistheknight
+willomate
 wilson035
 wiltort
 winfried1106
@@ -1707,6 +1736,7 @@ worklesschatmore
 wrod1987
 wstanevans
 wstennischamp
+wthedog
 xavilanz
 xj4g
 xose1953
