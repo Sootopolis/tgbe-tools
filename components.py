@@ -5,10 +5,10 @@ from progress.bar import IncrementalBar
 
 
 def update_invited(usernames: list[str]):
-    with open('invited.txt', 'r') as file:
-        invited = file.read().strip(' \n').split('\n')
     confirm = input("confirm inviting these players by typing 'Y': ")
     if confirm == 'Y':
+        with open('invited.txt', 'r') as file:
+            invited = file.read().strip(' \n').split('\n')
         invited = list(invited)
         invited += usernames
         invited.sort()
