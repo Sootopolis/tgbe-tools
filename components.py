@@ -1,8 +1,23 @@
 from requests import get
 from urllib.parse import urlparse
-from time import time, sleep  # , gmtime, strftime
-from pprint import pprint
+from time import time
 from progress.bar import IncrementalBar
+
+
+def update_invited(usernames: list[str]):
+    with open('invited.txt', 'r') as file:
+        invited = file.read().strip(' \n').split('\n')
+    confirm = input("confirm inviting these players by typing 'Y': ")
+    if confirm == 'Y':
+        invited = list(invited)
+        invited += usernames
+        invited.sort()
+        with open('invited.txt', 'w') as file:
+            file.write('\n'.join(invited))
+        print(f'{len(usernames)} players invited')
+        print('!!! DO NOT FORGET TO ACTUALLY INVITE THEM !!!')
+    else:
+        print('confirmation failed. please update manually later.')
 
 
 def get_player_id(username: str) -> int:
