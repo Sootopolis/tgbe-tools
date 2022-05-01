@@ -5,6 +5,7 @@
 19andrew64
 1wille
 20gblum
+210tony
 2blackrooks
 4king_knight
 4knights50
@@ -22,6 +23,7 @@ aaaceshigh
 aaaronuk
 aaronchristopher96
 aaronleckinger
+abdul_550
 aberpe
 abir164
 abshok
@@ -54,6 +56,7 @@ akoczkas
 akulovkms1986
 alchemy42
 alcii94
+alcybiad
 aldersley
 alecbod
 aleexan
@@ -82,6 +85,7 @@ alwayswannabeer
 alytrel
 alzubaidi66
 amadeus68
+amansinha888
 ambuzzuk
 amelvin
 amerleb
@@ -129,6 +133,7 @@ ash177
 ashadowspartan
 askeladden
 asoupdragon
+atalr
 atamolos
 athanasios
 aungaungtun
@@ -160,6 +165,7 @@ bartholomaeus
 batomp00
 battleman
 bauernsalat72
+bazplays
 bbtandn
 beachstud
 bear2034
@@ -236,6 +242,7 @@ brit_fk
 britesorb
 broadskins
 broadsword79
+broly_legendary
 brucelyn
 brun38
 bsa65
@@ -275,6 +282,7 @@ catshavepaws
 cavastrangler
 cclynes
 cdelanoval
+ceffin
 cembalo
 cerberus274
 cesardegroot
@@ -373,6 +381,7 @@ daleko22
 damarch
 damayito
 dan_a
+danbois5
 danbunting
 dandav666
 dani_el_vida_les
@@ -390,6 +399,7 @@ davidlondon
 davidsfm
 davidtoebast
 davrosftm
+dbabudelhi
 dd1104
 deathabove
 deepicex
@@ -405,6 +415,7 @@ dentoeter
 derbest1
 derekdharvey
 derekwilliams228
+derspieler50
 detroitlions1
 devilishangel1
 devitoria
@@ -453,6 +464,7 @@ drecic
 dreydar
 drgwestboca
 drogon72
+droolingdragon
 drsammph
 drunkental
 dshres
@@ -556,6 +568,7 @@ fmcdali
 folkie
 fotherz
 frankem51
+frankw77
 franpedre
 frauleinflick12
 fraxis7
@@ -669,12 +682,14 @@ hegj
 heigro
 hercher
 hesamodin_mokhtari
+hfdamac3
 hg206
 highvooltage
 hippoman
 hippotobaron6
 hlathan999
 hma_hma
+hnpanchal
 hobgoblin5771
 hocinemera
 holah
@@ -744,6 +759,7 @@ iztacoyolt
 izzylxxiv
 j_ludwig
 j_p_chess
+jabag13
 jaberwok
 jackadullboy67
 jackcoleman
@@ -826,6 +842,7 @@ josephbsarani
 joshphipp
 josian5
 joss_bartleet
+josue012
 joy10
 joydeep6772
 jpphilip
@@ -848,6 +865,7 @@ justaleks
 justapawn2
 justinsums
 justwanderer
+kadija2203
 kaesbaer
 kajobas2003
 kaliman1175
@@ -920,6 +938,7 @@ kuk143
 kumar_saket1979
 kungfupanda2004
 kuntakente
+kurtogluu
 kwa1
 kylemck1
 kylewar
@@ -938,6 +957,7 @@ laremaro
 laseve91
 lasvegaslife
 latecafe
+lavasalad
 lavrichenko
 lazroman
 lazy_gun
@@ -1042,6 +1062,7 @@ markgoldshtein
 markovitez
 marlin1875
 martinkojo
+marv1362
 maske2
 matb86
 matiuuuu85
@@ -1051,6 +1072,7 @@ mattmma22
 mattsher100
 mattspry
 maximkolpakov
+mb68
 mbechirdc
 mccarthyjames19
 mchuzz
@@ -1623,6 +1645,7 @@ thechessticulater
 thefmp
 thegamingmaster711
 thegreatnutkins
+thehumblelegend
 thelordofwinterfell
 themanwithno_name
 theo_paparrigo
@@ -1630,6 +1653,7 @@ thepackster82
 therandomhedgehog
 thesteelman
 theterrbear
+thetinkerman
 thevictorian
 thewee
 thezee69
@@ -1731,11 +1755,13 @@ waelmr
 wagner_godoi
 waialex
 walsamh
+walterflipstick
 waltyboy
 warnefrit
 waterbend3r
 wbz403
 wearsider
+wenlock
 wessexgambit
 westonknight
 westy77
@@ -1770,6 +1796,7 @@ wrod1987
 wstanevans
 wstennischamp
 wthedog
+xanthippes
 xavilanz
 xj4g
 xose1953
@@ -1782,6 +1809,7 @@ yke017
 ylephantspark
 yman2k9
 yonabendelac
+yorkshirepud
 youtube19
 ys_kanwar
 yuri_taraxzcenko
@@ -1808,3 +1836,4 @@ ztnook500
 zugzwischenzwang
 zvithelo
 zweckmaessigkeit
+zygatron
