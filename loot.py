@@ -1,10 +1,10 @@
-
 import json
 from time import time
 from datetime import datetime, timedelta
 from dateutil.relativedelta import relativedelta
 import requests
 from progress.bar import IncrementalBar
+from components import *
 
 # constraints
 target = int(input('number of players to invite: '))
@@ -253,6 +253,11 @@ if enter_cache:
 
 # output
 print(f'players invitable ({len(invitable)}):')
-print(*invitable, sep=' ') if invitable else print('(none)')
+if invitable:
+    for player in invitable:
+        print(player, end=' ')
+else:
+    print('(none)')
 print(f'runtime: {timedelta(seconds=int(end - start))}')
-print('DO NOT FORGET TO UPDATE INVITED.TXT')
+if invitable:
+    update_invited(invitable)
