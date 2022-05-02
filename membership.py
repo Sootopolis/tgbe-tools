@@ -44,7 +44,7 @@ if response.status_code == 200:
     if went:
         print('departures:')
         for i in range(len(went)):
-            print(went[i][0], datetime.fromtimestamp(went[i][1]))
+            print(went[i][0])
         with open('lost_members.json', 'r') as lost_members_json:
             try:
                 lost_members = json.load(lost_members_json)
