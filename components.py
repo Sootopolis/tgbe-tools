@@ -41,6 +41,3 @@ def update_invited(usernames: list[str]):
 #             member['player_id'] = get_player_id(member['username'])
 #             bar.next()
 #     return members
-
-
-print(get_player_ids(get_members('https://www.chess.com/club/tgbe-office-for-planning-and-preparation')))
