@@ -53,7 +53,7 @@ if response.status_code == 200:
         with open('lost_members.json', 'w') as lost_members_json:
             for i in range(len(went)):
                 lost_members[went[i][0]] = went[i][1]
-            lost_members = dict(sorted(lost_members))
+            lost_members = dict(sorted(lost_members.items()))
             json.dump(lost_members, lost_members_json)
 
     if changed:
