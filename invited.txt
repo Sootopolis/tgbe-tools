@@ -639,6 +639,7 @@ genjul
 gent00
 george_2908
 ghaggy1
+ghinea
 ghoulishfungus
 giacomo_r
 giampiero111
@@ -682,6 +683,7 @@ greggles90
 grether
 greydane769
 grittmeister
+grunfeldrules
 gsp74
 guchlu
 gudmarss
@@ -690,6 +692,7 @@ gutsygecko
 gw2
 gzzw
 habibilak
+hagarthehorible
 hakmat
 halffacedknight
 hamdym
@@ -697,6 +700,7 @@ hamishshierlaw
 hammers23
 hamtheman
 hand-carvedchess
+hansqiao
 happyhiren
 hari_uk
 harrypatzer
@@ -704,6 +708,7 @@ harrytipper3
 hashisheen
 hasimuzguler
 havastar
+havoern
 hbk15
 hbpatel142
 healblazer
@@ -795,6 +800,7 @@ jabag13
 jaberwok
 jackadullboy67
 jackcoleman
+jackk91
 jackputt99
 jadm1978
 jairchampion
@@ -858,6 +864,7 @@ johnsabin
 johnwickham
 johnxwood
 jojonjj
+jokerjones20
 jokin-garralda
 jollyolly
 jonathan8990
@@ -901,6 +908,7 @@ justwanderer
 kadija2203
 kaesbaer
 kajobas2003
+kalayaan003
 kaliman1175
 kamjan
 kandymat
@@ -964,6 +972,7 @@ korest1976
 koroushkabir
 kotov2000
 kramraek
+kringtord
 krisstianes_017
 kronus11
 krunicm
@@ -1007,9 +1016,11 @@ lefleurdeny
 leglessbird
 leigh981
 lenas1975
+lenkahblov
 leo_kaeferstein
 leomcl
 leomuchenje
+leonc
 leonhh
 leonvanrooyen
 leoschmoll
@@ -1050,6 +1061,7 @@ luckyhappychappy
 luckyleftydetroit
 luigi1113
 luihui
+luisdbolanos
 lukeowen
 lurcherone
 lurker2099
@@ -1089,6 +1101,7 @@ marc_atherton
 marcel0707
 marcelda
 marchenko_vadim
+marcinms24
 marengo2015
 margalita_natelauri
 marian810
@@ -1127,6 +1140,7 @@ messi000
 messmilligan
 metkonen
 mexcal1975
+mi15258
 michael85w
 michael93bell
 michaelmarmorstein
@@ -1145,6 +1159,7 @@ mikevillages
 miki-zavidovici
 mikk7670
 milanzv
+mildano
 millsteach
 mimasia
 miqayelkhachatryan
@@ -1161,6 +1176,7 @@ mkreps
 ml72
 mladenkrsic
 moasta
+mojimbo_6
 mojoworking
 mokry88
 moleff2020
@@ -1190,6 +1206,8 @@ msv68
 mtjc
 mtstone
 mttww
+muath_bh
+munanaim
 munari
 musicplayer99
 mybishop1
@@ -1396,7 +1414,9 @@ pwna8
 px150
 pyakurelhc
 qossmean
+qqpk
 quack_ster
+quarktonic
 quas_primas
 queeneatingdragon
 queenshead
@@ -1421,6 +1441,7 @@ rdeschain_89
 rdiet
 rdn2013
 rdoonan
+realmofspirits
 receptiveking
 recolor
 redblue777
@@ -1482,6 +1503,7 @@ rootsrocker
 rosenoire
 roytherover59
 roywebbhastings
+rsalvhus
 rskuik
 rsky77
 rstables
@@ -1497,6 +1519,7 @@ rustymcclintock
 ryanjthompson
 s1lvertiger
 sabatoli
+sadudin
 saetta1000
 safdaralipakistaniee
 safed1986
@@ -1519,6 +1542,7 @@ samkumar0987
 sammyl1108
 samybayatly
 sandra1on1
+sanuki
 saratonga
 sarge7697
 sashadan
@@ -1636,7 +1660,9 @@ stevepratt
 steveyorkie
 stevieg65
 steviesteve29
+stevnee
 stickman01
+stigmr
 stipitz
 stormram
 stpaddy
@@ -1652,6 +1678,7 @@ superfluousguy
 superpositionm
 surangad
 surfsnook
+svetlayordanova
 swift-j
 swmike
 synchronicity16
@@ -1662,6 +1689,7 @@ tablerorojo
 tabletennisman121
 taboot1978
 taconacho1994
+tal_d_best
 tamer35_5
 tango6925
 tangocharlie27
@@ -1683,6 +1711,7 @@ terminuso
 terryfromweymouth
 tesseract87
 tewald
+tex_knigit
 texwilson
 tgunther
 thanasis61979
@@ -1720,6 +1749,7 @@ thusith64
 tigertron
 tilkowski
 timetex
+timschoeniger
 titulintti
 tjanus71
 tkdryan
@@ -1799,6 +1829,7 @@ vlach
 vladimir_borisov
 vladont
 vododo
+vonkater
 votka7
 vova346
 vrystaatbul
