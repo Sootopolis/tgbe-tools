@@ -10,6 +10,7 @@
 4king_knight
 4knights50
 501soldier
+5amin8
 64shadesofgrey
 67chessgames
 777_s_777
@@ -120,6 +121,7 @@ antlew4
 antonisf
 antpeon
 anzorinio
+aorbe
 april280
 archer9999
 arda_zmir
@@ -153,6 +155,7 @@ austenidol
 austinguy
 averni
 awais211
+axat1960
 azizbai
 azuljack
 azuredragon9
@@ -201,6 +204,7 @@ billgraynotes
 bioinformagician
 bionrd
 birdmenace
+birurajopadhyaya
 bishoppair00
 bismarckleningrad
 bite2018
@@ -234,6 +238,7 @@ borgarfjordureystri
 boringlovechild
 boriquito
 boris_altman
+borochess
 bossinchess1
 bot_boy
 bottomlesspits
@@ -324,6 +329,7 @@ chessgnat
 chessjaycj
 chesslord-brighton
 chessman7935
+chessplayerro
 chesstkidding
 chesswithdino
 chessymcchessface96
@@ -409,11 +415,13 @@ davenunn
 daveyboy04
 davidantonyclarke1
 davideranalli
+davidheise
 davidlondon
 davidsfm
 davidtoebast
 davrosftm
 dbabudelhi
+dchapman196
 dd1104
 deathabove
 deepicex
@@ -539,6 +547,7 @@ erichprivat
 erickson87121
 ericpursley
 ernestsmith1
+eru_st
 escipion1974
 eslaimer
 eslam13888
@@ -788,6 +797,7 @@ irridon
 isotope55
 isvicthere
 itsjustchessman
+ivan_shumoff
 ivanhoeiii
 ivanm
 ivsky
@@ -801,6 +811,7 @@ jaberwok
 jackadullboy67
 jackcoleman
 jackk91
+jacknoris
 jackputt99
 jadm1978
 jairchampion
@@ -820,6 +831,7 @@ janbess
 jande524
 jarel1
 jarethosborne
+javierfernandezbarrero
 jay71
 jazicr
 jcvila
@@ -832,6 +844,7 @@ jes1969w
 jestey
 jf1
 jgbgame
+jhall282
 jim5489
 jimboki
 jimcooley3rd
@@ -899,6 +912,7 @@ juanpacheco1
 jugrnot
 juiceboy007
 jul_kev
+juliasou
 juliochen
 jupare
 justaleks
@@ -965,6 +979,7 @@ knightmareassassin
 knightrider185
 knowledgeablebeard
 koehlo13
+kolubarac78
 konstantinos830
 kopyae4589
 korboldarter
@@ -990,6 +1005,7 @@ kyrish
 lady_outlaw
 ladyofthe_knight
 lafleur1957
+laker32
 laki_juhar
 lambares
 lanceval
@@ -1027,6 +1043,7 @@ leoschmoll
 letu
 liammor
 lico87
+licolu
 liluclau
 limbus74
 limehouse2
@@ -1069,6 +1086,7 @@ lux47
 lvquan006
 lxnnyx
 lyudmylabuchyn
+m13xx
 m1chael11
 m210297
 m3tafl0ps
@@ -1113,6 +1131,7 @@ marlin1875
 martinkojo
 marv1362
 maske2
+mastersandi
 matb86
 matiuuuu85
 matthewch6v14
@@ -1256,6 +1275,7 @@ nominoe63
 normanbauschke
 northcliff304
 nos_divad
+notfrankturner49
 notsolucky21
 notused
 nrmalde
@@ -1393,6 +1413,7 @@ poojarysachin1979
 postieuk
 pougelstad
 powerchokes
+pradeepmurthy95
 prapas1024
 praveeensamj2
 pretty_hate_machine
@@ -1437,6 +1458,7 @@ raulmsanchez
 raysawy64
 rayv
 rayvisser
+razin1671
 rdeschain_89
 rdiet
 rdn2013
@@ -1517,6 +1539,7 @@ rusland1967
 ruslantuhtiev
 rustymcclintock
 ryanjthompson
+ryecatcher
 s1lvertiger
 sabatoli
 sadudin
@@ -1540,6 +1563,7 @@ samigulla
 samihgeha
 samkumar0987
 sammyl1108
+samuel_a_noob
 samybayatly
 sandra1on1
 sanuki
@@ -1576,6 +1600,7 @@ settheorist
 sevadas
 shah_mate79
 shaharaim
+shaka_zulu_king
 shakir_ghazi
 shawnlg777
 shiaolung
@@ -1590,6 +1615,7 @@ shumaaher
 sidonianknight
 sierrastar
 silversurfer7
+simi_1111
 simonmoth
 sipablo
 sir_sigmund
@@ -1649,6 +1675,7 @@ steinarsimensen
 stephennelson-smith
 stephenwoodhouse
 stevee2
+steveforsha
 stevegleds
 steveheg
 stevehill6
@@ -1775,6 +1802,7 @@ trevorlahey771
 trhkyt
 trigeek22209
 trotsky77
+truthmuse
 tsand1113
 tsengeltunsag
 tsin0125
@@ -1900,10 +1928,12 @@ ylephantspark
 yman2k9
 yonabendelac
 yorkshirepud
+young123
 youtube19
 ys_kanwar
 yuri_taraxzcenko
 zabavindo
+zabdielccs
 zait64
 zan159
 zanemortis
