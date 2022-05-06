@@ -36,12 +36,12 @@ archive_datetime = current_datetime - timedelta(days=90)
 
 # clear cache
 try:
-    with open('scanned.json', 'r') as scanned_json:
+    with open('scanned_players.json', 'r') as scanned_json:
         scanned = json.load(scanned_json)
     for key in list(scanned.keys()):
         if scanned[key] <= current_datetime.timestamp():
             del scanned[key]
-    with open('scanned.json', 'w') as scanned_json:
+    with open('scanned_players.json', 'w') as scanned_json:
         json.dump(scanned, scanned_json)
 except json.JSONDecodeError:
     scanned = {}
@@ -265,7 +265,7 @@ end = int(time())
 # update cache
 if enter_cache:
     scanned = dict(sorted(scanned.items()))
-    with open('scanned.json', 'w') as scanned_json:
+    with open('scanned_players.json', 'w') as scanned_json:
         json.dump(scanned, scanned_json)
 
 # output
