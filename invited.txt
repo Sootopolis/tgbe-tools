@@ -55,6 +55,7 @@ ahedrista
 airin239
 aj6chess
 ajchandler
+ajdonley
 akoczkas
 akulovkms1986
 alchemy42
@@ -145,6 +146,7 @@ asoupdragon
 atalr
 atamolos
 athanasios
+aufenix
 aungaungtun
 aungkothet
 aurora1996
@@ -184,6 +186,7 @@ bear2034
 beeehrer
 beermat78
 behradrahmani92
+benjie1121
 benrob85
 benrob86
 benztoyzii
@@ -358,9 +361,11 @@ clarkedavis
 claudiocordeiro
 clementine65
 cliverb
+clunkyer
 cm1970
 coinhunter88
 cokermike
+colinbmcbride
 columbo2008
 comrade44
 conde28
@@ -374,6 +379,7 @@ cpalexander
 cputech
 crasher83
 crazyswimmerman
+crisleft
 crispy2ba
 crnjak1
 croftangry20
@@ -411,6 +417,7 @@ darklorien
 darkpavel
 daruma52
 dave_agadir
+daven59
 davenunn
 daveyboy04
 davidantonyclarke1
@@ -447,6 +454,7 @@ dia_duit
 dibici
 dida70
 diegomoncayo
+digitu
 diligentver
 diogenes_of_sinope33
 dirk_brijs
@@ -471,6 +479,7 @@ domminnus
 donacropolis
 donargott_mgis
 donkeypawn_nc3
+donnywithad
 dornford
 dottorcasa
 dougrob
@@ -512,6 +521,7 @@ eatingkings
 ebiabs1980
 ecdg
 edberner13
+eddielevis
 eddytjan
 edelpatzer
 edirga
@@ -610,10 +620,12 @@ franpedre
 frauleinflick12
 fraxis7
 frazzzz
+fredairic
 fredishier58
 freetrog
 freluquetbis
 freyja23
+frid-man
 frontenislavall
 frwizzle
 fulviocagnazzi
@@ -642,6 +654,7 @@ geheee
 gellusboy
 gendamon
 gene_c
+general_trilkin
 generouslord
 genius610
 genjul
@@ -649,6 +662,7 @@ gent00
 george_2908
 ghaggy1
 ghinea
+gholamrezamohammadi
 ghoulishfungus
 giacomo_r
 giampiero111
@@ -666,6 +680,7 @@ gjakomo_77
 gladstonewanderer
 glasshrapnal
 glasspring
+glomik
 gmacandcheese
 gmartinp
 gofast_turnleft
@@ -717,6 +732,7 @@ harrytipper3
 hashisheen
 hasimuzguler
 havastar
+havefunplayingchess
 havoern
 hbk15
 hbpatel142
@@ -758,6 +774,7 @@ hugobribeiro
 humanistaaleko
 huntera88
 hunterjaed
+hybridi
 i5ao
 iain72
 iainctredway
@@ -829,6 +846,7 @@ jamol3852
 jan6363
 janbess
 jande524
+jankoesp
 jarel1
 jarethosborne
 javierfernandezbarrero
@@ -841,6 +859,7 @@ jebent
 jechaffins
 jefferson_chess_br
 jes1969w
+jessy75
 jestey
 jf1
 jgbgame
@@ -882,6 +901,7 @@ jokin-garralda
 jollyolly
 jonathan8990
 jonathanmaier
+jonathansmuggler
 jonbchess1
 jonboi197501
 jonmacf
@@ -898,6 +918,7 @@ joss_bartleet
 josue012
 joy10
 joydeep6772
+jpcrisol1
 jpphilip
 jrodri49
 jsamgd
@@ -914,6 +935,7 @@ juiceboy007
 jul_kev
 juliasou
 juliochen
+junglechess
 jupare
 justaleks
 justapawn2
@@ -949,9 +971,11 @@ kel1968
 keljosh
 kempokempo
 kenbenton
+kermadec01
 kerniggut
 kerri-jo
 kerrystead
+kerteszk
 kgdcia
 khan2670
 kidchess2500
@@ -1062,6 +1086,7 @@ llopfosc
 llthomasll
 lmmart-7
 londonlark
+longdiagonal43
 loosecannons
 lord_edmund
 lordgoig
@@ -1124,21 +1149,25 @@ marengo2015
 margalita_natelauri
 marian810
 marian8806
+maritoma
 markbv
 markgoldshtein
 markovitez
 marlin1875
 martinkojo
 marv1362
+masibo
 maske2
 mastersandi
 matb86
+mateuspaier
 matiuuuu85
 matthewch6v14
 matthiask24
 mattmma22
 mattsher100
 mattspry
+maxiache
 maximkolpakov
 mb68
 mbechirdc
@@ -1406,6 +1435,7 @@ plimsol
 pluk1978
 plumptonred
 plurality
+pmscarecrow
 polyhedralpig
 ponderinguy
 ponuryzajac
