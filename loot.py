@@ -42,7 +42,7 @@ try:
         if scanned[key] <= current_datetime.timestamp():
             del scanned[key]
     with open('scanned_players.json', 'w') as scanned_json:
-        json.dump(scanned, scanned_json)
+        json.dump(scanned, scanned_json, sort_keys=True, indent=2)
 except json.JSONDecodeError:
     scanned = {}
 
@@ -264,9 +264,9 @@ end = int(time())
 
 # update cache
 if enter_cache:
-    scanned = dict(sorted(scanned.items()))
+    # scanned = dict(sorted(scanned.items()))
     with open('scanned_players.json', 'w') as scanned_json:
-        json.dump(scanned, scanned_json)
+        json.dump(scanned, scanned_json, sort_keys=True, indent=2)
 
 # output
 print(f'players invitable ({len(invitable)}):')

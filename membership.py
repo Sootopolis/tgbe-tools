@@ -53,17 +53,17 @@ if response.status_code == 200:
         with open('lost_members.json', 'w') as lost_members_json:
             for i in range(len(went)):
                 lost_members[went[i][0]] = went[i][1]
-            lost_members = dict(sorted(lost_members.items()))
-            json.dump(lost_members, lost_members_json)
+            # lost_members = dict(sorted(lost_members.items()))
+            json.dump(lost_members, lost_members_json, sort_keys=True, indent=2)
 
     if changed:
         print('NAME CHANGES:')
         for i in range(len(changed)):
             print(f'{changed[i][0]} is now known as {changed[i][1]}')
 
-    new_members = dict(sorted(new_members.items()))
+    # new_members = dict(sorted(new_members.items()))
     with open('membership.json', 'w') as file:
-        json.dump(new_members, file)
+        json.dump(new_members, file, sort_keys=True, indent=2)
     print(f'total members: {len(new_members)}')
 
 else:
