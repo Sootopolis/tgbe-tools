@@ -9,6 +9,7 @@ from components import *
 # constraints
 target = int(input('number of players to invite: '))
 enter_cache = True
+clear_cache = True
 min_tm_played = 12  # int(input('minimum number of team match games in last 90 days: '))
 min_tm_ongoing = 2  # int(input('minimum number of ongoing games: '))
 max_ongoing = 100  # int(input('maximum number of ongoing games: '))
@@ -34,15 +35,16 @@ while archive_datetime <= current_datetime:
 months.reverse()
 archive_datetime = current_datetime - timedelta(days=90)
 
-# clear cache
+# clear cache and get scanned players
 try:
     with open('scanned_players.json', 'r') as scanned_json:
         scanned = json.load(scanned_json)
-    for key in list(scanned.keys()):
-        if scanned[key] <= current_datetime.timestamp():
-            del scanned[key]
-    with open('scanned_players.json', 'w') as scanned_json:
-        json.dump(scanned, scanned_json, sort_keys=True, indent=2)
+    if clear_cache:
+        for key in list(scanned.keys()):
+            if scanned[key] <= current_datetime.timestamp():
+                del scanned[key]
+        # with open('scanned_players.json', 'w') as scanned_json:
+        #     json.dump(scanned, scanned_json, sort_keys=True, indent=2)
 except json.JSONDecodeError:
     scanned = {}
 

@@ -3,13 +3,17 @@ def update_invited(usernames: list[str]):
     if confirm == 'Y':
         with open('invited.txt', 'r') as file:
             invited = file.read().strip(' \n').split('\n')
-        invited = list(invited)
         invited += usernames
         invited.sort()
         with open('invited.txt', 'w') as file:
             file.write('\n'.join(invited))
         print(f'{len(usernames)} players invited')
-        print('!!! DO NOT FORGET TO ACTUALLY INVITE THEM !!!')
+        print(
+            'The Great British Empire is an international club. We welcome chess players from all round the world, of all nationalities and all chess abilities.\n'
+            'We are a competitive club, currently 10th worldwide on the club matches leaderboard, and we expect our members to play club matches whilst avoiding timeouts and fair play violations.\n'
+            'We are also an active club in vote chess, which is a fun place for you to learn from your teammates’ ideas and to share your own.\n'
+            'If you are interested in joining a multi-national club, and if you are keen on playing to win whilst making friends, then we are the club for you!\n'
+        )
     else:
         print('confirmation failed. please update manually later.')
 
