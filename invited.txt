@@ -61,6 +61,7 @@ akulovkms1986
 alchemy42
 alcii94
 alcybiad
+aldemir68
 aldersley
 alecbod
 aleexan
@@ -83,6 +84,8 @@ alienkemistry
 alifanov
 alinaalexandra
 alof
+alperin
+alphazerob1
 alsonji
 alsonnik
 alvarovj
@@ -194,8 +197,10 @@ benztoyzii
 beotoch
 bernie1980
 beryslav-kyiv
+beth164
 beyond_dark
 bha1983
+big2hearted
 big_man62
 bigbertha
 bigeasymike
@@ -406,12 +411,14 @@ d2tod4
 d2weese
 d4start
 d_bun
+da-nee
 da_crusha
 daddy996
 daddynina
 daedae513
 daharma
 dakoe12
+dalailuke
 daleko22
 damarch
 damayito
@@ -464,11 +471,13 @@ dia_duit
 dibici
 dida70
 diegomoncayo
+dietersos
 digitu
 diligentver
 dinhthanhbinh
 diogenes_of_sinope33
 dirk_brijs
+divyansh22
 dj50
 djemir
 djpossum
@@ -599,6 +608,7 @@ farmpieterse
 fastmonty
 fatky
 fatlazymofo
+fbobobby
 fdapro
 fdo73
 fector_mt
@@ -624,6 +634,7 @@ flaminghakama
 flash_123
 flickas
 florida_man
+floryano25
 fluxman
 fm_khairoshevn
 fmcdali
@@ -748,6 +759,7 @@ hammers23
 hamtheman
 hand-carvedchess
 hansqiao
+hanzcheng
 happyhiren
 hari_uk
 harrypatzer
@@ -764,10 +776,12 @@ hedgefox
 hegj
 heigro
 heimdallrschwarz
+henri5
 hercher
 hesamodin_mokhtari
 hfdamac3
 hg206
+highglovesave
 highvooltage
 hippoman
 hippotobaron6
@@ -884,6 +898,7 @@ je-cabangcla
 jebent
 jechaffins
 jefferson_chess_br
+jeffjmcintire
 jes1969w
 jessy75
 jestey
@@ -934,6 +949,7 @@ jonathansmuggler
 jonbchess1
 jonboi197501
 jonmacf
+jonmill
 jonnyjoint
 jonpriebe
 jordanh
@@ -1182,6 +1198,8 @@ marathonmomma
 marc_atherton
 marcel0707
 marcelda
+marceldascalescu
+marcelllorincz
 marchenko_vadim
 marcinms24
 marengo2015
@@ -1189,6 +1207,7 @@ margalita_natelauri
 marian810
 marian8806
 maritoma
+mariusisu1
 markbv
 markgoldshtein
 markovitez
@@ -1201,6 +1220,7 @@ maske2
 mastersandi
 matb86
 mateuspaier
+mathmaster_68
 matiuuuu85
 matthewch6v14
 matthiask24
@@ -1221,6 +1241,7 @@ meidan_s
 melvinkentsowder
 memo_fkm
 mercedonyus
+merogrog
 merryhatman
 meskogn
 messageinabubble
@@ -1350,6 +1371,7 @@ noelbernilsr
 noestutia
 nokiokid
 nominoe63
+nonokeeper
 normanbauschke
 northcliff304
 nos_divad
@@ -1400,6 +1422,7 @@ ozza0001
 paavo
 pacoloja
 paddleman59
+paddy1962
 padundee
 paidiosuilleabhain
 paingloss
@@ -1493,6 +1516,7 @@ pluk1978
 plumptonred
 plurality
 pmscarecrow
+pocoloco-1
 polyhedralpig
 ponderinguy
 ponuryzajac
@@ -1589,14 +1613,17 @@ riosl
 risosir
 river2horses
 rivermonster60
+rj240616
 rjcc_paul
 rjdavison
 rjproton
+rlozinak
 rlparkeruk
 rnt2021
 ro_flores
 rob_appleby
 robdonchess
+robe10
 robertgerrard
 roberto-1995
 robertolton
@@ -1805,6 +1832,7 @@ stradbroketf
 strategydead
 stressedpebble
 strongriddle
+student2003
 suffolkpunch
 sullamontagna
 sultan2010
@@ -1995,6 +2023,7 @@ waterbend3r
 wbz403
 wearsider
 wenlock
+werball
 weslie10
 wessexgambit
 westonknight
@@ -2037,6 +2066,7 @@ xanthippes
 xavilanz
 xj4g
 xose1953
+yablon10
 yaccoff
 yarealguru
 yaroslavvvvvv
@@ -2064,6 +2094,7 @@ zeligar
 zentao8
 zeolithos
 zerrogi
+zhanbyrbaev_1981
 zhucher
 zinsx
 zippie
@@ -2078,4 +2109,5 @@ ztnook500
 zugzwischenzwang
 zvithelo
 zweckmaessigkeit
+zwilling67
 zygatron
