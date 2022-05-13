@@ -6,8 +6,12 @@ import requests
 from progress.bar import IncrementalBar
 from components import *
 
-# constraints
 target = int(input('number of players to invite: '))
+club_name = input('enter club name (as in url): ').strip(' /')
+if not club_name:
+    quit()
+
+# constraints
 enter_cache = True
 clear_cache = True
 min_tm_played = 12  # int(input('minimum number of team match games in last 90 days: '))
@@ -49,19 +53,25 @@ except json.JSONDecodeError:
     scanned = {}
 
 # start looting
-club_name = input('enter club name (as in url): ').strip(' /')
 with requests.session() as session:
 
     # get the victim club's admins
     response = session.get(f'https://api.chess.com/pub/club/{club_name}', timeout=5)
     if response.status_code != 200:
-        raise Exception('invalid url or connection error')
-    club_admins = set(response.json()['admin'])
+        print('connection error')
+        quit()
+    content = response.json()
+    if content.get('code', 1) == 0:
+        print('club does not exist')
+        quit()
+    club_admins = set(content['admin'])
 
     # get players to examine
     response = session.get(f'https://api.chess.com/pub/club/{club_name}/members', timeout=5)
     if response.status_code != 200:
-        raise Exception('connection error')
+        print('connection error')
+        quit()
+    content = response.json()
     candidates = []
     with open('membership.json') as membership_json:
         membership = json.load(membership_json)
@@ -70,7 +80,7 @@ with requests.session() as session:
     with open('invited.txt') as invited_txt:
         invited = set(invited_txt.read().strip(' \n').split('\n'))
     for category in ('weekly', 'monthly', 'all_time'):
-        for member in response.json()[category]:
+        for member in content[category]:
             # skip existing members
             if member['username'].lower() in membership:
                 continue
@@ -88,6 +98,15 @@ with requests.session() as session:
                 if f'https://api.chess.com/pub/player/{member["username"].lower()}' in club_admins:
                     continue
             candidates.append(member['username'].lower())
+    if not candidates:
+        with open('finished_clubs.txt', 'r') as file:
+            finished_clubs = file.read().strip(' \n').split('\n')
+        finished_clubs.append(club_name)
+        finished_clubs.sort()
+        with open('finished_clubs.txt', 'w') as file:
+            file.write('\n'.join(finished_clubs))
+        print('club is finished')
+        quit()
 
     try:
         # examine players
@@ -96,16 +115,17 @@ with requests.session() as session:
             for player in candidates:
                 candidates_bar.next()
 
-                # get last login
+                # get player profile
                 try:
                     response = session.get(f'https://api.chess.com/pub/player/{player}', timeout=5)
                 except requests.exceptions.RequestException:
                     continue
-
-                # eliminates players offline for too long
                 if response.status_code != 200:
                     continue
-                if current_datetime - datetime.fromtimestamp(response.json()['last_online']) > max_offline:
+                content = response.json()
+
+                # eliminates players offline for too long
+                if current_datetime - datetime.fromtimestamp(content['last_online']) > max_offline:
                     if enter_cache:
                         scanned[player] = int(current_datetime.timestamp() + timedelta(days=30).total_seconds())
                     continue
@@ -117,9 +137,10 @@ with requests.session() as session:
                     continue
                 if response.status_code != 200:
                     continue
+                content = response.json()
 
                 # eliminates players with too many clubs
-                if len(response.json()['clubs']) > max_clubs:
+                if len(content['clubs']) > max_clubs:
                     if enter_cache:
                         scanned[player] = int(current_datetime.timestamp() + timedelta(days=30).total_seconds())
                     continue
@@ -131,36 +152,37 @@ with requests.session() as session:
                     continue
                 if response.status_code != 200:
                     continue
+                content = response.json()
 
                 # eliminates players who don't play daily
-                if 'chess_daily' not in response.json():
+                if 'chess_daily' not in content:
                     if enter_cache:
                         scanned[player] = int(current_datetime.timestamp() + timedelta(days=30).total_seconds())
                     continue
 
                 # eliminates players who move too slow
-                if timedelta(seconds=response.json()['chess_daily']['record']['time_per_move']) > max_time_per_move:
+                if timedelta(seconds=content['chess_daily']['record']['time_per_move']) > max_time_per_move:
                     if enter_cache:
                         scanned[player] = int(current_datetime.timestamp() + timedelta(days=30).total_seconds())
                     continue
 
                 # eliminates players not in rating range
                 if (
-                    response.json()['chess_daily']['last']['rating'] < min_rating or
-                    response.json()['chess_daily']['last']['rating'] > max_rating
+                    content['chess_daily']['last']['rating'] < min_rating or
+                    content['chess_daily']['last']['rating'] > max_rating
                 ):
                     if enter_cache:
                         scanned[player] = int(current_datetime.timestamp() + timedelta(days=30).total_seconds())
                     continue
 
                 # eliminates players who lose or win too much
-                wins = response.json()['chess_daily']['record']['win']
-                losses = response.json()['chess_daily']['record']['loss']
-                draws = response.json()['chess_daily']['record']['draw']
-                if 'chess960_daily' in response.json():
-                    wins += response.json()['chess960_daily']['record']['win']
-                    losses += response.json()['chess960_daily']['record']['loss']
-                    draws += response.json()['chess960_daily']['record']['draw']
+                wins = content['chess_daily']['record']['win']
+                losses = content['chess_daily']['record']['loss']
+                draws = content['chess_daily']['record']['draw']
+                if 'chess960_daily' in content:
+                    wins += content['chess960_daily']['record']['win']
+                    losses += content['chess960_daily']['record']['loss']
+                    draws += content['chess960_daily']['record']['draw']
                 score_rate = (wins + draws / 2) / (wins + losses + draws)
                 if score_rate < min_score_rate or score_rate > max_score_rate:
                     if enter_cache:
@@ -168,7 +190,7 @@ with requests.session() as session:
                     continue
 
                 # streamlines later procedures for players without any timeout
-                no_timeout = response.json()['chess_daily']['record']['timeout_percent'] == 0
+                no_timeout = content['chess_daily']['record']['timeout_percent'] == 0
 
                 # get player ongoing games
                 try:
@@ -177,16 +199,17 @@ with requests.session() as session:
                     continue
                 if response.status_code != 200:
                     continue
+                content = response.json()
 
                 # eliminates players with too many games ongoing
-                if len(response.json()['games']) > max_ongoing:
+                if len(content['games']) > max_ongoing:
                     if enter_cache:
                         scanned[player] = int(current_datetime.timestamp() + timedelta(days=30).total_seconds())
                     continue
 
                 # eliminates players with too few team match games ongoing
                 tm_played = 0
-                for game in response.json()['games']:
+                for game in content['games']:
                     if 'match' in game:
                         tm_played += 1
                 if tm_played < min_tm_ongoing:
@@ -212,10 +235,11 @@ with requests.session() as session:
                     if response.status_code != 200:
                         is_invitable = False
                         break
-                    response.json()['games'].reverse()
+                    content = response.json()
+                    content['games'].reverse()
 
                     # check each game
-                    for game in response.json()['games']:
+                    for game in content['games']:
                         if 'match' in game:
                             if datetime.fromtimestamp(game['end_time']) <= archive_datetime:
                                 continue
