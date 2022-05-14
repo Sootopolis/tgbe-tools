@@ -83,6 +83,7 @@ alexfickey
 alexkuehn
 alfacere
 alfie_beamish
+alfil_dadaista
 alfonsed
 alfonso2021
 alfonzo87
@@ -125,6 +126,7 @@ angelvelasquez
 animalalgie
 anita76
 anjeltxov
+annalog002
 anpu3
 ant_plays_chess
 anthammer
@@ -300,6 +302,7 @@ calm_and_curious
 cameronc09
 camgilmour
 canadachess2015
+canari20
 canaryhammer
 capablanca24
 captainbegonia
@@ -334,6 +337,7 @@ cembalo
 cerberus274
 cesardegroot
 cesaroscco
+chakqs
 champ-68
 chankyaneti68
 chanman21
@@ -1003,6 +1007,7 @@ joydeep6772
 jpcrisol1
 jpf917
 jpphilip
+jrlott
 jrodri49
 jsamgd
 jsr_dijon
@@ -1029,6 +1034,7 @@ justinsums
 justwanderer
 kadija2203
 kaesbaer
+kafiaking
 kajobas2003
 kalayaan003
 kaliman1175
@@ -1149,6 +1155,7 @@ leglessbird
 leigh981
 len2016
 lenas1975
+lenjos
 lenkahblov
 leo_kaeferstein
 leomcl
@@ -1167,6 +1174,7 @@ limehouse2
 limjones
 lincolnheights
 linzinkhine
+lion01955
 liquidforce99
 lisandroes
 lithonius
@@ -1279,6 +1287,7 @@ mchuzz
 mealomaniac
 meansoutine
 medhatkishk
+medimehdi
 mehulkj
 meidan_s
 melih34
@@ -1363,12 +1372,15 @@ mrjt1270
 mrksherrmann
 mrmillstream
 mrmoney1
+mrsuitcase
+msmiljevic
 msoliver
 msv68
 mtjc
 mtstone
 mttww
 muath_bh
+mudgrudfud
 muharem59
 munanaim
 munari
@@ -1455,6 +1467,7 @@ oluwatomi
 omand41
 omgdidirealyjustsact
 omidrahimi1369
+opensquirrel
 orangered
 orpailleur
 orzhel00
@@ -1484,7 +1497,9 @@ pangus
 pannalman
 panosgagalis
 pantic1
+paolo55
 papa_456
+papadew505
 papaguy
 papikoke22
 papillian
@@ -1590,6 +1605,7 @@ provice
 pseudonymus
 pstoddard
 psych4052000
+pulpopaz
 pumas91
 putneypawn
 putrizabous
@@ -1612,6 +1628,7 @@ radeta
 radioheadthesmiths
 radnorth
 raf610
+rahul2018archana
 rainowlad
 raja_2142
 rakieta1980
@@ -1648,6 +1665,7 @@ remedyseeking
 remmy_b
 renier66
 respawningarmy
+reti1
 retsam100
 rev723
 reyantonio2do
@@ -1757,6 +1775,7 @@ saulo4c
 saulofwigan
 savvyfellow
 saxzn
+saywhen
 scaroth
 scetino
 scherzos
@@ -1818,13 +1837,16 @@ slayer1961
 sleppyfox
 slingnpi
 slow12hand
+slowyoda
 sly_old_fox
 smaribus
 smitty67
 smogol
 smoke1182
 smokeater
+sncpapa
 sneakyqueen
+snop2000
 soeren164
 soetewey
 sofialuke1983
@@ -1833,6 +1855,7 @@ softalegenda
 sokolskyb4
 solafuthi
 solarsapien
+songsmithsam
 sophieny
 sortov
 soulsniper99
@@ -1850,6 +1873,7 @@ sras01
 st-nut
 st1er
 stanimir
+stanislavxxx
 stanjakill
 stankela75
 stanleympinganjira
@@ -1940,6 +1964,7 @@ texwilson
 tgunther
 thanasis61979
 thatkarlguy
+thaunghtut
 the-untrained
 the_blade
 the_indian_dude
@@ -1970,6 +1995,7 @@ thorongil22
 threecsdad
 throbby4
 thusith64
+ticklefist84
 tigertron
 tiho71
 tilkowski
@@ -1981,6 +2007,7 @@ tkdryan
 toldsted
 tolodoxadrez
 tomahhawk
+tomdraug
 tomgoodsol
 tommy123xxx
 tonybuiano
@@ -2051,6 +2078,7 @@ victorstenshin
 videcv
 videssosakritai
 viffer800
+vilkas67
 vinbird
 visbrano1907
 vishy1410
@@ -2076,6 +2104,7 @@ waelmr
 wagner_godoi
 waialex
 waldoj
+walkingterrapin
 walsamh
 walterflipstick
 waltyboy
@@ -2173,4 +2202,5 @@ zugzwischenzwang
 zvithelo
 zweckmaessigkeit
 zwilling67
+zwischenzugzwaenge
 zygatron
