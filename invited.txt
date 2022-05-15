@@ -58,12 +58,14 @@ agargoyle
 agavedave
 ahajuga
 ahedrista
+aheelsfan
 airin239
 aj6chess
 ajchandler
 ajdonley
 akoczkas
 akulovkms1986
+alaghasad
 alchemy42
 alcii94
 alcybiad
@@ -119,6 +121,7 @@ andreuska
 andrew_pike
 andrewsc21
 andreychamp
+andriy_yaremovych
 andylay
 angelina-sh
 angelopoet
@@ -149,6 +152,7 @@ argonauta2
 ariangp86
 ariel_scilingo29
 arixegal
+arkivian
 arnekvam
 arnoldali
 artmarkham
@@ -249,12 +253,15 @@ bluepuppy
 bluesparx
 blunderseeker
 bmillner
+bmr07
 bmv1951
+bob_talparovsky
 bobbybalboa
 bobbydollar
 bobbyedge
 boeddha50
 bogano1980
+bogdanstavrov
 bogvera
 boilingbunny
 bombertank
@@ -365,6 +372,7 @@ chessjaycj
 chesslord-brighton
 chessman7935
 chessplayerro
+chessplayerwolfgang
 chesstkidding
 chesswithdino
 chessymcchessface96
@@ -372,6 +380,7 @@ chesszone9937
 chicanuck
 chichikinaleksei
 childhoods-end
+chillychess2010
 chinguunb
 chocpot
 chorlton69
@@ -385,6 +394,7 @@ chromeheart
 chuck2691
 chuffy54
 chuggerboom
+chukirov
 chyraen
 chz3369
 cimarron40
@@ -396,6 +406,7 @@ clarkedavis
 claudiocordeiro
 clementine65
 cliverb
+clms_chess
 clunkyer
 cm1970
 coffeechess4096
@@ -410,6 +421,7 @@ conspiranoic
 contessaserbelloni
 couldchuck
 countrylife123
+countyourpawns
 couwke
 cpalexander
 cputech
@@ -454,6 +466,7 @@ dani_el_vida_les
 danieldelaisla
 danielmp123456789
 dannyrowles
+dark-shogun
 darklorien
 darkpavel
 daruma52
@@ -551,6 +564,7 @@ droolingdragon
 drsammph
 drsigmund
 drunkental
+drzaiuss
 dshres
 du8le5gr2
 dude_bw
@@ -573,6 +587,7 @@ ecdg
 edberner13
 eddielevis
 eddytjan
+edefasm
 edelpatzer
 edirga
 edoisky
@@ -633,6 +648,7 @@ factotuma
 faescobar
 fakebeil91
 fangch55
+fardinehsani
 faridah_carpio
 farlleyderze
 farmpieterse
@@ -776,10 +792,12 @@ gregflat9
 greggles90
 grether
 greydane769
+grif_rift
 grittmeister
 grunfeldrules
 grust54
 gsp74
+gualtiero58
 guchlu
 gudmarss
 guigarcia
@@ -797,6 +815,7 @@ hamtheman
 hand-carvedchess
 hansqiao
 hanzcheng
+happy_spartan
 happyhiren
 hari_uk
 harrypatzer
@@ -834,6 +853,7 @@ holl75
 honeybrook
 hope2joy
 horatio52
+hordjedef
 hortonp
 horus-set
 hossein_mk
@@ -927,6 +947,7 @@ jande524
 jankoesp
 jarel1
 jarethosborne
+jaumei
 javierfernandezbarrero
 jay71
 jazicr
@@ -937,6 +958,7 @@ jebent
 jechaffins
 jefferson_chess_br
 jeffjmcintire
+jeffmthomas
 jes1969w
 jessy75
 jestey
@@ -958,6 +980,7 @@ jllister
 jmontesn
 jocke_1
 jocls
+jodares
 joe55460
 joe_legg
 joelorax
@@ -1010,6 +1033,7 @@ jpphilip
 jrlott
 jrodri49
 jsamgd
+jsatiger
 jsr_dijon
 jthomas2b
 jtkmoss
@@ -1079,12 +1103,14 @@ king1264
 king_jeffrey_lechez
 kingdomswagg
 kinggkongg
+kingofkings95
 kingonastring
 kingoswald
 kingslayer4321
 kingtrader
 kirilsavino
 kittyb
+kjbaker36
 kjlyne
 kk-1
 klausgmadsen
@@ -1098,6 +1124,7 @@ knightmareassassin
 knightrider185
 knowledgeablebeard
 koehlo13
+kolly2019
 kolubarac78
 konstantinos830
 kopyae4589
@@ -1290,6 +1317,7 @@ medhatkishk
 medimehdi
 mehulkj
 meidan_s
+meladze99
 melih34
 melvinkentsowder
 memo_fkm
@@ -1360,6 +1388,7 @@ morgue85
 morte00
 moscatirar
 mosquitoo99
+mostich
 mosx1
 moteque
 moto-guzzi
@@ -1756,6 +1785,7 @@ salvaje-bonifaz
 salvatoredellapatria
 salvatoredimicco
 salvatoresov
+salvatruchomarabunta
 sambir_ns
 samduck
 samigulla
@@ -1882,6 +1912,7 @@ starfox34
 stassneyking
 stavros130277
 stavrosbhuna
+stavrosds
 steelman420
 steenie60
 stefano1488
@@ -2071,6 +2102,7 @@ vblock101
 vegandelight
 verheugdro
 vernalfire
+vespasian33
 vibrantjar
 vicente9999
 victormanolo
