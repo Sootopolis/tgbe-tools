@@ -122,6 +122,7 @@ andre-hdez
 andreituapse
 andreuska
 andrew_pike
+andrewjgreene
 andrewsc21
 andreychamp
 andriy_yaremovych
@@ -145,6 +146,7 @@ antpeon
 anzorinio
 aorbe
 april280
+aquaria
 aragkousis
 archer9999
 arda_zmir
@@ -165,6 +167,7 @@ arvydasm
 asap2800
 ash177
 ashadowspartan
+asifucare
 askeladden
 asoupdragon
 atalr
@@ -184,6 +187,7 @@ averni
 awais211
 axat1960
 azizbai
+azorath1
 azuljack
 azuredragon9
 babyangel10
@@ -308,6 +312,7 @@ brothem
 brownew
 brucelyn
 brun38
+brutalius
 bsa65
 bsankar
 bsgor
@@ -388,6 +393,7 @@ chesslord-brighton
 chessman7935
 chessplayerro
 chessplayerwolfgang
+chesstiger7
 chesstkidding
 chesswithdino
 chessymcchessface96
@@ -469,6 +475,7 @@ daddy996
 daddynina
 daedae513
 daharma
+dakic69
 dakoe12
 dalailuke
 daleko22
@@ -591,6 +598,7 @@ duncan250505
 dungeonknight
 dungpusher
 dunyainwannabe
+durito53
 duschgel
 dutchgalego
 duviel84
@@ -619,9 +627,11 @@ ehsanlehri1
 ejarov
 ekonomisti
 el-gammal
+elban_dido
 elbrussuleymanli
 eldude56
 electronicmusicrocks
+elemphi
 elena_strichko
 elenadimitrieva
 eleonore99
@@ -635,6 +645,7 @@ elvenstar
 emersonfreitas
 emildrake
 emilie_hegland
+emilovsk
 enetsen
 engingirgin
 epicurus74
@@ -711,6 +722,7 @@ fm_khairoshevn
 fmcdali
 fmsce
 folkie
+forzafiume87
 fotherz
 francvrij
 frank14o2
@@ -808,6 +820,7 @@ goldiman
 gomvar
 goodluckgreenlantern
 gosserman
+grabaker
 graeme1982
 gragya
 grahama
@@ -1616,6 +1629,7 @@ pasaden
 pashaura1
 pashmak1978
 pastapeperoni
+pathfinder64
 pathyjr
 patpatt
 patpong
@@ -1628,6 +1642,7 @@ paulnrjones
 paulthebaul
 pavel999999
 pawnaround
+pawnpusher59
 pawnsquad
 pawny-devil
 pb-hal
@@ -1661,6 +1676,7 @@ ph_corvus_albus
 phantom73
 phfitzgerald
 philabbott
+philbgolf
 philidor_legacy
 philthepowerful
 phiupan
@@ -1688,6 +1704,7 @@ pmscarecrow
 pocoloco-1
 poluxland
 polyhedralpig
+ponan00
 ponderinguy
 ponuryzajac
 poojarysachin1979
@@ -1783,6 +1800,7 @@ reyartiles
 reydeespadas
 rez123456
 rezaaman
+rhutcheson
 ribeirobr1
 richardhigham
 richardmmartin
@@ -1798,6 +1816,7 @@ rj240616
 rjbue
 rjcc_paul
 rjdavison
+rjohoh
 rjproton
 rlozinak
 rlparkeruk
@@ -1865,6 +1884,7 @@ saful13
 sahaj26
 sai
 saint29
+sajjadakbar
 sallycc
 salpingidis
 salto27
@@ -1897,6 +1917,7 @@ scaroth
 scetino
 scherzos
 schinderhannes61
+schrob
 scorpino76
 scorpio100
 scotpaul
@@ -1933,6 +1954,7 @@ shouryavihan
 shrewranger
 shreyash161094
 shrikeatb4
+shsh1010
 shuberts
 shumaaher
 sidonianknight
@@ -1997,6 +2019,7 @@ sprut
 sras01
 st-nut
 st1er
+stajerc
 stanimir
 stanislavxxx
 stanjakill
@@ -2096,8 +2119,10 @@ tewald
 tex_knigit
 texwilson
 tgunther
+thamover
 thanasis61979
 thatkarlguy
+thatsagas
 thaunghtut
 the-untrained
 the_blade
@@ -2110,6 +2135,7 @@ thecheeese
 thechessticulater
 thefmp
 thegamingmaster711
+thegoose4u
 thegreatnutkins
 thehumblelegend
 thelordofwinterfell
@@ -2163,6 +2189,7 @@ totriornottotri
 toughplaya
 tourajz
 tower111
+trans21hook
 treb3
 trekker123
 trevorlahey771
@@ -2253,6 +2280,7 @@ wagner_godoi
 waialex
 waldoj
 walkingterrapin
+wallace_sheridan
 walsamh
 walterflipstick
 waltyboy
@@ -2262,6 +2290,7 @@ waspet
 waterbend3r
 wbz403
 wearsider
+weekiatyeo
 wenlock
 werball
 weslie10
@@ -2334,12 +2363,14 @@ zachertz
 zait64
 zan159
 zanemortis
+zanosom
 zaplji
 zaragoza_inmortal
 zarbianite
 zeligar
 zentao8
 zeolithos
+zero_61
 zerrogi
 zhanbyrbaev_1981
 zhucher
