@@ -161,6 +161,7 @@ arixegal
 arkivian
 arnekvam
 arnoldali
+art_menius
 artmarkham
 arturogonzalez1969
 arvydasm
@@ -253,6 +254,7 @@ bizzox14
 black_root
 blackdog317
 blackjack83
+blackqueen2012
 blancoletal
 blas_de_lezo
 blazejohnson
@@ -261,6 +263,7 @@ blithesprit
 blockdog2087
 bloomie246
 bluebluecow
+bluehen86
 blueiq
 bluenoseralph
 bluepuppy
@@ -423,6 +426,7 @@ cipiripi
 cjpawson
 ckhoooo
 clachglas
+clarkbart
 clarkedavis
 claudiocordeiro
 clementine65
@@ -493,6 +497,7 @@ dark-shogun
 darklorien
 darkpavel
 daruma52
+dathvarder2018
 dave_agadir
 daven59
 davenunn
@@ -525,6 +530,7 @@ derekdharvey
 derekwilliams228
 derenlat
 derspieler50
+desertpawnsw
 detroitlions1
 devilishangel1
 devitoria
@@ -623,6 +629,7 @@ eeyore2016
 eferelin
 eggleglet
 egittrich
+eglittle
 ehsanlehri1
 ejarov
 ekonomisti
@@ -695,6 +702,7 @@ fector_mt
 federal_judge16rus
 federer100
 felipe59
+fenway21117
 ferrarifan27
 fez1974
 fgalmeid
@@ -765,6 +773,7 @@ gareththegooner
 garibov-suleyman
 gaston-david
 gatsby57
+gatto_di_schrodinger
 gaz1969
 gazpachito
 gboudouris
@@ -798,6 +807,7 @@ gibson2
 gibsori
 ginoinreno
 ginzbirdman
+gioguaz
 giomal
 giovannimoscatelli
 giuggiulena
@@ -1001,6 +1011,7 @@ jaumei
 javierfernandezbarrero
 jay71
 jazicr
+jbsfe1812
 jcvila
 jdiamant07
 je-cabangcla
@@ -1077,6 +1088,7 @@ josephm000
 joshphipp
 josian5
 joss_bartleet
+jostbeermann
 josue012
 journeypastor
 joy10
@@ -1089,6 +1101,7 @@ jrodri49
 jsamgd
 jsatiger
 jsr_dijon
+jstow
 jthomas2b
 jtkmoss
 juandrisav
@@ -1220,6 +1233,7 @@ langbein
 lannes_jean
 laremaro
 laseve91
+lashomb23
 lasseden10
 lasvegaslife
 latecafe
@@ -1230,6 +1244,7 @@ lazroman
 lazy_gun
 lazyoyster
 lcsaloon
+ldpaxton
 leadweight2
 lebeane
 leechess2021
@@ -1377,6 +1392,7 @@ maximkolpakov
 mb68
 mbechirdc
 mccarthyjames19
+mcdoogey
 mchuzz
 mealomaniac
 meangene96
@@ -1403,6 +1419,7 @@ mexcal1975
 mfh1974
 mfreke21
 mi15258
+micah-r
 michael85w
 michael93bell
 michaelkushar
@@ -1436,6 +1453,8 @@ mischa1980
 mistakesrme
 misterandyjones
 misterb111
+misticknights13
+mititelucristi
 mkouter
 mkreps
 ml72
@@ -1522,6 +1541,7 @@ ngb1066
 nichabodnik
 nichaki
 nicolapre
+nicolas7544
 nicolasjouault
 nihili75
 nikdelhossein
@@ -1544,6 +1564,7 @@ normanbauschke
 northcliff304
 nos_divad
 notfrankturner49
+notjamo
 notsolucky21
 notused
 nov75
@@ -1575,6 +1596,7 @@ oliver271828
 oliverguillermo
 oliverolich
 ollyh
+ollyr
 olpl
 oluwatomi
 omand41
@@ -1777,6 +1799,7 @@ rdoonan
 realmofspirits
 receptiveking
 recolor
+red2wedge
 redblue777
 redbuild63
 reddalek
@@ -1802,6 +1825,7 @@ rez123456
 rezaaman
 rhutcheson
 ribeirobr1
+richardbarski
 richardhigham
 richardmmartin
 richards8626
@@ -1993,6 +2017,7 @@ smokeater
 sncpapa
 sneakyqueen
 snop2000
+snotnosterbol
 soeren164
 soetewey
 sofialuke1983
@@ -2015,6 +2040,7 @@ spinzero
 spiritual164
 spookyrooky64
 sporadicofficial
+spottdrossel
 sprut
 sras01
 st-nut
@@ -2138,6 +2164,7 @@ thegamingmaster711
 thegoose4u
 thegreatnutkins
 thehumblelegend
+theincrediblerook
 thelordofwinterfell
 themanwithno_name
 theo_paparrigo
@@ -2191,6 +2218,7 @@ tourajz
 tower111
 trans21hook
 treb3
+treegrower2003
 trekker123
 trevorlahey771
 trhkyt
@@ -2252,6 +2280,7 @@ victorstenshin
 videcv
 videssosakritai
 viffer800
+viktor_boev
 vilkas67
 vinbird
 vinothmpi
@@ -2390,4 +2419,5 @@ zvithelo
 zweckmaessigkeit
 zwilling67
 zwischenzugzwaenge
+zybex9
 zygatron
