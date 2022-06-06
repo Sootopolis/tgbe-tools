@@ -1,4 +1,5 @@
 0disseas
+101leszek101
 123tegid
 17skunks
 1966_06_21_gs
@@ -70,6 +71,7 @@ ajchandler
 ajdonley
 akoczkas
 akulovkms1986
+al-shatarangy
 alaghasad
 alchemy42
 alcii94
@@ -98,6 +100,7 @@ alfil_dadaista
 alfonsed
 alfonso2021
 alfonzo87
+alfred42000
 algarvechessplayer
 aliboron
 aliceband
@@ -206,6 +209,7 @@ austenidol
 austinguy
 autumncurtis
 averni
+avschar
 awais211
 axat1960
 azamats1982
@@ -214,6 +218,7 @@ azorath1
 azuljack
 azuredragon9
 babyangel10
+bacchus_on_crack
 badarung
 badaveg
 badescuionutlucian
@@ -731,6 +736,7 @@ enufem
 epicurus74
 epiphone339
 erfan19
+erfannorikia
 erichprivat
 erickson87121
 ericpursley
@@ -851,8 +857,10 @@ gambidiot
 gambitleon
 gamebitno1
 gamgee11
+garethjones1
 gareththegooner
 garibov-suleyman
+garri300222
 gaston-david
 gatsby57
 gatto_di_schrodinger
@@ -906,6 +914,7 @@ glasspring
 glomik
 gmacandcheese
 gmartinp
+gmprtmblk
 gofast_turnleft
 gogosf
 gokulk16
@@ -916,6 +925,8 @@ goldhorns
 goldiman
 gomvar
 goodluckgreenlantern
+gorclaw
+gordonogilvie
 gosserman
 goyovm
 grabaker
@@ -927,6 +938,7 @@ grandmasterrob
 grants_44
 grantxiets
 graplon
+grassguy001
 gratefulbear
 graveyardfool
 gravitika
@@ -1017,6 +1029,7 @@ hortonp
 horus-set
 hossein_mk
 hotelka
+hounddogmusic
 houssammh
 hovejo23
 howdy19
@@ -1344,9 +1357,11 @@ kuntakente
 kurilow
 kurtogluu
 kwa1
+kwatson27
 kylemck1
 kylewar
 kyrish
+l0n3-p4wn
 lady_outlaw
 ladyofthe_knight
 lafleur1957
@@ -1360,6 +1375,7 @@ landau96
 landon1981
 langbein
 lannes_jean
+lardy28
 laremaro
 laseve91
 lashomb23
@@ -1398,6 +1414,7 @@ leonhh
 leonvanrooyen
 leoschmoll
 letu
+level28
 liammor
 lico87
 licolu
@@ -1633,6 +1650,7 @@ modo_modo
 modun
 mohamadbasir
 mohamed4365
+mohamed_azizfadhel
 moiseyb
 mojimbo_6
 mojoworking
@@ -1694,6 +1712,7 @@ nagendragowda
 nahor73
 naitikkadam
 namu35950
+nanael-sama
 nannorijnders
 nar14
 narenpa
@@ -1907,6 +1926,7 @@ phiupan
 phoebus7200
 phoenixrise89
 pi11grim
+pickle47
 pieces08
 pietrocotroneo8
 pietromoretti
@@ -1952,6 +1972,7 @@ prometheus_fuschs
 prophali
 provice
 pseudonymus
+pss03d
 pstoddard
 psych4052000
 pulpopaz
@@ -1998,6 +2019,7 @@ raysawy64
 rayv
 rayvisser
 razin1671
+razors52
 rcashman
 rdeschain_89
 rdiet
@@ -2115,6 +2137,7 @@ ryanjthompson
 ryecatcher
 s0lm0
 s1lvertiger
+s_shashish-chessbolt
 sabatoli
 sadudin
 saetta1000
@@ -2125,6 +2148,7 @@ saful13
 sahaj26
 sai
 saint29
+saintsavedby-grace
 sajjadakbar
 sallycc
 salpingidis
@@ -2148,6 +2172,7 @@ saniyat24
 sanuki
 saratonga
 sarge7697
+sartresghost
 sashadan
 sassenach65
 saulo4c
@@ -2189,6 +2214,7 @@ shaharaim
 shahzor
 shaka_zulu_king
 shakir_ghazi
+shaolinkillerdeporco
 shawnlg777
 sheepzzz4
 shiaolung
@@ -2366,6 +2392,7 @@ teekayewun
 teheux
 temo-temo
 tempiese75
+tendo89
 termesz
 terminuso
 terryfromweymouth
@@ -2388,6 +2415,7 @@ the_name_of_the_game
 the_nimzo-larsener
 the_rookie46301
 thebigbear
+thecartel
 thecheeese
 thechessticulater
 thefmp
@@ -2451,6 +2479,7 @@ trans21hook
 treb3
 treegrower2003
 trekker123
+tretorvic
 trevorlahey771
 trhkyt
 trigeek22209
@@ -2594,6 +2623,7 @@ wintu1
 wizbyron
 wjb123
 wjoseph48
+wojtek744
 wolf227
 wolfbird
 wolfman1122
@@ -2629,6 +2659,7 @@ youcefal
 young123
 youtube19
 ys_kanwar
+yuexiafanzhou
 yuri_taraxzcenko
 yusak123
 zabavindo
