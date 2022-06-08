@@ -37,6 +37,7 @@ abir164
 abkmeti
 abshok
 accord289
+acerb95
 aceyduecy
 acroyogagenie
 actuaris
@@ -108,12 +109,14 @@ alienkemistry
 alifanov
 alinaalexandra
 alishapinks
+alkis23
 allenon
 alof
 alperin
 alphazerob1
 alsonji
 alsonnik
+aluspeakable
 alvarovj
 alvinlee59
 alwayswannabeer
@@ -164,6 +167,7 @@ anzorinio
 aorbe
 april280
 aquaria
+ar7an
 aragkousis
 aramgandomkar
 archer9999
@@ -249,6 +253,7 @@ beermat78
 behradrahmani92
 benjie1121
 benkiuguasu
+benni58
 benrob85
 benrob86
 bentmate
@@ -362,6 +367,7 @@ bsgor
 bubbleskitties
 bugurtian_ii
 bukinistoleg1968
+buleon
 bungle71
 bunnygod1
 butichess
@@ -369,6 +375,7 @@ button88
 c0aca
 c_benham
 calm_and_curious
+camelhump35
 cameronc09
 camgilmour
 canadachess2015
@@ -498,6 +505,7 @@ cokermike
 colinbmcbride
 columbo2008
 comrade44
+concordat
 conde28
 conkai
 conspiranoic
@@ -511,6 +519,7 @@ cpalexander
 cputech
 crasher83
 crazyswimmerman
+crisisofconfidence
 crisleft
 crispy2ba
 crnjak1
@@ -546,6 +555,7 @@ damarch
 damayito
 dan_a
 danbois5
+danbrstrm
 danbunting
 dandav666
 dani_el_vida_les
@@ -586,6 +596,7 @@ deglobalsam
 dejande69
 delcarpenter
 delmana
+demeumys
 demolaalalade
 dengues
 deni53
@@ -761,6 +772,7 @@ extenfactory
 fabiopicolo
 fabricelopezillac
 fabricewantiez
+fabrizio65
 factotuma
 faescobar
 fahro70
@@ -830,6 +842,7 @@ fraxis7
 frazzzz
 fredairic
 fredishier58
+freethebase2018
 freetrog
 freluquetbis
 freyja23
@@ -1000,6 +1013,7 @@ heidevolk
 heigro
 heimdallrschwarz
 henri5
+henrikusr
 hercher
 hesamodin_mokhtari
 hfdamac3
@@ -1009,6 +1023,7 @@ highvooltage
 hippo32
 hippoman
 hippotobaron6
+hisalols
 hjalmar_sig_73
 hlathan999
 hma_hma
@@ -1320,6 +1335,7 @@ kjbaker36
 kjlyne
 kk-1
 klausgmadsen
+klecken
 kliprsa
 kmqureshi100
 kng
@@ -1483,6 +1499,7 @@ m210297
 m3tafl0ps
 maalgara
 macabreska
+macbook99
 macchesssa
 madaiancu
 madanselili
@@ -1541,6 +1558,7 @@ markbv
 markgoldshtein
 markinmo
 markovitez
+markscooter10
 markusmaurer
 marlin1875
 martinkojo
@@ -1656,6 +1674,7 @@ mojimbo_6
 mojoworking
 mokry88
 moleff2020
+momobenni
 monadjib
 mondfell
 montfort
@@ -1809,6 +1828,7 @@ omgdidirealyjustsact
 omidrahimi1369
 onefineham
 onein144k
+onion-0812
 opensquirrel
 orangered
 orciety
@@ -1850,6 +1870,7 @@ pantic1
 paolo55
 paolomiso
 papa_456
+papadabear514
 papadew505
 papafrancescoxv
 papaguy
@@ -1872,6 +1893,7 @@ patpong
 patrick_70
 patrikbe
 patriotic
+patrykkchess
 patzerific
 paul20061220
 paul_uk
@@ -1886,6 +1908,7 @@ pawnpusher59
 pawnsquad
 pawny-devil
 pb-hal
+pc4eo
 pcaligiu
 pcrocker33
 pdatzira
@@ -1948,6 +1971,7 @@ pluk1978
 plumptonred
 plurality
 pmscarecrow
+pocky74
 pocoloco-1
 poluxland
 polyhedralpig
@@ -2096,6 +2120,7 @@ robpue
 rochess123
 rockmalupit
 rodgerroadstar99
+rodolfo1970
 rodrigueselvio
 rodwin88
 roger987
@@ -2150,6 +2175,7 @@ sai
 saint29
 saintsavedby-grace
 sajjadakbar
+sajmon91
 sallycc
 salpingidis
 salto27
@@ -2222,6 +2248,7 @@ shihchuliao
 shikamaru3
 shnymola
 shouryavihan
+shrek_leg
 shrewranger
 shreyash161094
 shrikeatb4
@@ -2341,6 +2368,7 @@ stpaddy
 stradbroketf
 strategydead
 stressedpebble
+strim1
 strongriddle
 stuartroyjones
 student2003
@@ -2595,6 +2623,7 @@ weslie10
 wessexgambit
 westonknight
 westy77
+wetlander
 whiskyrick
 whitekn1ght
 whiteknight065
@@ -2608,6 +2637,7 @@ wileecoyote94
 will11131
 will14n5
 willem100
+william812
 william_t
 willistheknight
 willomate
@@ -2673,6 +2703,7 @@ zaplji
 zaragoza_inmortal
 zarbianite
 zeligar
+zendak
 zentao8
 zeolithos
 zero_61
