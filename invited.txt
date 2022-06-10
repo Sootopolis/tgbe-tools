@@ -70,6 +70,7 @@ airin239
 aj6chess
 ajchandler
 ajdonley
+akaluismaia
 akoczkas
 akulovkms1986
 al-shatarangy
@@ -112,6 +113,7 @@ alifanov
 alinaalexandra
 alishapinks
 alkis23
+alkolol
 allenon
 alof
 alperin
@@ -151,6 +153,7 @@ angelopoet
 angelvelasquez
 animalalgie
 anita76
+anja50
 anjeltxov
 annalog002
 anogia
@@ -170,6 +173,7 @@ anzorinio
 aorbe
 april280
 aquaria
+aquilat
 ar7an
 aragkousis
 aramgandomkar
@@ -332,7 +336,9 @@ bogvera
 boilingbunny
 bojanptkc
 bombertank
+bone-separator
 bonfireofthevanities
+booking86
 borgarfjordureystri
 boringlovechild
 boriquito
@@ -387,6 +393,7 @@ canadachess2015
 canari20
 canaryhammer
 canca
+candelalight
 canrfisica33
 capablanca24
 captainbegonia
@@ -477,6 +484,7 @@ chocpot
 chorlton69
 chorusinthedawn
 chris212121
+chris27771
 chriskyleusa
 chrisparagreen
 chrisrstott
@@ -488,6 +496,7 @@ chuck2691
 chuffy54
 chuggerboom
 chukirov
+chyconija
 chyraen
 chz3369
 cimarron40
@@ -676,6 +685,7 @@ dragonb12
 dragonet35
 dragonwest
 drawgod
+drbistakchngneq
 drboots13
 drchrys
 drecic
@@ -683,6 +693,7 @@ dreydar
 drgwestboca
 drogon72
 droolingdragon
+drsam74
 drsammph
 drsigmund
 drunkental
@@ -768,6 +779,7 @@ erwin1963
 escipion1974
 eslaimer
 eslam13888
+esoraltrebor
 essexdave
 ethandw
 ethelredtheunready
@@ -784,6 +796,7 @@ fabricelopezillac
 fabricewantiez
 fabrizio65
 factotuma
+facw
 faescobar
 fahro70
 fakebeil91
@@ -839,6 +852,7 @@ fmsce
 folkie
 forzafiume87
 fotherz
+fourthy
 francvrij
 frank14o2
 frankdube25
@@ -1120,6 +1134,7 @@ isvicthere
 itsjustchessman
 itzogsteve
 iurifq
+ivan53
 ivan_shumoff
 ivanhoeiii
 ivanm
@@ -1149,6 +1164,7 @@ jameshill
 jamesreed88
 jamessbond007
 jamesthefirst
+jamesthetall
 jamestk
 jamiethegunner
 jammybambo
@@ -1638,6 +1654,7 @@ mfo66
 mfreke21
 mhgoss
 mi15258
+miaunescu
 micah-r
 michael85w
 michael93bell
@@ -1797,6 +1814,7 @@ nirvana
 nisal2000
 nit3shk
 nitalnistein
+nkosi05
 nks1402
 noactionrequired
 noahti2
@@ -1849,6 +1867,7 @@ oluwatomi
 omand41
 omgdidirealyjustsact
 omidrahimi1369
+omnipaul
 onefineham
 onein144k
 onion-0812
@@ -1874,6 +1893,7 @@ owlyowl
 oxidizer7
 ozimov13
 ozza0001
+p41100
 paavo
 pacoloja
 paddleman59
@@ -1928,6 +1948,7 @@ paulthebaul
 paulywalnuts
 pavel999999
 pawnaround
+pawnpusher103
 pawnpusher59
 pawnsquad
 pawny-devil
@@ -2052,9 +2073,11 @@ rahimchavoshi
 rahul2018archana
 rainowlad
 raja_2142
+rajesh_para
 rakenightfur
 rakieta1980
 ralpp
+ramezelmassry
 ramgi
 ran19dom
 rapman
@@ -2074,6 +2097,7 @@ rdiet
 rdn2013
 rdoonan
 realmofspirits
+rebellxsky
 rebelwriter
 rebintex
 receptiveking
@@ -2248,6 +2272,7 @@ seanclark
 seantheprawn18
 seanwmurphy
 sebastien9
+sectumsemprax
 seft
 segismund
 sehsei1983
@@ -2309,8 +2334,10 @@ sleppyfox
 slingnpi
 slow12hand
 slowyoda
+slurps51
 sly_old_fox
 smaribus
+smilingatthevoid
 smitty67
 smogol
 smoke1182
@@ -2364,6 +2391,7 @@ stavrosbhuna
 stavrosds
 steelman420
 steenie60
+stef7835
 stefano1488
 steffei94
 steinarsimensen
@@ -2403,6 +2431,7 @@ suffolkpunch
 sullamontagna
 sultan2010
 sumand
+sumnelse
 sumy58
 superfluousguy
 superpositionm
@@ -2542,6 +2571,7 @@ trevorlahey771
 trhkyt
 trigeek22209
 trotsky77
+troyen
 truthmuse
 tsand1113
 tsengeltunsag
@@ -2601,6 +2631,7 @@ videcv
 videssosakritai
 viffer800
 viktor_boev
+viktoradu
 viktorcovrig
 vilkas67
 vinbird
