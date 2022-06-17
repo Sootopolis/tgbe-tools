@@ -199,6 +199,7 @@ ariel_scilingo29
 arixegal
 arkady_chernobrovkin
 arkivian
+arlens25
 arnekvam
 arnoldali
 arro2
@@ -469,6 +470,7 @@ chavezo
 cheapciggies
 check10179
 checkjosh
+cheddarwedge
 chekuss
 chelseasteve
 chepabuga
@@ -542,6 +544,7 @@ coffeechess4096
 coinhunter88
 cokermike
 colinbmcbride
+colmartinfc
 columbo2008
 comrade44
 concordat
@@ -684,6 +687,7 @@ dkuberek
 dlittle231
 dlo998
 dmandinga666
+dmangion
 dmitrykorotkih1
 dnavarre
 docexadrez
@@ -923,7 +927,9 @@ fulviocagnazzi
 fulwich
 fun_controller
 funky72
+funtik89
 fusillipasta
+fvarvar
 g-fischer
 g_reza88
 gabanze
@@ -945,6 +951,7 @@ garri300222
 gaston-david
 gatsby57
 gatto_di_schrodinger
+gavilla
 gaz1969
 gazpachito
 gboudouris
@@ -1068,6 +1075,7 @@ haobam_ronel_singh
 happi73
 happy_spartan
 happyhiren
+haraldchess
 hari_uk
 harlem_shaker
 harrypatzer
@@ -1116,7 +1124,9 @@ horizonsight
 hortonp
 horus-set
 hossein_mk
+hot9cups
 hotelka
+houman_r
 hounddogmusic
 houssammh
 hovejo23
@@ -1311,6 +1321,7 @@ jonmill
 jonnyjoint
 jonpriebe
 jordanh
+jorgepellicera
 jorgxt
 jorkmantorres
 jose_alberto63
@@ -1366,6 +1377,7 @@ kajobas2003
 kalayaan003
 kaliman1175
 kaljop
+kambiz_rafi
 kamensko
 kamjan
 kandrzet
@@ -1428,6 +1440,7 @@ kliprsa
 kmir2-d2
 kmqureshi100
 kng
+knight593
 knightcharles
 knightdive
 knightgirl385
@@ -1445,6 +1458,7 @@ korest1976
 koroushkabir
 korsares
 kotov2000
+krajek6
 kramraek
 krasitzz
 kringtord
@@ -1575,6 +1589,7 @@ luckyleftydetroit
 luigi1113
 luihui
 luisdbolanos
+luistui
 lukachiqovani
 lukelarry
 lukeowen
@@ -1598,6 +1613,7 @@ macchesssa
 madaiancu
 madanselili
 madknightg8
+magarc
 magic_boy888
 magneticmorgan
 magnus_carl_seen
@@ -1626,6 +1642,7 @@ manselton
 manuelgomez
 manvelghazaryan
 manvelghazaryanz
+manya1969
 mar3i
 maratderdzyan
 maratgb
@@ -1640,6 +1657,7 @@ marcinms24
 marcus_berry
 marengo2015
 margalita_natelauri
+maria_rebecca
 marian810
 marian8806
 marianneolsen
@@ -1686,6 +1704,8 @@ mccarthyjames19
 mcdoogey
 mchang1229
 mchuzz
+mcnulty61953
+me4ok
 mealomaniac
 meangene96
 meansoutine
@@ -1757,6 +1777,7 @@ misha1chess
 mistakesrme
 misterandyjones
 misterb111
+misterwindupbird
 misticknights13
 mititelucristi
 mitkis71
@@ -1882,6 +1903,7 @@ nit3shk
 nitalnistein
 nkosi05
 nks1402
+nmgn
 noactionrequired
 noahti2
 noelbernilsr
@@ -1921,6 +1943,7 @@ ofitzer
 oghaab22
 ola-v
 olcmarcus
+oldbones51
 oldwelshbloke
 olegbondarenko
 olemvik
@@ -2106,6 +2129,7 @@ prapas1024
 praveeensamj2
 pretty_hate_machine
 prezrio4
+prioryparade
 prodri17
 prof-rich
 prokaryote
@@ -2145,6 +2169,7 @@ raf610
 rahara1988
 rahimchavoshi
 rahul2018archana
+rainman33
 rainowlad
 raja_2142
 rajesh_para
@@ -2192,6 +2217,7 @@ redsprite
 regicidalmaniac3321
 regoarrarr
 remedyseeking
+remmus1
 remmy_b
 remover218
 renier66
@@ -2260,6 +2286,7 @@ romangomezmarin
 romanromanyshyn
 romualdas
 ronbrendanmarin
+rookbro12
 rookover
 rootsrocker
 roryduthie
@@ -2405,6 +2432,7 @@ sirharold
 sirrah1
 sirwasimmuridke99
 sk-b
+skakmadam
 skelterhelter99
 skibass
 skillfultaxi
@@ -2505,6 +2533,7 @@ stipitz
 stoneford
 storckm
 stormram
+stout322
 stpaddy
 stradbroketf
 strategydead
@@ -2585,6 +2614,7 @@ the_indian_dude
 the_name_of_the_game
 the_nimzo-larsener
 the_rookie46301
+theastrologist
 thebigbear
 thecaptain
 thecartel
@@ -2666,6 +2696,7 @@ truthmuse
 tsand1113
 tsengeltunsag
 tsin0125
+ttanimoto
 ttconnor153
 tuertu
 tufail_ali
@@ -2728,6 +2759,7 @@ viktoradu
 viktorcovrig
 vilkas67
 vinbird
+vincell64
 vinothmpi
 vinyltears
 visbrano1907
