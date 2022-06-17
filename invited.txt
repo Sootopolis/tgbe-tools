@@ -14,6 +14,7 @@
 4knights50
 501soldier
 5amin8
+5martacus
 64shadesofgrey
 67chessgames
 777_s_777
@@ -149,6 +150,7 @@ andreuska
 andrew_pike
 andrewjgreene
 andrewsc21
+andrewsmith16
 andrey_stoletof
 andreychamp
 andriy_yaremovych
@@ -266,6 +268,7 @@ bayrakv
 bazplays
 bbshop
 bbtandn
+bddhttms
 beachstud
 bear2034
 beardo-x
@@ -401,6 +404,7 @@ c_benham
 cachareria25
 caiusbiserus75
 calm_and_curious
+cambiel
 camelhump35
 cameronc09
 camgilmour
@@ -485,6 +489,7 @@ chessman7935
 chesspatzerpol
 chessplayerro
 chessplayerwolfgang
+chessreina
 chessrocks2011
 chesstiger7
 chesstkidding
@@ -593,6 +598,7 @@ danbrstrm
 danbunting
 dandav666
 dani_el_vida_les
+danielboonep
 danieldelaisla
 danielmp123456789
 dannyrowles
@@ -726,6 +732,7 @@ drunkental
 drzaiuss
 dshres
 dsm_uk
+dtrayne
 du8le5gr2
 dude_bw
 dude_pls_chill
@@ -795,6 +802,7 @@ engingirgin
 enufem
 epicurus74
 epiphone339
+eraitikos
 erfan19
 erfannorikia
 erichprivat
@@ -803,6 +811,7 @@ ericpursley
 ernestsmith1
 erobby
 eru_st
+eruanantion
 erwin1963
 escipion1974
 eslaimer
@@ -840,12 +849,16 @@ fatky
 fatlazymofo
 fave20
 faxenei
+faxxiz
 fbobobby
 fdapro
+fdezjoe
 fdo73
+fearofthedark0807
 fector_mt
 federal_judge16rus
 federer100
+federis
 felani
 felipe59
 fenway21117
@@ -923,6 +936,7 @@ galaxy23
 gambidiot
 gambitleon
 gamebitno1
+gametrox10
 gamgee11
 garethjones1
 gareththegooner
@@ -983,6 +997,7 @@ glomik
 gmacandcheese
 gmartinp
 gmprtmblk
+gnjecc
 gofast_turnleft
 gogosf
 gokulk16
@@ -1031,6 +1046,7 @@ guchlu
 gudmarss
 guigarcia
 gunnyslayer
+gustavogarza13
 gutsygecko
 gw2
 gymstar074600
@@ -1150,6 +1166,7 @@ inlovewithjesus
 inosapro
 inselaffe19
 iraj-hajebabaee
+iraq_lion
 irish_assasin
 irisha_1411
 irishwaterspaniel
@@ -1212,6 +1229,7 @@ jaswant_s
 jaumei
 javierfernandezbarrero
 jay71
+jayeggert
 jazicr
 jbsfe1812
 jcvila
@@ -1235,6 +1253,7 @@ jgbgame
 jhall282
 jhawks
 jigonkbao
+jijicas
 jim5489
 jimbo0001
 jimboki
@@ -1347,6 +1366,7 @@ kajobas2003
 kalayaan003
 kaliman1175
 kaljop
+kamensko
 kamjan
 kandrzet
 kandymat
@@ -1423,6 +1443,7 @@ kopyae4589
 korboldarter
 korest1976
 koroushkabir
+korsares
 kotov2000
 kramraek
 krasitzz
@@ -1638,6 +1659,7 @@ markusmaurer
 marlin1875
 marsdelpueblo
 martinkojo
+martinnikolovski123
 martyriko
 marv1362
 masibo
@@ -1662,6 +1684,7 @@ mb68
 mbechirdc
 mccarthyjames19
 mcdoogey
+mchang1229
 mchuzz
 mealomaniac
 meangene96
@@ -1775,6 +1798,7 @@ moteque
 moto-guzzi
 mounirgaiji
 move_master11
+mozsik
 mr-frank
 mr_etc
 mr_majestic98
@@ -1792,6 +1816,7 @@ msmiljevic
 msoliver
 msqueeny0609
 msv68
+mtdelacruzcavite
 mtjc
 mtstone
 mttww
@@ -1879,6 +1904,7 @@ nudger12
 nuncle
 nuran93
 nurdinhas
+nurn191
 nvqcharles2000
 nyimyoaung
 nytemere
@@ -1886,6 +1912,7 @@ obi707
 obrezaa
 october1979
 odd623
+odin7cielo
 odygaj
 oe24
 oekm
@@ -2049,6 +2076,7 @@ pinkesh13
 piotrd11
 piotrf
 pipersdram
+pista460823
 pistoulasa
 piv1971
 pjasodactyl
@@ -2218,6 +2246,7 @@ rodgerroadstar99
 rodolfo1970
 rodrigueselvio
 rodwin88
+rogan_gangoso
 roger987
 rogerthecabinboy
 rohithafernando
@@ -2274,6 +2303,7 @@ saint29
 saintsavedby-grace
 sajjadakbar
 sajmon91
+salargh222
 sallycc
 salpingidis
 salto27
@@ -2357,6 +2387,7 @@ shrikeatb4
 shsh1010
 shuberts
 shumaaher
+shuwaht
 sidonianknight
 sidthesod
 sierrastar
@@ -2438,6 +2469,7 @@ stanleympinganjira
 stanop
 starfox34
 starspinner
+stasjpw
 stassneyking
 stavros130277
 stavrosbhuna
@@ -2690,6 +2722,7 @@ victorstenshin
 videcv
 videssosakritai
 viffer800
+vikingchucky
 viktor_boev
 viktoradu
 viktorcovrig
@@ -2782,6 +2815,7 @@ wolfman1122
 wolfshield
 wolverineheals
 wonderfull8
+woody_wood_pusher
 worklesschatmore
 wowcoolr
 wrod1987
