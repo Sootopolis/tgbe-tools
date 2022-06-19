@@ -13,6 +13,7 @@
 4king_knight
 4knights50
 501soldier
+55gra23
 5amin8
 5martacus
 64shadesofgrey
@@ -34,6 +35,7 @@ aaronleckinger
 abdul_550
 abdullahkeshavarz
 aberpe
+abioseh
 abir164
 abkmeti
 abm57-cv
@@ -276,6 +278,7 @@ beardo-x
 beeehrer
 beermat78
 behradrahmani92
+beki111
 benjie1121
 benkiuguasu
 benni58
@@ -305,6 +308,7 @@ bill3347
 billforchess
 billgraynotes
 billyjchess
+biloute3323
 bioinformagician
 bionrd
 birdmenace
@@ -386,6 +390,7 @@ broadsword79
 broly_legendary
 brothem
 brownew
+brozotenebroso
 brucelyn
 brun38
 brutalius
@@ -540,6 +545,7 @@ clms_chess
 cloudp
 clunkyer
 cm1970
+coffee-pot
 coffeechess4096
 coinhunter88
 cokermike
@@ -578,6 +584,7 @@ cumbachero
 cumbiebob
 cup_of_cow
 cyee124
+cyrille85
 czekov
 d2tod4
 d2weese
@@ -619,6 +626,7 @@ daveeeer
 daven59
 davenunn
 daveyboy04
+daviad
 david_almeida_pt
 davidantonyclarke1
 daviddavids88
@@ -723,6 +731,7 @@ drawgod
 drbistakchngneq
 drboots13
 drchrys
+drcippy
 drecic
 dreydar
 drgwestboca
@@ -751,6 +760,7 @@ duschgel
 dutchgalego
 duviel84
 dwredmill
+dwtrue207
 dysonator69
 eagle116
 earlpsyches
@@ -833,6 +843,7 @@ ewingwr
 exmexicano
 extenfactory
 fabiopicolo
+faboart
 fabricelopezillac
 fabricewantiez
 fabrizio65
@@ -1015,6 +1026,7 @@ goldhorns
 goldiman
 gomvar
 goodluckgreenlantern
+goodsaint
 gorclaw
 gordonogilvie
 gosserman
@@ -1061,6 +1073,7 @@ gzzw
 h0ru5
 habibilak
 hagarthehorible
+hajeka
 hajiyev017
 hakmat
 halffacedknight
@@ -1132,6 +1145,7 @@ houssammh
 hovejo23
 howdy19
 howsden1
+hpuskar
 hreczecha
 hrushikesh56
 hrynchak11
@@ -1266,6 +1280,7 @@ jigonkbao
 jijicas
 jim5489
 jimbo0001
+jimbob67
 jimboki
 jimcooley3rd
 jimmyondioline
@@ -1310,6 +1325,7 @@ jokerjones20
 jokers064
 jokin-garralda
 jollyolly
+joluches
 jonathan8990
 jonathanmaier
 jonathansmuggler
@@ -1367,9 +1383,11 @@ jupp90
 jurica1calma
 justaleks
 justapawn2
+justarooky
 justinsums
 justwanderer
 jvertes
+jypet
 kadija2203
 kaesbaer
 kafiaking
@@ -1391,6 +1409,7 @@ kapelskrysh
 karimcannes
 karimherroui
 karlbeyleveld
+karlozko
 karlwhite
 karmeleone
 kastelanin
@@ -1401,6 +1420,7 @@ kaymishra
 kaysin99
 kbarth
 kblunt333
+kbrownmx
 kekic76
 keks2017
 kel1968
@@ -1489,6 +1509,7 @@ laker32
 laki_juhar
 lalo0675
 lalos
+lamascarademon
 lambares
 lanceval
 landau96
@@ -1827,6 +1848,7 @@ mr_mow_joe
 mr_pacheco
 mrcotch
 mrelzain
+mrfishboy
 mrjt1270
 mrksherrmann
 mrmillstream
@@ -1895,6 +1917,7 @@ nikin51
 nikoz10
 nilap1978
 nimavi
+nimbleknight
 nimos01
 ninifu
 nirvana
@@ -1998,6 +2021,7 @@ paingloss
 pajde
 pakonan
 pal05
+pal1n0
 paleologos11
 palidan5
 palmeros48
@@ -2039,6 +2063,7 @@ paulh1958
 paulhumphreys
 paulnrjones
 paulthebaul
+paultheplugg
 paulywalnuts
 pavel999999
 pawnaround
@@ -2057,6 +2082,7 @@ pebbles123
 pedja789
 pedro_mateo
 pejoko
+pelikaan
 pelouche
 pepp7
 pequive
@@ -2127,6 +2153,7 @@ powerchokes
 pradeepmurthy95
 prapas1024
 praveeensamj2
+prestonpapa
 pretty_hate_machine
 prezrio4
 prioryparade
@@ -2231,6 +2258,7 @@ reydeespadas
 rez123456
 rezaaman
 rfrrfr
+rha3gar
 rhutcheson
 ribeirobr1
 richardbarski
@@ -2256,6 +2284,7 @@ rlparkeruk
 rnt2021
 ro_flores
 rob_appleby
+robbiebobic
 robdonchess
 robe10
 robertgerrard
@@ -2667,6 +2696,7 @@ tomas1313
 tomciop
 tomdraug
 tomengelhardt
+tomfinney123
 tomgoodsol
 tommy123xxx
 tonybuiano
@@ -2690,6 +2720,7 @@ tretorvic
 trevorlahey771
 trhkyt
 trigeek22209
+trix52
 trotsky77
 troyen
 truthmuse
@@ -2919,3 +2950,4 @@ zwilling67
 zwischenzugzwaenge
 zybex9
 zygatron
+zzarkis
