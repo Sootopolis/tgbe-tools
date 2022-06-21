@@ -10,12 +10,14 @@
 20gblum
 210tony
 2blackrooks
+3angels
 4king_knight
 4knights50
 501soldier
 55gra23
 5amin8
 5martacus
+64chess2021
 64shadesofgrey
 67chessgames
 777_s_777
@@ -279,6 +281,7 @@ beeehrer
 beermat78
 behradrahmani92
 beki111
+belacsregor
 benjie1121
 benkiuguasu
 benni58
@@ -666,6 +669,7 @@ derekdharvey
 derekwilliams228
 derenlat
 derspieler50
+desaimanav93
 desertpawnsw
 detectie
 detroitlions1
@@ -810,6 +814,7 @@ emersonfreitas
 emildrake
 emilie_hegland
 emilovsk
+emin1001
 emmanuel5408
 enetsen
 engingirgin
@@ -820,6 +825,7 @@ eraitikos
 erfan19
 erfannorikia
 erichprivat
+erick1962
 erickson87121
 ericpursley
 ernestsmith1
@@ -998,10 +1004,12 @@ gibbers1
 gibbilo
 gibson2
 gibsori
+gilangaditya
 ginoinreno
 ginzbirdman
 gioguaz
 giomal
+giorgisulaberidze
 giorm17
 giovannimoscatelli
 giuggiulena
@@ -1021,6 +1029,7 @@ gogosf
 gokulk16
 gold_grizzly
 golddog
+goldenhands7
 goldenwheelx
 goldhorns
 goldiman
@@ -1065,6 +1074,7 @@ guchlu
 gudmarss
 guigarcia
 gunnyslayer
+gunyus
 gustavogarza13
 gutsygecko
 gw2
@@ -1156,6 +1166,7 @@ humanistaaleko
 huntera88
 hunterjaed
 hybridi
+hydro79
 i5ao
 iain72
 iainctredway
@@ -1175,6 +1186,7 @@ igoryacha
 iker71
 ikhtiandre
 ilbonoff
+ildanny
 ilgarmirzayev
 ilikepie9999
 ill_be_black
@@ -1406,6 +1418,7 @@ kangru
 kano995
 kaonsral
 kapelskrysh
+kareemblack
 karimcannes
 karimherroui
 karlbeyleveld
@@ -1621,6 +1634,7 @@ lux47
 lvquan006
 lxnnyx
 lyudmylabuchyn
+lza78
 m0nkeytrousers
 m13xx
 m1chael11
@@ -1654,6 +1668,7 @@ malinaru
 malishious
 malko
 malvic
+mamal4040
 mancave29
 manchesstercity
 manitarius
@@ -1695,6 +1710,7 @@ markinmo
 markovitez
 markscooter10
 markusmaurer
+markusorelious
 marlin1875
 marsdelpueblo
 martinkojo
@@ -1737,6 +1753,7 @@ mehulkj
 meidan_s
 meladze99
 melih34
+meliton
 melvinkentsowder
 memento_mori_primis
 memo_fkm
@@ -1858,6 +1875,7 @@ msa1994
 msmiljevic
 msoliver
 msqueeny0609
+mstoev88
 msv68
 mtdelacruzcavite
 mtjc
@@ -1914,6 +1932,7 @@ nicolasjouault
 nihili75
 nikdelhossein
 nikin51
+nikolay1970
 nikoz10
 nilap1978
 nimavi
@@ -1981,6 +2000,7 @@ ollyr
 olpl
 oluwatomi
 omand41
+omatikaya
 omgdidirealyjustsact
 omidrahimi1369
 omnipaul
@@ -2150,6 +2170,7 @@ postieuk
 poucetoi
 pougelstad
 powerchokes
+powerpufgirl
 pradeepmurthy95
 prapas1024
 praveeensamj2
@@ -2211,6 +2232,7 @@ rashid177
 rattusgangstus
 raulmsanchez
 ravadu123
+ravi54
 rayirth_vats
 raysawy64
 rayv
@@ -2238,6 +2260,7 @@ redhatx
 redknight27
 redknightskewered
 redman
+redsky333
 redsox1970
 redspecial
 redsprite
@@ -2381,6 +2404,7 @@ sandra1on1
 saniyat24
 sanuki
 saplingwoods21
+sarabo
 saratonga
 sarge7697
 sartresghost
@@ -2447,6 +2471,7 @@ shuwaht
 sidonianknight
 sidthesod
 sierrastar
+sigurd-jarl
 silversurfer7
 silviu_76
 simbaxx
@@ -2571,6 +2596,7 @@ strim1
 strongriddle
 stuartroyjones
 student2003
+stupid_i_am
 suffolkpunch
 sullamontagna
 sultan2010
@@ -2686,6 +2712,7 @@ timschoeniger
 timur111181
 tiredoldman-original
 titulintti
+tjandanleni
 tjanus71
 tkdryan
 tod-boy
@@ -2724,6 +2751,7 @@ trix52
 trotsky77
 troyen
 truthmuse
+tryhardbutnoob_cz
 tsand1113
 tsengeltunsag
 tsin0125
@@ -2810,6 +2838,7 @@ votka7
 vova346
 vrystaatbul
 vstrelnik
+vuduchile
 vuki77
 vvlad22
 vvqes
@@ -2885,6 +2914,7 @@ wrod1987
 wstanevans
 wstennischamp
 wthedog
+wuki
 wynjvr
 xanthippes
 xavilanz
@@ -2938,6 +2968,7 @@ zlikom
 zlyvkomiroslav
 zokilu
 zolko24
+zombi_2
 zombybob
 zoran5
 zorantosic
