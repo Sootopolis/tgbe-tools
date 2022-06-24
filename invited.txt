@@ -149,6 +149,7 @@ an_angry_pawn
 anacardium
 anastasakis
 anationalacrobat
+anchordraw
 andre-hdez
 andreituapse
 andreuska
@@ -233,6 +234,7 @@ aurotruji
 aussiejimk
 aussiemac89
 austenidol
+austin200700
 austinguy
 autumncurtis
 av_kolchak
@@ -312,6 +314,7 @@ bill3347
 billforchess
 billgraynotes
 billyjchess
+bilousov
 biloute3323
 bioinformagician
 bionrd
@@ -411,6 +414,7 @@ bungle71
 bunnygod1
 butichess
 button88
+buttonc
 c0aca
 c_benham
 cachareria25
@@ -466,6 +470,7 @@ cembalo
 cerberus274
 cesardegroot
 cesaroscco
+cgiorgos1
 chakqs
 champ-68
 chankyaneti68
@@ -782,6 +787,7 @@ eddielevis
 eddytjan
 edefasm
 edelpatzer
+edgarh37
 edirga
 edoisky
 edomex25
@@ -895,6 +901,7 @@ fez1974
 ffbrothers
 fgalmeid
 fgleason
+fide1855
 fighterz
 filosofilico
 finnkeddin
@@ -1013,6 +1020,7 @@ gibbilo
 gibson2
 gibsori
 gilangaditya
+ginobili
 ginoinreno
 ginzbirdman
 gioguaz
@@ -1464,6 +1472,7 @@ kidchess2500
 killerkween
 kindpawn
 king1264
+king960
 king_jeffrey_lechez
 kingdomswagg
 kinggkongg
@@ -1522,6 +1531,7 @@ kungfupanda2004
 kuntakente
 kurilow
 kurtogluu
+kutyus
 kwa1
 kwatson27
 kylemck1
@@ -1537,11 +1547,13 @@ lalo0675
 lalos
 lamascarademon
 lambares
+lambertus
 lanceval
 landau96
 landon1981
 langbein
 lannes_jean
+lardonio
 lardy28
 laremaro
 laseve91
@@ -1840,6 +1852,7 @@ mkouter
 mkreps
 ml72
 mladenkrsic
+mmadaras
 mnorbert87
 moasta
 mobarez
@@ -1907,6 +1920,7 @@ munanaim
 munari
 muqaddamshakirova
 musicplayer99
+myauno
 mybishop1
 mykser
 mysterycas
@@ -1932,6 +1946,7 @@ necroscope640
 nedthecrazybishop
 neelsskaak1
 nefasto973
+neha199602
 neithsia
 nek2012
 nel364
@@ -1983,6 +1998,7 @@ notused
 nov75
 nrmalde
 nsy2ndteam
+nuberu
 nudger12
 nuncle
 nuran93
@@ -2002,6 +2018,7 @@ oekm
 officialshawa
 ofitzer
 oghaab22
+ogicres
 ola-v
 olcmarcus
 oldbones51
@@ -2221,6 +2238,7 @@ qafarovv
 qossmean
 qqpk
 quack_ster
+quail3796
 quarktonic
 quas_primas
 queeneatingdragon
@@ -2391,6 +2409,7 @@ s0lm0
 s1lvertiger
 s_shashish-chessbolt
 sabatoli
+sacha212
 sacrificialprawn
 sadudin
 saetta1000
@@ -2430,14 +2449,18 @@ saplingwoods21
 sarabo
 saratonga
 sarge7697
+saro_ar
 sartresghost
+sasa333
 sashadan
+sassafrasa
 sassenach65
 saulo4c
 saulofwigan
 savvyfellow
 saxzn
 saywhen
+scarletsnail
 scaroth
 scetino
 scherzos
@@ -2646,12 +2669,14 @@ tablerorojo
 tabletennisman121
 taboot1978
 taconacho1994
+takestock
 tal_d_best
 tal_k
 talgat_astana
 tamer35_5
 tamer619
 tamirsoliman
+taner
 tango6925
 tangocharlie27
 taras22
@@ -2690,6 +2715,7 @@ thanasis61979
 thatkarlguy
 thatsagas
 thaunghtut
+the-auspex
 the-untrained
 the_blade
 the_indian_dude
@@ -2709,6 +2735,7 @@ thegreatnutkins
 theharry
 thehumblelegend
 theincrediblerook
+thelastcharrua
 thelegend_10
 thelordofwinterfell
 themanwithno_name
@@ -2728,6 +2755,7 @@ thonock
 thorongil22
 threecsdad
 throbby4
+thugnastysloth
 thusith64
 ticklefist84
 tiepinl
@@ -2807,10 +2835,12 @@ unaman
 unclenathan
 underveis
 unforgivenundertaker
+unicronz
 unstable8
 uptherievers
 uqtay
 uray24
+urbanrecluse
 usama-ahmd-nela
 uwe23
 uxb_steve
@@ -2818,6 +2848,7 @@ vagrantsoulchess
 vaima01
 vakuum
 val3002
+valdoza
 valeksk
 valeriobc
 valery1957a
@@ -2839,6 +2870,7 @@ victormanolo
 victorstenshin
 videcv
 videssosakritai
+vidra133
 viffer800
 vikingchucky
 viktor_boev
@@ -2853,6 +2885,7 @@ visbrano1907
 vishy1410
 vitalyklmnk
 vitor2908
+vittoriagiuseppe
 viva-villa
 vkastanas
 vlach
@@ -2891,6 +2924,7 @@ waterbend3r
 wbz403
 wearsider
 weekiatyeo
+wellingtonian
 wenlock
 werball
 wertdeswertes
