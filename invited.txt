@@ -287,6 +287,8 @@ beermat78
 behradrahmani92
 beki111
 belacsregor
+belgianking98
+belgianrocker
 benjie1121
 benkiuguasu
 benni58
@@ -521,6 +523,7 @@ chesswine27
 chesswithdino
 chessymcchessface96
 chesszone9937
+chevalier25
 chicanuck
 chichikinaleksei
 childhoods-end
@@ -543,6 +546,7 @@ chuck2691
 chuffy54
 chuggerboom
 chukirov
+chuklev91
 chyconija
 chyraen
 chz3369
@@ -562,6 +566,7 @@ clms_chess
 cloudp
 clunkyer
 cm1970
+cobb452
 coeurdelyon
 coffee-pot
 coffeechess4096
@@ -634,6 +639,7 @@ dannyrowles
 danthesloth
 daredevil_2512
 dark-shogun
+dark_perimeter
 darklorien
 darkpavel
 daruma52
@@ -690,6 +696,7 @@ derenlat
 derspieler50
 desaimanav93
 desertpawnsw
+desolationangel
 detectie
 detroitlions1
 devanshking4420101200
@@ -871,6 +878,7 @@ everlyse
 evgenymukhin
 evilgazebo
 ewingwr
+ewolcan
 exmexicano
 extenfactory
 fabiopicolo
@@ -905,9 +913,11 @@ fector_mt
 federal_judge16rus
 federer100
 federis
+feela1
 felani
 felipe59
 fenway21117
+ferfran
 fernando_vel
 ferrarifan27
 fez1974
@@ -963,6 +973,7 @@ freluquetbis
 freyja23
 frid-man
 friedeggsof
+friedhelm1960
 fritz_the_cat
 frncbvrd
 frontenislavall
@@ -1132,6 +1143,7 @@ happyhiren
 haraldchess
 hari_uk
 harlem_shaker
+harry-78
 harrypatzer
 harrytipper3
 hashisheen
@@ -1305,6 +1317,7 @@ jcvila
 jdiamant07
 je-cabangcla
 jean-marielemire
+jean_de_louvre
 jebent
 jechaffins
 jefferson_chess_br
@@ -1316,6 +1329,7 @@ jes1969w
 jessy75
 jestey
 jesus_lucia
+jet61
 jf1
 jg1
 jg29
@@ -1364,6 +1378,7 @@ johnnyboy1576
 johnnyolbc
 johnnyu
 johnpfred
+johnrossi
 johnsabin
 johnwickham
 johnxwood
@@ -1461,12 +1476,14 @@ karlbeyleveld
 karlozko
 karlwhite
 karmeleone
+karons
 kastelanin
 kaszassandor
 kathang_diwa
 kautilya68
 kaymishra
 kaysin99
+kayuu23
 kbarth
 kblunt333
 kbrownmx
@@ -1542,6 +1559,7 @@ ksandaker
 ktahmooresi
 ktsquangkhanh
 kuk143
+kulsatish
 kumar_saket1979
 kungfupanda2004
 kuntakente
@@ -1557,6 +1575,7 @@ l0n3-p4wn
 lady_outlaw
 ladyofthe_knight
 lafleur1957
+lakandiwa
 laker32
 laki_juhar
 lalo0675
@@ -1713,6 +1732,7 @@ malinaru
 malishious
 malko
 malvic
+malvolio62
 mamal4040
 mancave29
 manchesstercity
@@ -1821,6 +1841,7 @@ mexcal1975
 mfh1974
 mfo66
 mfreke21
+mgalli
 mhgoss
 mi15258
 miaunescu
@@ -1853,6 +1874,7 @@ mildano
 mildred3
 millsteach
 mimasia
+minamina18
 miqayelkhachatryan
 miqo7
 mirakubat
@@ -1921,6 +1943,7 @@ mrjt1270
 mrksherrmann
 mrmillstream
 mrmoney1
+mroa0599
 mrsuitcase
 msa1994
 msmiljevic
@@ -2017,6 +2040,7 @@ notjamo
 notsolucky21
 notused
 nov75
+nqmaime
 nrmalde
 nsy2ndteam
 nuberu
@@ -2104,6 +2128,7 @@ pal1n0
 paleologos11
 palidan5
 palmeros48
+pam234
 pangus
 pannalman
 panosgagalis
@@ -2163,6 +2188,7 @@ pedro_mateo
 pejoko
 pelikaan
 pelouche
+peoncolorado
 pepp7
 pequive
 persaq
@@ -2306,6 +2332,7 @@ rdeschain_89
 rdiet
 rdn2013
 rdoonan
+realchessnut
 realmofspirits
 rebellxsky
 rebelwriter
@@ -2491,6 +2518,7 @@ scaroth
 scetino
 scherzos
 schinderhannes61
+schlappyc
 schrob
 scorpino76
 scorpio100
@@ -2524,6 +2552,7 @@ shaharaim
 shahzor
 shaka_zulu_king
 shakir_ghazi
+shaneshaw1961
 shaolinkillerdeporco
 shawnlg777
 sheepzzz4
@@ -2559,7 +2588,9 @@ sirrah1
 sirwasimmuridke99
 sk-b
 skakmadam
+skakmand
 skelterhelter99
+skenda69
 skibass
 skillfultaxi
 skorpionbg
@@ -2583,6 +2614,7 @@ sncpapa
 sneakyqueen
 snop2000
 snotnosterbol
+snowpumacat
 soeren164
 soetewey
 sofialuke1983
@@ -2611,6 +2643,7 @@ sporadicofficial
 spottdrossel
 sprut
 sras01
+srichakra
 sschmieta
 sspeed
 st-nut
@@ -2849,6 +2882,7 @@ turboroy
 turq06
 tweety_byrde
 tyrone1980
+tzimakos1173
 tzvetanov
 uberscoober
 ubumebme
@@ -2998,6 +3032,7 @@ wolf227
 wolfbird
 wolfman1122
 wolfshield
+wolschi
 wolverineheals
 wonderfull8
 woody_wood_pusher
