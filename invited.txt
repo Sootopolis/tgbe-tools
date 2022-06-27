@@ -92,6 +92,7 @@ aldooooo
 alecbod
 alectryon
 aleexan
+alekhine2025
 aleksandr_k
 aleksandr_katkov
 aleksandralehin
@@ -289,6 +290,7 @@ beki111
 belacsregor
 belgianking98
 belgianrocker
+benbenjajaminman
 benjie1121
 benkiuguasu
 benni58
@@ -299,6 +301,7 @@ benztoyzii
 beotoch
 beqa24
 bercamal
+bergbossendorf
 bernie1980
 beryslav-kyiv
 beth164
@@ -317,6 +320,7 @@ bill2
 bill3347
 billforchess
 billgraynotes
+billydekid
 billyjchess
 bilousov
 biloute3323
@@ -411,6 +415,7 @@ bsa65
 bsankar
 bsgor
 bubbleskitties
+bufab
 bugurtian_ii
 bukinistoleg1968
 buleon
@@ -433,6 +438,7 @@ canadachess2015
 canari20
 canaryhammer
 canca
+cancancantona
 candelalight
 canrfisica33
 capablanca24
@@ -465,6 +471,7 @@ catalin_radu1
 catfanshogl
 catshavepaws
 cavastrangler
+cavu
 cbeato
 ccbforlife
 ccccretan
@@ -477,6 +484,7 @@ cesardegroot
 cesaroscco
 cfdeng
 cgiorgos1
+chair-man
 chakqs
 champ-68
 chankyaneti68
@@ -529,6 +537,7 @@ chichikinaleksei
 childhoods-end
 chillychess2010
 chinguunb
+chinogarcia57
 chockeyboy
 chocpot
 chorlton69
@@ -575,6 +584,7 @@ cokermike
 colinbmcbride
 colinstrong
 colmartinfc
+colorfulrainbow2020
 columbo2008
 comrade44
 concordat
@@ -626,6 +636,7 @@ dalailuke
 daleko22
 damarch
 damayito
+dan25678998
 dan_a
 danbois5
 danbrstrm
@@ -703,6 +714,7 @@ devanshking4420101200
 devilishangel1
 devitoria
 dewitt281
+dgarcia01
 dgrish
 dgsgibara
 dgwizard
@@ -1313,12 +1325,14 @@ jay71
 jayeggert
 jazicr
 jbsfe1812
+jcohen42
 jcvila
 jdiamant07
 je-cabangcla
 jean-marielemire
 jean_de_louvre
 jebent
+jebusdatolo
 jechaffins
 jefferson_chess_br
 jeffjmcintire
@@ -1528,6 +1542,7 @@ kmir2-d2
 kmqureshi100
 kng
 knight593
+knightbeatsall
 knightcharles
 knightdive
 knightgirl385
@@ -1662,12 +1677,14 @@ llthomasll
 lmmart-7
 lmmduarte
 logsy
+loki_82
 londonlark
 longdiagonal43
 loosecannons
 lord_benjou
 lord_edmund
 lord_leon
+lordchesseline100
 lordgoig
 lordmamu
 lordmwa
@@ -1770,6 +1787,7 @@ mariusm1983
 mark-ch
 markbol
 markbv
+markdennison
 markgoldshtein
 markinmo
 markovitez
@@ -1853,6 +1871,7 @@ michaelkushar
 michaelmarmorstein
 michail_tal
 michelangelo111
+mickey222
 mickeyren1
 mickscan
 midnight_rambler
@@ -1912,6 +1931,7 @@ moleff2020
 momobenni
 monadjib
 mondfell
+monkeywithgun
 montfort
 montyspringer
 mookjw
@@ -2105,6 +2125,7 @@ osher12345
 osmanomeragic
 ossie57
 oszapo62
+oth42
 ottgm
 oulayoulay
 ouroboros
@@ -2385,6 +2406,7 @@ rimas4
 rimsky33
 riosl
 risosir
+ristoalexander
 river2horses
 rivermonster60
 rj240616
@@ -2433,6 +2455,7 @@ ronbrendanmarin
 roodenrijs
 rookbro12
 rookover
+rookyhere
 rootsrocker
 roryduthie
 rosenoire
@@ -2490,6 +2513,7 @@ samduck
 samharut
 samigulla
 samihgeha
+samkoemka
 samkumar0987
 sammyl1108
 samuel_a_noob
@@ -2575,6 +2599,7 @@ sierrastar
 sigurd-jarl
 silversurfer7
 silviu_76
+simba007
 simbaxx
 simi_1111
 simonesapphire
@@ -2647,6 +2672,7 @@ srichakra
 sschmieta
 sspeed
 st-nut
+st-sandavagur
 st1er
 stajerc
 stanimir
@@ -2711,6 +2737,7 @@ sultan2010
 sumand
 sumnelse
 sumy58
+sunnymick
 superfluousguy
 superpositionm
 superprog
@@ -2724,6 +2751,7 @@ swmike
 synchronicity16
 szekelycsaba76
 szente
+szescdziewiec
 t-hobbes
 taataravi
 tablerorojo
@@ -2755,6 +2783,7 @@ tboss111
 tdale95
 teachesmay
 tec391
+ted_logan
 teddyroo
 teekayewun
 teheux
@@ -2896,6 +2925,7 @@ umibozzu
 umkorotk
 unaman
 unclenathan
+undefeated_chessking
 underveis
 unforgivenundertaker
 unicronz
@@ -2906,6 +2936,7 @@ uqtay
 uray24
 urbanrecluse
 usama-ahmd-nela
+usto2015
 uwe23
 uxb_steve
 vagrantsoulchess
@@ -3066,6 +3097,7 @@ yonabendelac
 yonitheavenger
 yorkshirepud
 youcefal
+youmademerealise
 young123
 youtube19
 ys_kanwar
@@ -3083,6 +3115,7 @@ zanosom
 zaplji
 zaragoza_inmortal
 zarbianite
+zari72
 zeligar
 zendak
 zentao8
