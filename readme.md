@@ -20,11 +20,15 @@ In a club match between two clubs:
 
 ### 3. My Role as Club Admin
 
-As an admin of my club, I am mainly in charge of inviting players from other clubs to join my club ("looting"/"raiding", as we call it - but as a player can belong to a virtually unlimited number of clubs, I am not actually stealing players away from other clubs). 
+As an admin of my club, my main responsibility is to recruit new players by inviting players in other clubs' member lists to join my club. ("Looting" or "raiding", as we call it - but as a player can belong to a virtually unlimited number of clubs, it is not really a steal.)
 
-To invite a player, an admin must send the player an invitation through an official invitation portal, else risk getting banned by chess.com for spamming. Up to 30 invitations are available at any given time on the portal, and once an invitation is used, it will be replenished after exactly 24 hours. An invited player can decide to join the club or not.
+To invite a player, an admin must send the player an invitation through an official invitation portal, else risk getting banned by chess.com for spamming. 
 
-I aim to **avoid** inviting players players who: 
+Up to 30 invitations are available at any given time on the portal, and once an invitation is used, it will be replenished after exactly 24 hours. 
+
+An invited player can decide to join the club or not.
+
+I aim to **avoid** inviting players who: 
 
 | filter                                               | reason                                                                                                                                            |
 |------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -32,13 +36,22 @@ I aim to **avoid** inviting players players who:
 | are in too many clubs                                | they tend not to do much for any of them                                                                                                          |
 | do not play club matches                             | if they don't play for their clubs, they won't do for us                                                                                          |
 | time out club matches                                | if they time out for other clubs, they will do for us too (note that I don't care if they time out personal games such as individual tournaments) |
+| resign early in club matches                         | similar rationale as above                                                                                                                        |
 | move too slow                                        | it's annoying                                                                                                                                     |
 | do not have too many daily games ongoing             | it incurs a huge risk of a mass timeout                                                                                                           |
-| do not have suspiciously high win rate or elo rating | they can be banned for cheating                                                                                                                   |
+| do not have suspiciously high win rate or elo rating | they are likely to be banned for cheating                                                                                                         |
 | do not have really low win rate or elo rating        | they are not of much use for the club                                                                                                             |
 
-I also assist other admins in 
+Before this project, I manually assessed players one by one according to these criteria. 
 
+I also try to avoid even assessing players who:
+
+* have already been invited
+* are current members of my club
+* are former members of my club who are no longer members for whatever reasons
+
+I also occasionally assist other admins with their tasks, such as identifying members who time out their games or resign early and those who contribute a lot of points to the club. 
 
 ## Problems
 
+###
