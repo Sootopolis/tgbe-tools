@@ -2,27 +2,40 @@
 
 ## Table of Contents
 
-I. [Background](#I.-Background)
+1. [Background](#background)
 
-1. [The Club](#1.-The-Club)
-2. [Game and Match Formats](#2.-Game-and-Match-Formats)
-3. [My Role as Club Admin](#3.-My-Role-as-Club-Admin)
+   1. [The Club](#the-club)
+   2. [Game and Match Formats](#game-and-match-formats)
+   3. [My Role in Recruitment](#my-role-in-recruitment)
+2. [Problems](#problems)
 
-II. [Problems](#II.-Problems)
+   1. [Timeout and Inactivity](#timeout-and-inactivity)
+   2. [Player of the Week (POTW)](#player-of-the-week-potw)
+   3. [Looting](#looting)
 
-1. [Timeout and Inactivity](#1.-Timeout-and-Inactivity)
-2. [Player of the Week (POTW)](#2.-Player-of-the-Week-(POTW))
-3. [Looting](#3.-Looting)
+3. [The API](#the-api)
 
-III. [The API](#III.-The-API)
+    1. [Player](#player)
+        1. [Player - Stats](#player---stats)
+        2. [Player - Clubs](#player---clubs)
+        3. [Player - Games - Ongoing](#player---games---ongoing)
+        4. [Player - Games - Monthly Archives](#player---games---monthly-archives)
+    2. [Club](#club)
+        1. [Club - Members](#club---members)
+        2. [Club - Club Matches](#club---club-matches)
+    3. [Club Match](#club-match)
+   
+4. [The Programs](#the-programs)
 
-## I. Background
+    1. [Update Membership](#update-membership)
 
-### 1. The Club
+## Background
+
+### The Club
 
 We are a chess club on chess.com that actively participate in daily chess club matches and currently sits 10th on the daily club match worldwide leaderboard.
 
-### 2. Game and Match Formats
+### Game and Match Formats
 
 In a daily chess game, a player must make a move in a given number of days (usually 3, but can also be 1, 2, 5, 7, 10, 14), whereas failure to do so will result in a loss by timeout. 
 
@@ -34,15 +47,13 @@ In a club match between two clubs:
 * If a player is banned by chess.com for cheating, all club matches of the player will be counted as losses, even if they are finished; but in case that a club match opponent of the player is also banned for cheating, the games will count as draws.
 * When all games in a match finish, the match finishes. `5 * (number of boards)` leaderboard points is awarded to the club with more points; in case that the clubs tie in points, `2 * (number of boards)` leadership points is awarded to both.
 
-### 3. My Role as Club Admin
+### My Role in Recruitment
 
 As an admin of my club, my main responsibility is to recruit new players by inviting players in other clubs' member lists to join my club. ("Looting" or "raiding", as we call it - but as a player can belong to a virtually unlimited number of clubs, it is not really a steal.)
 
-To invite a player, an admin must send the player an invitation through an official invitation portal, else risk getting banned by chess.com for spamming. 
+To invite a player, an admin must send the player an invitation through an official invitation portal, else risk getting banned by chess.com for spamming. Up to 30 invitations are available at any given time on the portal, and once an invitation is used, it will be replenished after exactly 24 hours. 
 
-Up to 30 invitations are available at any given time on the portal, and once an invitation is used, it will be replenished after exactly 24 hours. 
-
-An invited player can decide to join the club or not.
+An invited player can decide to join the club or not. When a player opts to join the club, an admin has to approve the player's join request for the player to become a member.
 
 I aim to **avoid** inviting players who: 
 
@@ -69,9 +80,9 @@ I also try to avoid even assessing players who:
 
 I also occasionally assist other admins with their tasks, such as identifying members who time out their games or resign early and those who contribute a lot of points to the club. 
 
-## II. Problems
+## Problems
 
-### 1. Timeout and Inactivity
+### Timeout and Inactivity
 
 Players who time out their games make the club lose points in matches unnecessarily.
 
@@ -79,7 +90,7 @@ Prior to important club matches that require a large number of players to join, 
 
 The admins seek to warn and may eventually remove such players. Given the large number of club matches in which the club participate and the large membership for manual management, it is not always possible.
 
-### 2. Player of the Week (POTW)
+### Player of the Week (POTW)
 
 The club give an award to the player who scores the most points in a 7-day interval (usually from one Thursday 10:00 to the next), known as "player of the week (POTW)". 
 
@@ -87,7 +98,7 @@ An admin has made a program for POTW calculation using PHP. It relies on the "da
 
 Given the part-manual nature of this operation, it is prone to unfairness if it cannot be executed precisely at the same time each week, and to errors if something somehow goes wrong with the copying-pasting (for example if the content of a page is copied when the curser is hovering within a certain area, the data will show the win/lose/draw percentages of members instead of the absolute numbers, which will cause the program to malfunction).
 
-### 3. Looting
+### Looting
 
 I used to find players to invite manually by going through memberships of other clubs and examining each member, but it would take nearly one hour per day to send 30 invitations this way, which has been by far impossible for me to carry on doing.
 
@@ -98,13 +109,13 @@ Also, the following information is no longer available on the web pages:
 
 The club's membership grew from 395 to 470 with my effort during 2020-21. Since I became much busier, it fell to 405 with members leaving, closing their accounts, or being removed by the admins. I know that with my programming knowledge I can revive the club's membership.
 
-## III. The API
+## The API
 
 To look for a way to automate the tasks so that I can still contribute to the club, I joined the [Chess.com Developer Community](https://www.chess.com/club/chess-com-developer-community), where I found [the site's api](https://www.chess.com/news/view/published-data-api) (only accessible after creating a account and joining the Chess.com Developer Community).
 
 The relevant endpoints are listed as follows, with simplifications to omit irrelevant parts: 
 
-### 1. Player
+### Player
 
 ```
 {
@@ -114,7 +125,7 @@ The relevant endpoints are listed as follows, with simplifications to omit irrel
 }
 ```
 
-#### 1.1. Player - Stats
+#### Player - Stats
 
 ```
 {
@@ -133,7 +144,7 @@ The relevant endpoints are listed as follows, with simplifications to omit irrel
 }
 ```
 
-#### 1.2. Player - Clubs
+#### Player - Clubs
 
 ```
 {
@@ -143,9 +154,7 @@ The relevant endpoints are listed as follows, with simplifications to omit irrel
 }
 ```
 
-#### 1.3. Player - Games
-
-##### 1.3.1. Player - Games - Ongoing
+#### Player - Games - Ongoing
 
 ```
 {
@@ -157,7 +166,7 @@ The relevant endpoints are listed as follows, with simplifications to omit irrel
 }
 ```
 
-##### 1.3.2. Player - Games - Monthly Archives
+#### Player - Games - Monthly Archives
 
 ```
 {
@@ -178,9 +187,9 @@ The relevant endpoints are listed as follows, with simplifications to omit irrel
 }
 ```
 
-### 2. Club
+### Club
 
-#### 2.1. Club - Members
+#### Club - Members
 
 ```
 {
@@ -206,7 +215,7 @@ The relevant endpoints are listed as follows, with simplifications to omit irrel
 ```
 "Weekly", "monthly", and "all-time" are active levels of a club's members that are not actually helpful for my purpose.
 
-#### 2.2. Club - Club Matches
+#### Club - Club Matches
 
 ```
 {
@@ -227,7 +236,7 @@ The relevant endpoints are listed as follows, with simplifications to omit irrel
 }
 ```
 
-### 3. Club Match
+### Club Match
 
 ```
 {
@@ -265,7 +274,7 @@ The relevant endpoints are listed as follows, with simplifications to omit irrel
 }
 ```
 
-## IV. The Programs
+## The Programs
 
 I decided that the following use cases are to be fulfilled: 
 
@@ -277,26 +286,26 @@ I decided that the following use cases are to be fulfilled:
 * find POTW
 * automate everything (except "loot")
 
-### 1. Update Membership
+### Update Membership
 
-Files created for this use case:
+Name of the main program:
 * `membership.py`
+
+Files used for this use case:
 * `members.json`
 * `lost_members.json`
 
-Only the club players api endpoint (3.2.1.) needs to be accessed for this purpose. 
+API endpoints used for this use case:
+* 3.i. [Player](#player)
+* 3.ii.a. [Club - Members](#club---members)
 
-from the api, it is easy to get a json (dictionary) of current members and to score it locally. 
+The *Club - Members* API endpoint (3.ii.a.) provides a JSON file which consists of a list of members of a club, and with each member, the timestamps at which the member joined. It can be stored locally into `members.json`. On the next execution of the program, the new JSON and the old can be compared, exposing any differences, i.e. new and lost members. Lost member data are stored in `lost_members.json`.
 
-on the next execution of the program, the new json and the old can be compared, exposing any differences, i.e. new and lost members. data of lost members are also stored locally. 
+A problem with this is that a player is allowed to change username once and only once. This is rare but still happens from time to time. For the sake of other use cases, it should not be seen as an old member leaving and a new one joining. 
 
-a problem to deal with is that a player is allowed to change his/her username once, which should not be seen as an old member leaving and a new one joining. 
+A somewhat practical solution to this problem is to compare the timestamps of new and lost usernames. To some extent, it can be considered an identifier of a player because it is unlikely that a player leaves and another joins in the same second.
 
-a somewhat practical solution to this problem is to compare the "joined" timestamps of new and lost usernames. it can to some extent be considered an identifier of a player because it is unlikely that a player leaves and another joins in the same second. 
-
-a problem with this solution is that in case that the unlikely event happens, it will compromise the data. 
-
-another problem with this solution is that in the rare event that between two execution of the program, a member leaves, rejoins, and changes username at some point between the two executions, the program cannot detect the username change because the "joined" timestamps are different. 
+There are two problems with the solution. The obvious one is that the aforementioned event still may happen. Another is that in the rare event that between two execution of the program, a member leaves, rejoins, and changes username at any point during this period, the program cannot detect the username change because the usernames and timestamps are both different.
 
 a more sensible solution is obviously to use the player id in the player api endpoint (3.1.), which is a truly unique identifier of a player. 
 
