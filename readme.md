@@ -28,6 +28,7 @@
 4. [The Programs](#the-programs)
 
     1. [Update Membership](#update-membership)
+    2. 
 
 ## Background
 
@@ -43,7 +44,7 @@ In a club match between two clubs:
 
 * Before a match starts, each club field a list of players sorted by ratings from high to low.
 * When a match starts, the two lists of players are zipped up, with each pair of players (known as a board) playing two games with each other (one as white and the other as black). The number of boards will be the length of the shorter list of players.
-* When a game finishes, if the result is decisive (i.e. if a player beat the other), 1 point is awarded to the winner's club, else 1/2 points is awarded to both clubs.
+* When a game finishes, if the result is decisive (i.e. if a player beat the other), `1` point is awarded to the winner's club, else `1/2` points is awarded to both clubs.
 * If a player is banned by chess.com for cheating, all club matches of the player will be counted as losses, even if they are finished; but in case that a club match opponent of the player is also banned for cheating, the games will count as draws.
 * When all games in a match finish, the match finishes. `5 * (number of boards)` leaderboard points is awarded to the club with more points; in case that the clubs tie in points, `2 * (number of boards)` leadership points is awarded to both.
 
@@ -303,12 +304,32 @@ The *Club - Members* API endpoint (3.ii.a.) provides a JSON file which consists 
 
 A problem with this is that a player is allowed to change username once and only once. This is rare but still happens from time to time. For the sake of other use cases, it should not be seen as an old member leaving and a new one joining. 
 
-A somewhat practical solution to this problem is to compare the timestamps of new and lost usernames. To some extent, it can be considered an identifier of a player because it is unlikely that a player leaves and another joins in the same second.
+A somewhat practical solution to this problem is to compare the timestamps of new and lost usernames. To some extent, it can be considered an identifier of a player because it is unlikely that a player leaves and another joins in the same second. Now if a member opts to change username, it can be detected as a username change, as a lost username and a new username share the same timestamp.
 
-There are two problems with the solution. The obvious one is that the aforementioned event still may happen. Another is that in the rare event that between two execution of the program, a member leaves, rejoins, and changes username at any point during this period, the program cannot detect the username change because the usernames and timestamps are both different.
+There are two problems with the solution. One, as mentioned, is that the unlikely event may still happen. Another is that in the also very rare event that between two execution of the program, a member leaves, rejoins, and changes username at any point during this period, the program will consider the old username and the new username two different players, for the usernames and timestamps are both different.
 
-a more sensible solution is obviously to use the player id in the player api endpoint (3.1.), which is a truly unique identifier of a player. 
+A more sensible solution is to retrieve from the Player API endpoint (3.i.) every player's player ID, which is an actually unique identifier of a player. 
 
-a problem with this solution is that instead of 1 http request, the program now has to make (1 + number of members) http requests, which drastically increases the runtime. 
+A problem with this solution is that instead of `1` HTTP request, the program now has to make `1 + (number of members)` HTTP requests, which drastically increases the runtime of this program. For a club like mine with 400-600 members, it typically takes a couple of minutes. Should the program be used on clubs with 20,000+ members, however, this process can take hours.
 
-given the relatively low frequency of membership changes thus the need to run this program, plus the fact that comparisons only need to be made on the differences, this should not be a problem. 
+It can be argued that this problem is trivial. The first execution of the program indeed takes `O(n)` runtime, where n stands for the club's membership. But after that, given the generally low ratio of membership changes with regard to the entire membership and the fact that comparisons only need to be performed on the differences, not too many requests have to be made after initialising the membership data. In other words, when comparing the new JSON to the old, the username check can be used on the entire lists, and then the player_id check can be applied on the differences. 
+
+My code in production is currently using the username-timestamp check. It will be updated to use the username-player_id check instead to address the very rare corner cases. 
+
+### Loot
+
+Name of the main program:
+* `loot.py`
+
+Files used for this use case:
+* `members.json`
+* `lost_members.json`
+* `invited.txt`
+* `scanned.json`
+
+API endpoints used for this use case:
+* 
+
+
+
+
