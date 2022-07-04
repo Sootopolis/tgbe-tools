@@ -7,7 +7,7 @@ from progress.bar import IncrementalBar
 from components import *
 
 target = int(input('number of players to invite: '))
-club_name = input('enter club name (as in url): ').strip(' /')
+club_name = input('enter club name (as in url; leave empty to quit): ').strip(' /')
 if not club_name:
     quit()
 
