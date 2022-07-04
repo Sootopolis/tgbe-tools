@@ -17,7 +17,7 @@ clear_cache = True
 min_tm_played = 12  # int(input('minimum number of team match games in last 90 days: '))
 min_tm_ongoing = 2  # int(input('minimum number of ongoing games: '))
 max_ongoing = 100  # int(input('maximum number of ongoing games: '))
-max_clubs = 30  # int(input('maximum number of clubs: '))
+max_clubs = 32  # int(input('maximum number of clubs: '))
 min_rating = 1000  # int(input('minimum rating (inclusive): '))
 max_rating = 2500  # int(input('maximum rating (inclusive): '))
 # min_win_rate = 0.4  # int(input('minimum win rate: '))
@@ -25,7 +25,7 @@ max_rating = 2500  # int(input('maximum rating (inclusive): '))
 min_score_rate = 0.45
 max_score_rate = 0.85
 max_time_per_move = timedelta(hours=18)
-max_offline = timedelta(hours=36)
+max_offline = timedelta(hours=48)
 avoid_admins = True
 
 # find yyyy/mm
