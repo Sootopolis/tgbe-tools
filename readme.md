@@ -73,17 +73,22 @@ player's join request for the player to become a member.
 
 I aim to **avoid** inviting players who:
 
-| filter                                               | reason                                                                                                                                            |
-|------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
-| are not online recently                              | they are obviously not active                                                                                                                     |
-| are in too many clubs                                | they tend not to do much for any of them                                                                                                          |
-| do not play club matches                             | if they don't play for their clubs, they won't do for us                                                                                          |
-| time out club matches                                | if they time out for other clubs, they will do for us too (note that I don't care if they time out personal games such as individual tournaments) |
-| resign early in club matches                         | similar rationale as above                                                                                                                        |
-| move too slow                                        | it's annoying                                                                                                                                     |
-| do not have too many daily games ongoing             | it incurs a huge risk of a mass timeout                                                                                                           |
-| do not have suspiciously high win rate or elo rating | they are likely to be banned for cheating                                                                                                         |
-| do not have really low win rate or elo rating        | they are not of much use for the club                                                                                                             |
+| filter                                                  | reason                                                                                                                                            |
+|---------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
+| are not online recently                                 | they are obviously not active                                                                                                                     |
+| are in too many clubs                                   | they tend not to do much for any of them                                                                                                          |
+| do not play club matches                                | if they don't play for their clubs, they won't do for us                                                                                          |
+| time out club matches                                   | if they time out for other clubs, they will do for us too (note that I don't care if they time out personal games such as individual tournaments) |
+| resign early in club matches                            | similar rationale as above                                                                                                                        |
+| move too slow                                           | it's annoying                                                                                                                                     |
+| do not have too many daily games ongoing                | it incurs a huge risk of a mass timeout                                                                                                           |
+| do not have suspiciously high score rate* or elo rating | they are likely to be banned for cheating                                                                                                         |
+| do not have really low score rate or elo rating         | they are not of much use for the club                                                                                                             |
+
+where score rate is calculated as such: 
+```
+score_rate = (wins + draws * 0.5) / games_played
+```
 
 Before this project, I manually assessed players one by one according to these criteria.
 
@@ -411,9 +416,9 @@ Module(s) involved:
 
 File(s) involved:
 
-* `members.json`
-* `lost_members.json`
-* `invited.txt`
+* `members.json` (list of members of the club)
+* `lost_members.json` (list of former members of the club since I began to keep this record)
+* `invited.txt` (list of players invited by me)
 * `scanned.json`
 
 API endpoint(s) involved:
@@ -428,3 +433,10 @@ API endpoint(s) involved:
 
 <!-- This program has been incredibly valuable for me personally, not just because my main role in the club's admin team is to recruit new player, but also because the design, implementation, and outcome of this program have been absolutely instrumental in landing me a visa-sponsoring job in the UK.-->
 
+At the beginning of the program, user inputs are taken for the number of invitable players to find and the name of the club to find them from. 
+
+Then parameters for the filters mentioned earlier in 1.iii. [My Role in Recruitment](#my-role-in-recruitment) are set. These are hard-coded into the program, for there is usually no need to change these parameters. Should some parameters be required to change frequently, though, it would of course be possible to take user inputs for them, but the caching mechanism would have to be overhauled, which will be explained later. 
+
+The program then gets the current time. This will be used for multiple purposes:
+* to delete expired cache (explained later)
+* 

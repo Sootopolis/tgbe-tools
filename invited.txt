@@ -158,6 +158,7 @@ anastasakis
 anationalacrobat
 anchordraw
 andre-hdez
+andreasshahinyan
 andreituapse
 andreuska
 andrew_pike
@@ -266,6 +267,7 @@ badaveg
 badescuionutlucian
 badgertonofthirst
 badlobster
+bai_stavri
 bajosh
 balabali02
 baldazar
@@ -405,6 +407,7 @@ braddeichler
 bradfee
 bradleypetersen
 branur
+bravenam
 brettkoz
 brewfessor
 brfc
@@ -486,6 +489,7 @@ catshavepaws
 cavastrangler
 cavu
 cbeato
+cbwkay
 ccbforlife
 ccccretan
 cclynes
@@ -668,10 +672,12 @@ dani_el_vida_les
 danielboonep
 danieldelaisla
 danielmp123456789
+danielpalabuykov
 danman24
 dannyrowles
 danthesloth
 daredevil_2512
+darindd
 dark-shogun
 dark_perimeter
 darklorien
@@ -1086,6 +1092,7 @@ genjul
 gent00
 geordieed
 george_2908
+georgi_atanasov
 gersonripardo
 gfaq
 ggarbarini
@@ -1122,6 +1129,7 @@ glengen
 glomik
 gmacandcheese
 gmartinp
+gmemmy
 gmprtmblk
 gmronweasley
 gnjecc
@@ -1216,6 +1224,7 @@ havefunplayingchess
 havoern
 hbk15
 hbpatel142
+he4obek
 healblazer
 hedgefox
 hegj
@@ -1333,6 +1342,7 @@ iurifq
 ivan53
 ivan_shumoff
 ivanhoeiii
+ivanivanovstr
 ivankolevivanov
 ivanm
 ivsky
@@ -1387,6 +1397,7 @@ jazicr
 jbsfe1812
 jcohen42
 jcvila
+jdhgriffin
 jdiamant07
 je-cabangcla
 jean-marielemire
@@ -1429,6 +1440,7 @@ jkpopov
 jllister
 jlmolgar
 jmontesn
+jn64
 joaopaulomtmirandapeluchi
 jocke_1
 jocls
@@ -1477,6 +1489,7 @@ jordanh
 jorgepellicera
 jorgxt
 jorkmantorres
+jorobs
 jose_alberto63
 jose_kagaoan
 joseignacio57
@@ -1511,6 +1524,7 @@ judger1
 jugrnot
 juiceboy007
 jul_kev
+jules_raider
 juliasou
 juliochen
 junglechess
@@ -1573,6 +1587,7 @@ keljosh
 kempokempo
 kenbenton
 kerem79
+keres1982
 kermadec01
 kerniggut
 kerri-jo
@@ -1581,6 +1596,7 @@ kerteszk
 kgdcia
 khan2670
 kidchess2500
+kikiok
 killerkween
 kindpawn
 king1264
@@ -1605,6 +1621,7 @@ klecken
 kliprsa
 kmir2-d2
 kmqureshi100
+kneonlight
 kng
 knight593
 knightbeatsall
@@ -1630,6 +1647,7 @@ kotov2000
 krajek6
 kramin
 kramraek
+krasikirchev
 krasitzz
 krinakrina
 kringtord
@@ -1637,6 +1655,7 @@ krisstianes_017
 krm28
 kronus11
 krunicm
+krvelkov
 kryshevalshik
 ksandaker
 ktahmooresi
@@ -1686,6 +1705,7 @@ latecafe
 laut_selatan
 lavasalad
 lavrichenko
+lazardel
 lazarorojas6312
 lazroman
 lazy_gun
@@ -1701,6 +1721,7 @@ leflaneurbreton
 lefleurdeny
 leglessbird
 leigh981
+leimonus
 leiten1
 len2016
 len31
@@ -2053,6 +2074,7 @@ mrmillstream
 mrmoney1
 mroa0599
 mrsuitcase
+mrtn
 msa1994
 msfuzzywalker
 msmiljevic
@@ -2093,6 +2115,7 @@ narenpa
 nashlypol
 nashwannmahfoud
 nasso889
+nastradamuz
 nastyushechka
 nayyar1973
 nc55
@@ -2246,6 +2269,7 @@ paleologos11
 palidan5
 palmeros48
 pam234
+panader1s
 pangus
 pannalman
 panosgagalis
@@ -2354,6 +2378,8 @@ pistoulasa
 piv1971
 pjasodactyl
 pkinnicutt
+plamen196565
+plamen77
 planteverte222
 plascornel
 plimsol
@@ -2555,6 +2581,7 @@ romangomezmarin
 romanromanyshyn
 romualdas
 ron1010
+ron2969
 ronbrendanmarin
 roodenrijs
 rookbro12
@@ -2659,6 +2686,7 @@ scottkr
 scottr0313
 scouser86
 scouserone
+sdenchev
 sdminsocal
 sean6322
 seanclark
@@ -2861,6 +2889,7 @@ surangad
 surfsnook
 susanadualte
 svetlayordanova
+sveto
 swaterwalker
 swift-j
 swmike
@@ -3018,6 +3047,7 @@ troyen
 truthmuse
 tryhardbutnoob_cz
 tsand1113
+tsankodimitirov
 tsengeltunsag
 tsin0125
 ttanimoto
@@ -3227,6 +3257,7 @@ yorkshirepud
 youcefal
 youmademerealise
 young123
+yourdantrifonov
 youtube19
 ys_kanwar
 yuexiafanzhou
