@@ -45,7 +45,7 @@ try:
         scanned = json.load(scanned_json)
     if clear_cache:
         for key in list(scanned.keys()):
-            if scanned[key] <= current_datetime.timestamp():
+            if scanned[key] <= start:
                 del scanned[key]
         # with open('scanned_players.json', 'w') as scanned_json:
         #     json.dump(scanned, scanned_json, sort_keys=True, indent=2)
@@ -128,7 +128,7 @@ with requests.session() as session:
                 # eliminates players offline for too long
                 if current_datetime - datetime.fromtimestamp(content['last_online']) > max_offline:
                     if enter_cache:
-                        scanned[player] = int(current_datetime.timestamp() + timedelta(days=30).total_seconds())
+                        scanned[player] = int(start + timedelta(days=30).total_seconds())
                     continue
 
                 # get player clubs
@@ -143,7 +143,7 @@ with requests.session() as session:
                 # eliminates players with too many clubs
                 if len(content['clubs']) > max_clubs:
                     if enter_cache:
-                        scanned[player] = int(current_datetime.timestamp() + timedelta(days=30).total_seconds())
+                        scanned[player] = int(start + timedelta(days=30).total_seconds())
                     continue
 
                 # get player stats
@@ -158,13 +158,13 @@ with requests.session() as session:
                 # eliminates players who don't play daily
                 if 'chess_daily' not in content:
                     if enter_cache:
-                        scanned[player] = int(current_datetime.timestamp() + timedelta(days=30).total_seconds())
+                        scanned[player] = int(start + timedelta(days=30).total_seconds())
                     continue
 
                 # eliminates players who move too slow
                 if timedelta(seconds=content['chess_daily']['record']['time_per_move']) > max_time_per_move:
                     if enter_cache:
-                        scanned[player] = int(current_datetime.timestamp() + timedelta(days=30).total_seconds())
+                        scanned[player] = int(start + timedelta(days=30).total_seconds())
                     continue
 
                 # eliminates players not in rating range
@@ -173,7 +173,7 @@ with requests.session() as session:
                     content['chess_daily']['last']['rating'] > max_rating
                 ):
                     if enter_cache:
-                        scanned[player] = int(current_datetime.timestamp() + timedelta(days=30).total_seconds())
+                        scanned[player] = int(start + timedelta(days=30).total_seconds())
                     continue
 
                 # eliminates players who lose or win too much
@@ -187,7 +187,7 @@ with requests.session() as session:
                 score_rate = (wins + draws / 2) / (wins + losses + draws)
                 if score_rate < min_score_rate or score_rate > max_score_rate:
                     if enter_cache:
-                        scanned[player] = int(current_datetime.timestamp() + timedelta(days=30).total_seconds())
+                        scanned[player] = int(start + timedelta(days=30).total_seconds())
                     continue
 
                 # streamlines later procedures for players without any timeout
@@ -205,7 +205,7 @@ with requests.session() as session:
                 # eliminates players with too many games ongoing
                 if len(content['games']) > max_ongoing:
                     if enter_cache:
-                        scanned[player] = int(current_datetime.timestamp() + timedelta(days=30).total_seconds())
+                        scanned[player] = int(start + timedelta(days=30).total_seconds())
                     continue
 
                 # eliminates players with too few team match games ongoing
@@ -215,7 +215,7 @@ with requests.session() as session:
                         tm_played += 1
                 if tm_played < min_tm_ongoing:
                     if enter_cache:
-                        scanned[player] = int(current_datetime.timestamp() + timedelta(days=30).total_seconds())
+                        scanned[player] = int(start + timedelta(days=30).total_seconds())
                     continue
 
                 # invites players without timeouts and with enough team match games ongoing
@@ -282,7 +282,7 @@ with requests.session() as session:
                     # eliminate players without enough team match games
                     else:
                         if enter_cache:
-                            scanned[player] = int(current_datetime.timestamp() + timedelta(days=30).total_seconds())
+                            scanned[player] = int(start + timedelta(days=30).total_seconds())
 
     except KeyboardInterrupt:
         pass
