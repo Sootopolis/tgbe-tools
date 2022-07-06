@@ -85,7 +85,8 @@ I aim to **avoid** inviting players who:
 | do not have suspiciously high score rate* or elo rating | they are likely to be banned for cheating                                                                                                         |
 | do not have really low score rate or elo rating         | they are not of much use for the club                                                                                                             |
 
-where score rate is calculated as such: 
+where score rate is calculated as such:
+
 ```
 score_rate = (wins + draws * 0.5) / games_played
 ```
@@ -364,10 +365,7 @@ can be considered an identifier of a player because it is unlikely that a player
 second. Now if a member opts to change username, it can be detected as a username change, as a lost username and a new
 username share the same timestamp.
 
-There are two problems with the solution. One, as mentioned, is that the unlikely event may still happen. Another is
-that in the also very rare event that between two execution of the program, a member leaves, rejoins, and changes
-username at any point during this period, the program will consider the old username and the new username two different
-players, for the usernames and timestamps are both different.
+There are two problems with the solution. One, as mentioned, is that the unlikely event may still happen. Another is that in the also very rare event that between two execution of the program, a member leaves, rejoins, and changes username at any point during this period, the program will consider the old username and the new username two different players, for the usernames and timestamps are both different.
 
 A more sensible solution is to retrieve from the Player API endpoint (3.i.) every player's player ID, which is an
 actually unique identifier of a player.
@@ -400,10 +398,12 @@ API endpoint(s) involved:
 
 * (none)
 
-This is a script that I wrote last year when I just started to learn Python, predating this project. It maintains a list of invited players in `invited.txt`, and supports these operations: 
+This is a script that I wrote last year when I just started to learn Python, predating this project. It maintains a list
+of invited players in `invited.txt`, and supports these operations:
 
 * check - checks a list of usernames to find out which have been invited and which have not
-* input - checks a list of usernames to find out which have been invited and which have not, and write the usernames that have not been invited into `invited.txt`
+* input - checks a list of usernames to find out which have been invited and which have not, and write the usernames
+  that have not been invited into `invited.txt`
 * output - prints `invited.txt` along with the number of usernames it contains
 
 ### Loot
@@ -412,14 +412,13 @@ Module(s) involved:
 
 * `loot.py` (main program)
 * `membership.py`
-* `invite.py`
 
 File(s) involved:
 
 * `members.json` (list of members of the club)
-* `lost_members.json` (list of former members of the club since I began to keep this record)
+* `lost_members.json` (list of former members of the club since I began to keep this record, along with their )
 * `invited.txt` (list of players invited by me)
-* `scanned.json`
+* `scanned.json` (list )
 
 API endpoint(s) involved:
 
@@ -433,10 +432,31 @@ API endpoint(s) involved:
 
 <!-- This program has been incredibly valuable for me personally, not just because my main role in the club's admin team is to recruit new player, but also because the design, implementation, and outcome of this program have been absolutely instrumental in landing me a visa-sponsoring job in the UK.-->
 
-At the beginning of the program, user inputs are taken for the number of invitable players to find and the name of the club to find them from. 
+At the beginning of the program, user inputs are taken for the number of invitable players to find and the name of the
+club to find them from.
 
-Then parameters for the filters mentioned earlier in 1.iii. [My Role in Recruitment](#my-role-in-recruitment) are set. These are hard-coded into the program, for there is usually no need to change these parameters. Should some parameters be required to change frequently, though, it would of course be possible to take user inputs for them, but the caching mechanism would have to be overhauled, which will be explained later. 
+Then parameters for the filters mentioned earlier in 1.iii. [My Role in Recruitment](#my-role-in-recruitment) are set.
+These are hard-coded into the program, for there is usually no need to change these parameters. Should some parameters
+be required to change frequently, though, it would of course be possible to take user inputs for them, but the caching
+mechanism would have to be overhauled (explained later).
 
 The program then gets the current time. This will be used for multiple purposes:
+
 * to delete expired cache (explained later)
-* to 
+* to get the player games monthly archives that may require inspection, as the program takes into account of players'
+  games in the last arbitrary number of days (90 is the number that I chose)
+* to write cache
+
+Usernames of players deemed invitable by the program will be added into a list. Upon the end of the scanning process (whether due to enough invitable players having been found, due to the target club's member list having been exhausted,
+or due to keyboard interruption), the program will print this list and prompt the user to add these usernames into `invited.txt`. If the user opts not to do so, nothing else will happen, and the user can always manually add them using `invite.py`.
+
+Usernames of players deemed uninvitable by the program will be added into a dictionary, along with a timestamp which is
+the expiry time of their record. A player's record will expire 30 days after the current time, except
+for players who are filtered out due to a timeout in a club match game, in which case the expiry time will be 90 days
+after the player's most recent club match timeout. Those numbers are arbitrary and can be changed too. Upon the end of the scanning process, usernames in the dictionary
+will be added to `scanned.json`. 
+
+A problem with this caching method, as mentioned earlier, is that records must be interpreted in the context of the filters applied. For example, if a filter is set so that a player must have played or been playing 20 club match games in the last 90 days, and if the parameter is lowered to 12 at some point, then some players previously filtered out by this filter may become invitable under the new rule. It should be technically possible to store along with the cache records the set of rules used to filter players out, but it is not done for two reasons:
+* It makes caching unnecessarily complicated, whereas it may be more sensible to simply avoid adjusting filters too often.
+* If a filter becomes stricter, players in the cache record should fail the new filter too at the time when the record was written; and if a filter becomes looser, it will at most ignore some players who have become invitable, and those players can be assessed again once their records expire.
+

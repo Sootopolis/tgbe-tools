@@ -47,8 +47,6 @@ try:
         for key in list(scanned.keys()):
             if scanned[key] <= start:
                 del scanned[key]
-        # with open('scanned_players.json', 'w') as scanned_json:
-        #     json.dump(scanned, scanned_json, sort_keys=True, indent=2)
 except json.JSONDecodeError:
     scanned = {}
 
