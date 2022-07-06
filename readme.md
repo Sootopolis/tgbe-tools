@@ -436,13 +436,24 @@ This program takes user inputs of an integer `target` and a string `club_name`, 
 
 #### Parameters
 
-At the beginning of the program, user inputs are taken for the number of invitable players to find and the name of the
-club to find them from.
+At the beginning of the program, user inputs are taken for the number of invitable players to find and the name of the club to find them from.
 
-Then parameters for the filters mentioned earlier in 1.iii. [My Role in Recruitment](#my-role-in-recruitment) are set.
-These are hard-coded into the program, for there is usually no need to change these parameters. Should some parameters
-be required to change frequently, though, it would of course be possible to take user inputs for them, but the caching
-mechanism would have to be overhauled (explained later).
+Then parameters for the filters mentioned earlier in 1.iii. [My Role in Recruitment](#my-role-in-recruitment) are set. These are hard-coded into the program, for there is usually no need to change these parameters. Should some parameters be required to change frequently, though, it would of course be possible to take user inputs for them, but the caching mechanism would have to be overhauled (explained later).
+
+At the moment the parameters are set as following:
+
+| parameters                              | value |
+|-----------------------------------------|-------|
+| minimum club match games played/ongoing | 12    |
+| minimum club match games ongoing        | 2     |
+| maximum daily games ongoing             | 100   |
+| maximum clubs                           | 32    |
+| minimum Elo rating                      | 1000  |
+| maximum Elo rating                      | 2300  |
+| minimum score rate                      | 0.45  |
+| maximum score rate                      | 0.85  |
+| maximum hours per move in daily chess   | 18    |
+| maximum hours since last login          | 48    |
 
 The program then gets the current time. This will be used for multiple purposes:
 
@@ -462,7 +473,7 @@ A problem with this caching method, as mentioned earlier, is that records must b
 * It makes caching unnecessarily complicated, whereas it may be more sensible to simply avoid adjusting filters too often.
 * If a filter becomes stricter, players in the cache record should fail the new filter too at the time when the record was written; and if a filter becomes looser, it will at most ignore some players who have become invitable, and those players can be assessed again once their records expire.
 
-#### Candidates
+#### Scanning
 
 The program first checks the 3.ii. [Club](#club) endpoint if the club name that the user has provided exists. If it does not, the program finishes.
 
@@ -473,5 +484,6 @@ If it does exist, the program gets a list of the club's admins from the same end
 * usernames in `scanned.json`
 * usernames in the club's list of admins
 
-#### Scanning
+If either of the two API endpoints cannot be accessed for any reason in the above processes, the program finishes. Now scanning of players begins, and from here if any API endpoint is unreachable, the program simply skips the player in question and moves onto the next one.
+
 

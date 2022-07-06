@@ -14,12 +14,12 @@ if not club_name:
 # constraints
 enter_cache = True
 clear_cache = True
-min_tm_played = 12  # int(input('minimum number of team match games in last 90 days: '))
-min_tm_ongoing = 2  # int(input('minimum number of ongoing games: '))
+min_cm_played = 12  # int(input('minimum number of team match games in last 90 days: '))
+min_cm_ongoing = 2  # int(input('minimum number of ongoing games: '))
 max_ongoing = 100  # int(input('maximum number of ongoing games: '))
 max_clubs = 32  # int(input('maximum number of clubs: '))
 min_rating = 1000  # int(input('minimum rating (inclusive): '))
-max_rating = 2500  # int(input('maximum rating (inclusive): '))
+max_rating = 2300  # int(input('maximum rating (inclusive): '))
 # min_win_rate = 0.4  # int(input('minimum win rate: '))
 # max_win_rate = 0.8  # int(input('maximum win rate: '))
 min_score_rate = 0.45
@@ -197,17 +197,17 @@ with requests.session() as session:
                     continue
 
                 # eliminates players with too few team match games ongoing
-                tm_played = 0
+                cm_played = 0
                 for game in content['games']:
                     if 'match' in game:
-                        tm_played += 1
-                if tm_played < min_tm_ongoing:
+                        cm_played += 1
+                if cm_played < min_cm_ongoing:
                     if enter_cache:
                         scanned[player] = int(start + timedelta(days=30).total_seconds())
                     continue
 
                 # invites players without timeouts and with enough team match games ongoing
-                if no_timeout and tm_played >= min_tm_played:
+                if no_timeout and cm_played >= min_cm_played:
                     invitable.append(player)
                     if len(invitable) >= target:
                         break
@@ -232,11 +232,11 @@ with requests.session() as session:
                         if 'match' in game:
                             if datetime.fromtimestamp(game['end_time']) <= archive_datetime:
                                 continue
-                            tm_played += 1
+                            cm_played += 1
 
                             # invite players without timeout and with enough team match games played
                             if no_timeout:
-                                if tm_played >= min_tm_played:
+                                if cm_played >= min_cm_played:
                                     break
 
                             # eliminate players with team match timeouts
@@ -257,12 +257,12 @@ with requests.session() as session:
                     # check if further scan is needed
                     if not is_invitable:
                         break
-                    if no_timeout and tm_played >= min_tm_played:
+                    if no_timeout and cm_played >= min_cm_played:
                         break
 
                 # invite players without timeout who played enough games
                 if is_invitable:
-                    if tm_played >= min_tm_played:
+                    if cm_played >= min_cm_played:
                         invitable.append(player)
                         if len(invitable) >= target:
                             break
