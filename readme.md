@@ -211,7 +211,7 @@ The relevant endpoints are listed as follows, with simplifications to omit irrel
 
 ```
 {
-  "games": [
+  "games": [ // list of a player's finished daily games in a calendar month, sorted chronologically
     {
       "end_time": int, // timestamp of end time of a game 
       "white": {
@@ -442,18 +442,18 @@ Then parameters for the filters mentioned earlier in 1.iii. [My Role in Recruitm
 
 At the moment the parameters are set as following:
 
-| parameters                              | value |
-|-----------------------------------------|-------|
-| minimum club match games played/ongoing | 12    |
-| minimum club match games ongoing        | 2     |
-| maximum daily games ongoing             | 100   |
-| maximum clubs                           | 32    |
-| minimum Elo rating                      | 1000  |
-| maximum Elo rating                      | 2300  |
-| minimum score rate                      | 0.45  |
-| maximum score rate                      | 0.85  |
-| maximum hours per move in daily chess   | 18    |
-| maximum hours since last login          | 48    |
+| name                | meaning                                           | value |
+|---------------------|---------------------------------------------------|------:|
+| `min_cm_played`     | minimum number of club match games played/ongoing |    12 |
+| `min_cm_ongoing`    | minimum number of club match games ongoing        |     2 |
+| `max_ongoing`       | maximum number of daily games ongoing             |   100 |
+| `max_clubs`         | maximum number of clubs                           |    32 |
+| `min_rating`        | minimum Elo rating                                |  1000 |
+| `max_rating`        | maximum Elo rating                                |  2300 |
+| `min_score_rate`    | minimum score rate %                              |    45 |
+| `max_score_rate`    | maximum score rate %                              |    85 |
+| `max_time_per_move` | maximum hours per move in daily chess             |    18 |
+| `max_offline`       | maximum hours since last login                    |    48 |
 
 The program then gets the current time. This will be used for multiple purposes:
 
@@ -475,15 +475,61 @@ A problem with this caching method, as mentioned earlier, is that records must b
 
 #### Scanning
 
-The program first checks the 3.ii. [Club](#club) endpoint if the club name that the user has provided exists. If it does not, the program finishes.
+The part is organised around the API endpoints accessed and the checks performed based on the information in the endpoints.
 
-If it does exist, the program gets a list of the club's admins from the same endpoint, then fetches a list of the club's members from the 3.ii.a. [Club - Members](#club---members) endpoint. The program then generates a list of candidate players to scan by removing the following players from the list of members:
-* usernames in `members.json`
-* usernames in `lost_members.json`
-* usernames in `invited.txt`
-* usernames in `scanned.json`
-* usernames in the club's list of admins
+[Club](#club)
 
-If either of the two API endpoints cannot be accessed for any reason in the above processes, the program finishes. Now scanning of players begins, and from here if any API endpoint is unreachable, the program simply skips the player in question and moves onto the next one.
+* Check if the club exists.
+* Get a list of the club's admins.
+
+[Club - Members](#club---members)
+
+* Get a list of members of the club.
+* Exclude the following players to make a final list of candidates to scan:
+  * usernames in `members.json`
+  * usernames in `lost_members.json`
+  * usernames in `invited.txt`
+  * usernames in `scanned.json`
+  * usernames in the club's list of admins
+
+If either of the two API endpoints cannot be accessed for any reason in the above processes, the program finishes. 
+
+Now scanning of players begins, and from here if any API endpoint is unreachable, the program simply skips the player in question and moves onto the next one. If at any point the length of the list of invitable players found exceeds `target`, scanning finishes.
+
+[Player](#player)
+
+* Get the player's last login time. 
+  * Reject the player if the current time minus the last login time is greater than `max_offline`. 
+
+[Player - Clubs](#player---clubs)
+
+* Get the player's list of clubs. Reject the player if the length of the list is greater than `max_clubs`.
+
+[Player - Stats](#player---stats)
+
+* Reject the player if the player has no daily chess record.
+* Get the player's daily chess time per move. Reject the player if this is greater than `max_time_per_move`.
+* Get the player's daily chess rating. Reject the player if this is not between `min_rating` and `max_rating`.
+* Get the player's daily chess and daily chess960 (a variant of chess that my club also play sometimes) win/loss/draw stats and calculate the player's score rate. Reject the player if the score rate is not between `min_score_rate` and `max_score_rate`.
+* Get the player's daily chess timeout percentage. This will not be used to reject a player, but a 0% timeout percentage will significantly simplify timeout checks later on.
+
+[Player - Games - Ongoing](#player---games---ongoing)
+
+* Get the player's list of ongoing games. Reject the player if the length of the list is greater than `max_ongoing`.
+* Set `cm_played` to 0 to denote the number of daily club match games that the player has played or been playing. 
+* Iterate though the list of ongoing games and increment `cm_played` if a game is a club match game. 
+* Reject the player if `cm_played` is smaller than `min_cm_ongoing`.
+* Deem the player invitable if the player has 0% timeout percentage and the player's `cm_played` is at least `min_cm_played`.
+
+[Player - Games - Monthly Archives](#player---games---monthly-archives)
+
+* Get the player's lists of finished games in the last 90 days.
+* Iterate through the lists in descending chronological order, increment `cm_played` if a game is a club match game.
+  * During the iteration, deem a player invitable if the player has 0% timeout percentage and `cm_played` is at least `min_cm_played`.
+  * During the iteration, reject a player if the player has lost a game by timeout.
+* Reject a player if `cm_played` is smaller than `min_cm_played`.
+
+Deem the player invitable if the player has not been rejected for any reason after all the checks above.
+
 
 

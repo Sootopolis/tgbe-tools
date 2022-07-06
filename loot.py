@@ -228,7 +228,7 @@ with requests.session() as session:
                     content['games'].reverse()
 
                     # check each game
-                    for game in content['games']:
+                    for game in content['games'][::-1]:
                         if 'match' in game:
                             if datetime.fromtimestamp(game['end_time']) <= archive_datetime:
                                 continue
