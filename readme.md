@@ -151,7 +151,7 @@ I can revive the club's membership.
 
 To look for a way to automate the tasks so that I can still contribute to the club, I joined
 the [Chess.com Developer Community](https://www.chess.com/club/chess-com-developer-community), where I
-found [the site's api](https://www.chess.com/news/view/published-data-api) (only accessible after creating a account and
+found [the site's api](https://www.chess.com/news/view/published-data-api) (only accessible after creating an account and
 joining the Chess.com Developer Community).
 
 The relevant endpoints are listed as follows, with simplifications to omit irrelevant parts:
@@ -337,6 +337,8 @@ I decided that the following use cases are to be fulfilled:
 
 ### Update Membership
 
+#### Resources
+
 Module(s) involved:
 
 * `membership.py`
@@ -351,40 +353,34 @@ API endpoint(s) involved:
 * 3.i. [Player](#player)
 * 3.ii.a. [Club - Members](#club---members)
 
-The *Club - Members* API endpoint (3.ii.a.) provides a JSON file which consists of a list of members of a club, and with
-each member, the timestamps at which the member joined. It can be stored locally into `members.json`. On the next
-execution of the program, the new JSON and the old can be compared, exposing any differences, i.e. new and lost members.
-Lost member data are stored in `lost_members.json`.
+#### Function 
 
-A problem with this is that a player is allowed to change username once and only once. This is rare but still happens
-from time to time. For the sake of other use cases, it should not be seen as an old member leaving and a new one
+This program takes no user input, updates `members.json` and `lost_members.json`, and prints usernames of new members, lost members, and username changes.
+
+#### Mechanism, Problems, Compromises, Solutions
+
+The 3.ii.a. [Club - Members](#club---members) endpoint provides a JSON file which consists of a list of members of a club, and with each member, the timestamps at which the member joined. It can be stored locally into `members.json`. On the next execution of the program, the new JSON and the old can be compared, exposing any differences, i.e. new and lost members. Lost member data are stored in `lost_members.json`.
+
+A problem with this is that a player is allowed to change username once and only once. This is rare but still happens from time to time. For the sake of other use cases, it should not be seen as an old member leaving and a new one
 joining.
 
-A somewhat practical solution to this problem is to compare the timestamps of new and lost usernames. To some extent, it
-can be considered an identifier of a player because it is unlikely that a player leaves and another joins in the same
-second. Now if a member opts to change username, it can be detected as a username change, as a lost username and a new
-username share the same timestamp.
+A somewhat practical solution to this problem is to compare the timestamps of new and lost usernames. To some extent, it can be considered an identifier of a player because it is unlikely that a player leaves and another joins in the same second. Now if a member opts to change username, it can be detected as a username change, as a lost username and a new username share the same timestamp.
 
-There are two problems with the solution. One, as mentioned, is that the unlikely event may still happen. Another is that in the also very rare event that between two execution of the program, a member leaves, rejoins, and changes username at any point during this period, the program will consider the old username and the new username two different players, for the usernames and timestamps are both different.
+There are two problems with the solution: 
+* As mentioned, is that the unlikely event may still happen. 
+* In the also very rare event that between two execution of the program, a member leaves, rejoins, and changes username at any point during this period, the program will consider the old and the new usernames two different players, for the usernames and timestamps are both different.
 
-A more sensible solution is to retrieve from the Player API endpoint (3.i.) every player's player ID, which is an
-actually unique identifier of a player.
+A more sensible solution is to retrieve from the 3.i. [Player](#player) endpoint every player's player ID, which is an actually unique identifier of a player.
 
-A problem with this solution is that instead of `1` HTTP request, the program now has to make `1 + (number of members)`
-HTTP requests, which drastically increases the runtime of this program. For a club like mine with 400-600 members, it
-typically takes a couple of minutes. Should the program be used on clubs with 20,000+ members, however, this process can
-take hours.
+A problem with this solution is that instead of `1` HTTP request, the program now has to make `1 + (number of members)` HTTP requests, which drastically increases the runtime of this program. For a club like mine with 400-600 members, it typically takes a couple of minutes. Should the program be used on clubs with 20,000+ members, however, this process can take hours.
 
-It can be argued that this problem is trivial. The first execution of the program indeed takes `O(n)` runtime, where n
-stands for the club's membership. But after that, given the generally low ratio of membership changes with regard to the
-entire membership and the fact that comparisons only need to be performed on the differences, not too many requests have
-to be made after initialising the membership data. In other words, when comparing the new JSON to the old, the username
-check can be used on the entire lists, and then the player_id check can be applied on the differences.
+It can be argued that this problem is trivial. The first execution of the program indeed takes `O(n)` runtime, where n stands for the club's membership. But after that, given the generally low ratio of membership changes with regard to the entire membership and the fact that comparisons only need to be performed on the differences, not too many requests have to be made after initialising the membership data. In other words, when comparing the new JSON to the old, the username check can be used on the entire lists, and then the player_id check can be applied on the differences.
 
-My code in production is currently using the username-timestamp check. It will be updated to use the username-player_id
-check instead to address the very rare corner cases.
+My code in production is currently using the username-timestamp check. It will be updated to use the username-player_id check instead to address the very rare corner cases.
 
 ### Invite
+
+#### Resources
 
 Module(s) involved:
 
@@ -398,15 +394,17 @@ API endpoint(s) involved:
 
 * (none)
 
-This is a script that I wrote last year when I just started to learn Python, predating this project. It maintains a list
-of invited players in `invited.txt`, and supports these operations:
+#### Function
+
+This is a script that I wrote last year when I just started to learn Python, predating this project. It maintains a duplicate-free list of invited players in `invited.txt`, and supports these operations:
 
 * check - checks a list of usernames to find out which have been invited and which have not
-* input - checks a list of usernames to find out which have been invited and which have not, and write the usernames
-  that have not been invited into `invited.txt`
+* input - checks a list of usernames to find out which have been invited and which have not, and writes the usernames that have not been invited into `invited.txt`
 * output - prints `invited.txt` along with the number of usernames it contains
 
 ### Loot
+
+#### Resources
 
 Module(s) involved:
 
@@ -430,7 +428,13 @@ API endpoint(s) involved:
 * 3.i.c. [Player - Games - Ongoing](#player---games---ongoing)
 * 3.i.d. [Player - Games - Monthly Archives](#player---games---monthly-archives)
 
+#### Function
+
 <!-- This program has been incredibly valuable for me personally, not just because my main role in the club's admin team is to recruit new player, but also because the design, implementation, and outcome of this program have been absolutely instrumental in landing me a visa-sponsoring job in the UK.-->
+
+This program takes user inputs of an integer `target` and a string `club_name`, prints usernames of up to `target` invitable (based on a set of hard-coded filters) players from the club with API endpoint URL `f"https://api.chess.com/pub/club/{club_name}"`, prompts the user to add these players to `invited.txt`, and updates `scanned.json` which contains expirable records of players deemed uninvitable.
+
+#### Parameters
 
 At the beginning of the program, user inputs are taken for the number of invitable players to find and the name of the
 club to find them from.
@@ -445,18 +449,29 @@ The program then gets the current time. This will be used for multiple purposes:
 * to delete expired cache (explained later)
 * to get the player games monthly archives that may require inspection, as the program takes into account of players'
   games in the last arbitrary number of days (90 is the number that I chose)
-* to write cache
+* to write cache (explained later)
+
+#### Caching
 
 Usernames of players deemed invitable by the program will be added into a list. Upon the end of the scanning process (whether due to enough invitable players having been found, due to the target club's member list having been exhausted,
 or due to keyboard interruption), the program will print this list and prompt the user to add these usernames into `invited.txt`. If the user opts not to do so, nothing else will happen, and the user can always manually add them using `invite.py`.
 
-Usernames of players deemed uninvitable by the program will be added into a dictionary, along with a timestamp which is
-the expiry time of their record. A player's record will expire 30 days after the current time, except
-for players who are filtered out due to a timeout in a club match game, in which case the expiry time will be 90 days
-after the player's most recent club match timeout. Those numbers are arbitrary and can be changed too. Upon the end of the scanning process, usernames in the dictionary
-will be added to `scanned.json`. 
+Usernames of players deemed uninvitable by the program will be added into a dictionary, along with a timestamp which is the expiry time of their record. A player's record will expire 30 days after the current time, except for players who are filtered out due to a timeout in a club match game, in which case the expiry time will be 90 days after the player's most recent club match timeout. Those numbers are arbitrary and can be changed too. Upon the end of the scanning process, usernames in the dictionary will be added to `scanned.json`. 
 
 A problem with this caching method, as mentioned earlier, is that records must be interpreted in the context of the filters applied. For example, if a filter is set so that a player must have played or been playing 20 club match games in the last 90 days, and if the parameter is lowered to 12 at some point, then some players previously filtered out by this filter may become invitable under the new rule. It should be technically possible to store along with the cache records the set of rules used to filter players out, but it is not done for two reasons:
 * It makes caching unnecessarily complicated, whereas it may be more sensible to simply avoid adjusting filters too often.
 * If a filter becomes stricter, players in the cache record should fail the new filter too at the time when the record was written; and if a filter becomes looser, it will at most ignore some players who have become invitable, and those players can be assessed again once their records expire.
+
+#### Candidates
+
+The program first checks the 3.ii. [Club](#club) endpoint if the club name that the user has provided exists. If it does not, the program finishes.
+
+If it does exist, the program gets a list of the club's admins from the same endpoint, then fetches a list of the club's members from the 3.ii.a. [Club - Members](#club---members) endpoint. The program then generates a list of candidate players to scan by removing the following players from the list of members:
+* usernames in `members.json`
+* usernames in `lost_members.json`
+* usernames in `invited.txt`
+* usernames in `scanned.json`
+* usernames in the club's list of admins
+
+#### Scanning
 

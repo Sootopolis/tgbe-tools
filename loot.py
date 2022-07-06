@@ -53,7 +53,7 @@ except json.JSONDecodeError:
 # start looting
 with requests.session() as session:
 
-    # get the victim club's admins
+    # check if victim club exists and get the victim club's admins
     response = session.get(f'https://api.chess.com/pub/club/{club_name}', timeout=5)
     if response.status_code != 200:
         print('connection error')
@@ -96,16 +96,6 @@ with requests.session() as session:
                 if f'https://api.chess.com/pub/player/{member["username"].lower()}' in club_admins:
                     continue
             candidates.append(member['username'].lower())
-    # if not candidates:
-    #     with open('finished_clubs.txt', 'r') as file:
-    #         finished_clubs = file.read().strip(' \n').split('\n')
-    #     if club_name not in finished_clubs:
-    #         finished_clubs.append(club_name)
-    #         finished_clubs.sort()
-    #         with open('finished_clubs.txt', 'w') as file:
-    #             file.write('\n'.join(finished_clubs))
-    #         print('club is finished')
-    #         quit()
 
     try:
         # examine players
