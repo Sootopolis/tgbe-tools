@@ -330,10 +330,11 @@ I decided that the following use cases are to be fulfilled:
 
 * update membership
 * loot (go through members of a club to find players to invite)
-* find timeouts
-* find inactivity
-* find early resignations
-* find POTW
+* member management tools
+  * find timeouts
+  * find early resignations
+  * find inactivity
+  * find POTW
 * automate everything (except "loot")
 
 ### Update Membership
@@ -501,8 +502,7 @@ Now scanning of players begins, and from here if any API endpoint is unreachable
 
 [Player](#player)
 
-* Get the player's last login time. 
-  * Reject the player if the current time minus the last login time is greater than `max_offline`. 
+* Get the player's last login time. Reject the player if the current time minus the last login time is greater than `max_offline`. 
 
 [Player - Clubs](#player---clubs)
 
@@ -551,11 +551,9 @@ Another major problem is that I don't know how I can test this program thoroughl
 * Find players who have not finished, been playing, or joined a club match game for the club since the program was last run or since an arbitrary point of time. 
 * Find the player(s) who have contributed the greatest number of points for the club from one Thursday 10:00 to the next.
 
-
-
 #### Idea 
 
-Once a player joins my club, all that the admins care is that they do play club match games for us without timing out, resigning early etc., and that we award members for their contribution. Unlike the looting stage, here it no longer matters if members time out club match games for another clubs, as long as they are all good for us. 
+Once a player joins my club, all that I care is that they do play club match games for us without timing out, resigning early etc., and that members are awarded for their contribution. Unlike the looting stage, here it no longer matters if members time out club match games for another clubs, as long as they are all good for us. 
 
 For these member management use cases, my idea is to build a database of the club's club matches using the [Club - Club Matches](#club---club-matches) and [Club Match](#club-match) endpoints. The former provides a list of club matches of a club, divided into three sections - in registration, ongoing, finished. The latter provides a list of games in a club match. Each game can be added to a record of a member. On every execution of the program, any changes in the status of the matches and games can be detected, and members' records can be updated accordingly. 
 
