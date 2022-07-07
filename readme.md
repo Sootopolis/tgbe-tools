@@ -213,6 +213,7 @@ The relevant endpoints are listed as follows, with simplifications to omit irrel
 {
   "games": [ // list of a player's finished daily games in a calendar month, sorted chronologically
     {
+      "pgn": str, // portable game notation, a record of all the moves in the game
       "end_time": int, // timestamp of end time of a game 
       "white": {
         "result": str, // outcome of the game for white (specified if lost or drawn) 
@@ -455,6 +456,8 @@ At the moment the parameters are set as following:
 | `max_time_per_move` | maximum hours per move in daily chess             |    18 |
 | `max_offline`       | maximum hours since last login                    |    48 |
 
+Note that this program does not detect early resignations, the reason of which will be explained later.
+
 The program then gets the current time. This will be used for multiple purposes:
 
 * to delete expired cache (explained later)
@@ -494,7 +497,7 @@ The part is organised around the API endpoints accessed and the checks performed
 
 If either of the two API endpoints cannot be accessed for any reason in the above processes, the program finishes. 
 
-Now scanning of players begins, and from here if any API endpoint is unreachable, the program simply skips the player in question and moves onto the next one. If at any point the length of the list of invitable players found exceeds `target`, scanning finishes.
+Now scanning of players begins, and from here if any API endpoint is unreachable, the program simply skips the player in question and moves onto the next one. If at any point the length of the list of invitable players found exceeds `target`, scanning finishes. The scanning process can be terminated by keyboard interruption `command + C` (macOS) or `ctrl + C` (Windows), in which case the program will proceed to the next stage with the results obtained so far.
 
 [Player](#player)
 
@@ -531,5 +534,26 @@ Now scanning of players begins, and from here if any API endpoint is unreachable
 
 Deem the player invitable if the player has not been rejected for any reason after all the checks above.
 
+#### Problems, Compromises, Solutions
 
+A major problem is that this program has not taken into account early resignations yet. It is of course completely possible by using the PGN, a record of moves in a game, provided in [Player - Games - Monthly Archives](#player---games---monthly-archives). However, this is costly to implement.
 
+The reason why it is costly is that the program now has to scan all daily games in the last arbitrary number of days of every player. Recall from the previous part that if our only requirements on a player's daily club match games are quantity and absence of timeouts, then the scanning process of players with 0% daily chess timeout percentage can be significantly simplified. This is because if a player has not timed out a daily game, the player must not have timed out a daily club match game, thus there is no need to scan through the player's monthly archives for timeouts. These players indeed account for a decent proportion of those deemed invitable, and as the early resignation check mostly affects the runtime of the program on these players, it will lead to a notable increase in the runtime overall. Considering that early resignation, though undesirable, is rather rare, I decided that it would not be a good trade-off to implement a check on it.
+
+Another major problem is that I don't know how I can test this program thoroughly. Perhaps the fact that I have brought more than 150 players into the club since I launched this program in April should mean that it more or less works, but I have not actually properly tested every component of it. 
+
+### Find Timeouts, Early Resignations, POTW 
+
+#### Idea 
+
+Once a player joins my club, all that the admins care is that they do play club match games for us without timing out, resigning early etc., and that we award members for their contribution. Unlike the looting stage, here it no longer matters if members time out club match games for another clubs, as long as they are all good for us. 
+
+For these member management use cases, my idea is to build a database of the club's club matches using the [Club - Club Matches](#club---club-matches) and [Club Match](#club-match) endpoints. The former provides a list of club matches of a club, divided into three sections - in registration, ongoing, finished. The latter provides a list of games in a club match. Each game can be added to a record of a member. On every execution of the program, any changes in the status of the matches and games can be detected, and members' records can be updated accordingly. 
+
+#### Challenge 
+
+A key challenge of the implementation of this idea is data storage. 
+
+Recall that in the previous use case, I am using a JSON file `scanned.json` (which probably is not the best format, but I do need it to be a dictionary when the program reads the data, which JSON is) to store cache of players who are deemed uninvitable at the time of scanning. There are around 30,000 entries into the JSON file. It is a large number, but its size is still somewhat contained, as some old records will expire on each execution of the program.
+
+Here, however, I must either think of some way to store data in a way that records can be deleted after a while without wreaking havoc, or find a better way to store data altogether, or both.
