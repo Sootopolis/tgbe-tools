@@ -30,6 +30,7 @@
     1. [Update Membership](#update-membership)
     2. [Invite](#invite)
     3. [Loot](#loot)
+    4. [Maintain Member Records](#maintain-member-records)
 
 ## Background
 
@@ -418,7 +419,7 @@ File(s) involved:
 * `members.json` (list of members of the club)
 * `lost_members.json` (list of former members of the club since I began to keep this record, along with their )
 * `invited.txt` (list of players invited by me)
-* `scanned.json` (list )
+* `scanned.json` (expirable records of uninvitable players)
 
 API endpoint(s) involved:
 
@@ -542,7 +543,22 @@ The reason why it is costly is that the program now has to scan all daily games 
 
 Another major problem is that I don't know how I can test this program thoroughly. Perhaps the fact that I have brought more than 150 players into the club since I launched this program in April should mean that it more or less works, but I have not actually properly tested every component of it. 
 
-### Find Timeouts, Early Resignations, Inactivity, POTW 
+### Maintain Member Records
+
+#### Resources
+
+Module(s) involved:
+
+* TBD
+
+File(s) involved:
+
+* TBD
+
+API endpoint(s) involved:
+
+* [Club - Club Matches](#club---club-matches)
+* [Club Match](#club-match)
 
 #### Functions
 
@@ -564,3 +580,15 @@ A key challenge of the implementation of this idea is data storage.
 Recall that in the previous use case, I am using a JSON file `scanned.json` (which probably is not the best format, but I do need it to be a dictionary when the program reads the data, which JSON is) to store cache of players who are deemed uninvitable at the time of scanning. There are around 30,000 entries into the JSON file. It is a large number, but its size is still somewhat contained, as some old records will expire on each execution of the program.
 
 Here, however, I must either think of some way to store data in a way that records can be deleted after a while without wreaking havoc, or find a better way to store data altogether, or both.
+
+### Automate
+
+#### Function 
+
+Apart from `loot.py`, which is to be run manually, all others programs should be run on a regular basis - find POTW every Thursday 10:00, others a lot more frequent. Any important should be sent to me (or other admins) somehow. 
+
+#### Challenges 
+
+I will need to find ways to:
+* Automate programs
+* Enable programs to send me alerts, perhaps via email

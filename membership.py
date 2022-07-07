@@ -13,7 +13,7 @@ if response.status_code == 200:
     for category in ('weekly', 'monthly', 'all_time'):
         for entry in response.json()[category]:
             new_members[entry['username']] = entry['joined']
-    with open('membership.json', 'r') as membership_json:
+    with open('members.json', 'r') as membership_json:
         try:
             old_members = json.load(membership_json)
         except JSONDecodeError:
@@ -63,7 +63,7 @@ if response.status_code == 200:
             print(f'{changed[i][0]} is now known as {changed[i][1]}')
 
     # new_members = dict(sorted(new_members.items()))
-    with open('membership.json', 'w') as membership_json:
+    with open('members.json', 'w') as membership_json:
         json.dump(new_members, membership_json, sort_keys=True, indent=2)
     print(f'total members: {len(new_members)}')
 

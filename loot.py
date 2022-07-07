@@ -71,7 +71,7 @@ with requests.session() as session:
         quit()
     content = response.json()
     candidates = []
-    with open('membership.json') as membership_json:
+    with open('members.json') as membership_json:
         membership = json.load(membership_json)
     with open('lost_members.json') as lost_members_json:
         lost_members = json.load(lost_members_json)
