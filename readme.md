@@ -410,7 +410,7 @@ This is a script that I wrote last year when I just started to learn Python, pre
 Module(s) involved:
 
 * `loot.py` (main program)
-* `membership.py`
+* `membership.py` (should be run before this program is run to keep member list updated)
 
 File(s) involved:
 
@@ -542,7 +542,16 @@ The reason why it is costly is that the program now has to scan all daily games 
 
 Another major problem is that I don't know how I can test this program thoroughly. Perhaps the fact that I have brought more than 150 players into the club since I launched this program in April should mean that it more or less works, but I have not actually properly tested every component of it. 
 
-### Find Timeouts, Early Resignations, POTW 
+### Find Timeouts, Early Resignations, Inactivity, POTW 
+
+#### Functions
+
+* Find players who have timed out club match games for the club since the program was last run or since an arbitrary point of time.
+* Find players who have timed out club match games for the club since the program was last run or since an arbitrary point of time. 
+* Find players who have not finished, been playing, or joined a club match game for the club since the program was last run or since an arbitrary point of time. 
+* Find the player(s) who have contributed the greatest number of points for the club from one Thursday 10:00 to the next.
+
+
 
 #### Idea 
 
