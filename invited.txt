@@ -219,6 +219,7 @@ arkady_chernobrovkin
 arkivian
 arlens25
 arnekvam
+arnesmekens
 arnoldali
 arro2
 arron88
@@ -290,6 +291,7 @@ battleman
 bauernsalat72
 bayrakv
 bazplays
+bbaxley
 bbshop
 bbtandn
 bddhttms
@@ -469,6 +471,7 @@ canca
 cancancantona
 candelalight
 canrfisica33
+cantabile9
 capablanca24
 captainbegonia
 captainthai
@@ -476,6 +479,7 @@ captaintsuina
 carbon
 cardinal56
 cardsure
+carioca50rn
 carla-magnusson
 carlgway
 carli121
@@ -546,6 +550,7 @@ chessandcoffeepr
 chessboarddarren
 chessbrotherjon
 chessfriend51
+chessgf
 chessgnat
 chessigence
 chessjaycj
@@ -556,6 +561,7 @@ chessplayerro
 chessplayerwolfgang
 chessreina
 chessrocks2011
+chessron99
 chesstiger7
 chesstkidding
 chesswarrior48
@@ -667,6 +673,7 @@ d4start
 d_bun
 da-nee
 da_crusha
+dabigduck
 daddy996
 daddynina
 daedae513
@@ -776,6 +783,7 @@ diegomoncayo
 dietersos
 digitu
 diligentver
+dimialana
 dimosthenisg
 dinhthanhbinh
 diogenes_of_sinope33
@@ -1334,7 +1342,9 @@ ickby
 idleplayer
 idris077
 iet420
+igmaro
 igor-svoboda
+igor0230
 igor_giga
 igorrud
 igoryacha
@@ -1388,6 +1398,7 @@ ivsky
 iweasel
 iwilderman
 izeno
+izovat
 iztacoyolt
 izzylxxiv
 j_ludwig
@@ -1400,6 +1411,8 @@ jackcoleman
 jackk91
 jacknoris
 jackputt99
+jacobdcarlson
+jadedmantis
 jadm1978
 jairchampion
 jakey848
@@ -1503,6 +1516,7 @@ johnbager
 johnclapson
 johngd63
 johnkeoghofearth
+johnlitvin
 johnnyboy1576
 johnnyolbc
 johnnyu
@@ -1517,6 +1531,7 @@ jokers064
 jokin-garralda
 jollyolly
 joluches
+jonah_coenen
 jonathan8990
 jonathanmaier
 jonathansmuggler
@@ -1563,6 +1578,7 @@ juanernestonovoa
 juanesp
 juangrisart
 juanpacheco1
+juanxeneixe12
 judger1
 jugrnot
 juiceboy007
@@ -1624,6 +1640,7 @@ kbarth
 kblunt333
 kbrownmx
 kdimakis
+keiscuzoen
 kekic76
 keks2017
 kel1968
@@ -1638,10 +1655,13 @@ kerniggut
 kerri-jo
 kerrystead
 kerteszk
+kevlinbert
 kgdcia
 khan2670
 kidchess2500
+kikera
 kikiok
+killerinstinct33
 killerkween
 kindpawn
 king1264
@@ -1842,6 +1862,7 @@ lorilen84
 loughderg
 lpiedra
 lrjbman
+luarsoleil
 lubosm
 lucibot
 luciferbitterman
@@ -1911,6 +1932,7 @@ manchesstercity
 manitarius
 mannycalavera11
 manonfire_jer
+manosgal
 manselton
 manuelgomez
 manvelghazaryan
@@ -2043,6 +2065,7 @@ mickscan
 midnight_rambler
 midnightluxury
 miguellamas67
+miguelmessi
 mihael154
 mihail315
 mihaivcf
@@ -2158,6 +2181,7 @@ muhnase
 munanaim
 munari
 muqaddamshakirova
+muratak
 musicplayer99
 myauno
 mybishop1
@@ -2168,6 +2192,7 @@ mysterycas
 n64bondplayer
 na_brown
 nadi1113
+nagdalyan
 nagendragowda
 nahor73
 naitikkadam
@@ -2412,6 +2437,7 @@ peterchaplin
 petespoker
 petipion
 petitesirah217
+petkoshah
 petobalaz6996
 petraberts
 petrolifero
@@ -2560,6 +2586,7 @@ receptiveking
 recolor
 red2wedge
 redblue777
+redborys
 redbuild63
 reddalek
 reddersn
@@ -2624,6 +2651,7 @@ rob_appleby
 robbiebobic
 robdonchess
 robe10
+robe178
 robert12000
 robertgerrard
 robertharris
@@ -2978,6 +3006,7 @@ swift-j
 swmike
 synapsechess
 synchronicity16
+szavcsenko
 szekelycsaba76
 szente
 szescdziewiec
@@ -3380,6 +3409,7 @@ zeroqb
 zerrogi
 zhanbyrbaev_1981
 zhucher
+ziggy_zugzwang
 zinsx
 zippie
 zlikom
