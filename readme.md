@@ -31,6 +31,7 @@
     2. [Invite](#invite)
     3. [Loot](#loot)
     4. [Maintain Member Records](#maintain-member-records)
+    5. [Automate](#automate)
 
 ## Background
 
