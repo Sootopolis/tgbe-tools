@@ -37,13 +37,11 @@
 
 ### The Club
 
-We are a chess club on chess.com that actively participate in daily chess club matches and currently sits 10th on the
-daily club match worldwide leaderboard.
+We are a chess club on chess.com that actively participate in daily chess club matches and currently sits 10th on the daily club match worldwide leaderboard.
 
 ### Game and Match Formats
 
-In a daily chess game, a player must make a move in a given number of days (usually 3, but can also be 1, 2, 5, 7, 10,
-14), whereas failure to do so will result in a loss by timeout.
+In a daily chess game, a player must make a move in a given number of days (usually 3, but can also be 1, 2, 5, 7, 10, 14), whereas failure to do so will result in a loss by timeout.
 
 In a club match between two clubs:
 
@@ -51,27 +49,18 @@ In a club match between two clubs:
 * When a match starts, the two lists of players are zipped up, with each pair of players (known as a board) playing two
   games with each other (one as white and the other as black). The number of boards will be the length of the shorter
   list of players.
-* When a game finishes, if the result is decisive (i.e. if a player beat the other), `1` point is awarded to the
-  winner's club, else `1/2` points is awarded to both clubs.
-* If a player is banned by chess.com for cheating, all club matches of the player will be counted as losses, even if
-  they are finished; but in case that a club match opponent of the player is also banned for cheating, the games will
+* When a game finishes, if the result is decisive (i.e. if a player beat the other), `1` point is awarded to the winner's club, else `1/2` points is awarded to both clubs.
+* If a player is banned by chess.com for cheating, all club matches of the player will be counted as losses, even if they are finished; but in case that a club match opponent of the player is also banned for cheating, the games will
   count as draws.
-* When all games in a match finish, the match finishes. `5 * (number of boards)` leaderboard points is awarded to the
-  club with more points; in case that the clubs tie in points, `2 * (number of boards)` leadership points is awarded to
-  both.
+* When all games in a match finish, the match finishes. `5 * (number of boards)` leaderboard points is awarded to the club with more points; in case that the clubs tie in points, `2 * (number of boards)` leadership points is awarded to both.
 
 ### My Role in Recruitment
 
-As an admin of my club, my main responsibility is to recruit new players by inviting players in other clubs' member
-lists to join my club. ("Looting" or "raiding", as we call it - but as a player can belong to a virtually unlimited
-number of clubs, it is not really a steal.)
+As an admin of my club, my main responsibility is to recruit new players by inviting players in other clubs' member lists to join my club. ("Looting" or "raiding", as we call it - but as a player can belong to a virtually unlimited number of clubs, it is not really a steal.)
 
-To invite a player, an admin must send the player an invitation through an official invitation portal, else risk getting
-banned by chess.com for spamming. Up to 30 invitations are available at any given time on the portal, and once an
-invitation is used, it will be replenished after exactly 24 hours.
+To invite a player, an admin must send the player an invitation through an official invitation portal, else risk getting banned by chess.com for spamming. Up to 30 invitations are available at any given time on the portal, and once an invitation is used, it will be replenished after exactly 24 hours.
 
-An invited player can decide to join the club or not. When a player opts to join the club, an admin has to approve the
-player's join request for the player to become a member.
+An invited player can decide to join the club or not. When a player opts to join the club, an admin has to approve the player's join request for the player to become a member.
 
 I aim to **avoid** inviting players who:
 
