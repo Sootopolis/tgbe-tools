@@ -284,6 +284,7 @@ bajosh
 balabali02
 baldazar
 baldleg
+bama6
 bambi0nice
 banerosic
 barkman173
@@ -376,6 +377,7 @@ blauerstein
 blazejohnson
 blazeroe
 blithesprit
+blixter08
 blizzardlizzard
 blockdog2087
 bloomie246
@@ -392,6 +394,7 @@ bluesparx
 blunderseeker
 bmadero
 bmillner
+bmind
 bmr07
 bmv1951
 bob_talparovsky
@@ -400,6 +403,7 @@ bobbybalboa
 bobbycejes
 bobbydollar
 bobbyedge
+bobbymgambit
 boeddha50
 bogano1980
 bogdanstavrov
@@ -624,7 +628,9 @@ ckovar
 clachglas
 clarkbart
 clarkedavis
+clarkjosh
 claudiocordeiro
+cleaner75
 clementine65
 clericalerr0r
 cliff50
@@ -861,6 +867,7 @@ drcippy
 drecic
 dreydar
 drgwestboca
+dright
 drogon72
 droolingdragon
 dropthepawn
@@ -899,6 +906,7 @@ eastriverferry
 eatingkings
 ebiabs1980
 ecdg
+echecsgoat
 ecolih157
 edberner13
 eddielevis
@@ -1478,6 +1486,7 @@ jcohen42
 jcvila
 jdhgriffin
 jdiamant07
+jdk1962
 je-cabangcla
 jean-marielemire
 jean_de_louvre
@@ -1496,6 +1505,7 @@ jestey
 jesus_lucia
 jet61
 jf1
+jf_the_best
 jg1
 jg29
 jgbgame
@@ -1720,6 +1730,7 @@ knight593
 knightbeatsall
 knightcharles
 knightdive
+knightgallant00
 knightgirl385
 knightguy
 knightmareassassin
@@ -1812,6 +1823,7 @@ lcsaloon
 ldpaxton
 leadweight2
 lebeane
+ledainstudent72
 lee_w
 leechess2021
 leethechicken
@@ -1869,6 +1881,7 @@ lktoliver
 lleevv
 llopfosc
 llthomasll
+lmacdonald5288
 lmmart-7
 lmmduarte
 logsy
@@ -1908,6 +1921,7 @@ lunchtimechess
 lurcherone
 lurker2099
 luuquocviet
+luwasserman
 lux47
 lvquan006
 lxnnyx
@@ -1936,6 +1950,7 @@ magic_boy888
 magneticmorgan
 magnus_carl_seen
 maher_alhasan
+mahirw
 mahmoud1957
 maidfordrook
 maimai05
@@ -2007,6 +2022,7 @@ marooned
 marsdelpueblo
 martinkojo
 martinnikolovski123
+martinspg
 martinzichy
 martyriko
 marv1362
@@ -2032,6 +2048,7 @@ mattsher100
 mattspry
 maxiache
 maximkolpakov
+mayhemone4
 mazkadikis
 mb68
 mbeaudoin
@@ -2106,6 +2123,7 @@ mikevillages
 miki-zavidovici
 miki4fun
 mikk7670
+mila350
 milanzv
 mildano
 mildred3
@@ -2213,6 +2231,7 @@ munari
 muqaddamshakirova
 muratak
 musicplayer99
+mutesmates
 myauno
 mybishop1
 mykola_65
@@ -2251,6 +2270,7 @@ neo503
 nepali_chess2019
 nesko_ruse79
 nevaground
+neverbeforeseenname
 neville2016
 newfischer78
 ngb1066
@@ -2513,6 +2533,7 @@ pkinnicutt
 plamen196565
 plamen77
 planteverte222
+plappo
 plascornel
 plimsol
 plsec
@@ -2781,6 +2802,7 @@ safehands81
 saful13
 sahaj26
 sai
+saint-eustache
 saint29
 saintsavedby-grace
 sajjadakbar
@@ -2953,6 +2975,7 @@ softalegenda
 sokolskyb4
 solafuthi
 solarsapien
+soligo66
 some_guy1one3
 songsmithsam
 sophieny
@@ -3002,6 +3025,7 @@ steffei94
 steinarsimensen
 stepan123123
 stephano75
+stephen_play
 stephennelson-smith
 stephenwoodhouse
 stevee2
@@ -3165,6 +3189,7 @@ thorongil22
 threecsdad
 throbby4
 thugnastysloth
+thunderhorse2020
 thusith64
 ticklefist84
 tiepinl
@@ -3200,6 +3225,7 @@ tonybuiano
 tonyelson
 tonyj444
 tonykora
+toprobbo1970
 tormodoe
 toromudo1973
 torrefish
@@ -3247,6 +3273,7 @@ uberscoober
 ubumebme
 ughbah
 ukhousemafia
+ukrainiancanadian
 ulbras
 ulisesplasencia
 ultraratchet
@@ -3372,6 +3399,7 @@ whiteknight065
 whiteknightscantjump
 whitenerdy53
 whoknowsbob
+whynotplayagain
 wigoogle
 wikkua
 wildwolf13
@@ -3400,6 +3428,7 @@ wjoseph48
 wojtek744
 wolf227
 wolfbird
+wolfgang_print
 wolfman1122
 wolfshield
 wolschi
@@ -3478,6 +3507,7 @@ zlyvkomiroslav
 zokilu
 zolko24
 zombi_2
+zombie9999
 zombybob
 zoran5
 zorantosic
