@@ -111,6 +111,7 @@ alekvatagin
 alex1951
 alex_bohn
 alexakkerman
+alexander-d-knudsen
 alexanderfvanbiezen
 alexandermusatov
 alexandre_sacha0
@@ -310,6 +311,7 @@ bddhttms
 beachstud
 bear2034
 beardo-x
+beatthenoobs
 beeehrer
 beefy08
 beermat78
@@ -475,6 +477,7 @@ butichess
 button88
 buttonc
 c0aca
+c1everdick
 c_benham
 cachareria25
 caiusbiserus75
@@ -1080,6 +1083,7 @@ fiszner
 fitil
 fivebucksfivebucks
 fjb-n
+fjollepurk
 fl400
 flaminghakama
 flash_123
@@ -1177,6 +1181,7 @@ generouslord
 genius610
 genjul
 gent00
+geographos
 geordieed
 george_2908
 georgi_atanasov
@@ -1209,6 +1214,7 @@ giuggiulena
 giulianoferreira
 givemeadraw
 gjakomo_77
+gjonss
 gladstonewanderer
 glasshrapnal
 glasspring
@@ -1252,6 +1258,7 @@ graveyardfool
 gravitika
 gray_cat
 great_champ
+grebleif
 greengooner
 greenpawn16
 greenzone
@@ -1269,6 +1276,7 @@ grunfeldrules
 grust54
 gs77
 gsp74
+gtbsgajd
 gualtiero58
 guara10
 guchlu
@@ -1458,6 +1466,7 @@ j_p_chess
 jaaskak
 jabag13
 jaberwok
+jack-413
 jackadullboy67
 jackcoleman
 jackk91
@@ -1466,6 +1475,7 @@ jackputt99
 jacobdcarlson
 jadedmantis
 jadm1978
+jaimefw
 jairchampion
 jakey848
 jakgreek
@@ -1516,6 +1526,7 @@ jefferson_chess_br
 jeffjmcintire
 jeffmthomas
 jenecoc
+jenni66
 jenseni
 jes1969w
 jessy75
@@ -1619,6 +1630,7 @@ joy10
 joydeep6772
 jpcrisol1
 jpf917
+jpk77
 jpphilip
 jpzheng
 jrlott
@@ -1738,6 +1750,7 @@ kittyb
 kjbaker36
 kjlyne
 kk-1
+klasbritse
 klausgmadsen
 klecken
 kliprsa
@@ -1908,6 +1921,7 @@ loki_82
 londonlark
 longdiagonal43
 loosecannons
+lord_axe
 lord_benjou
 lord_edmund
 lord_leon
@@ -1954,6 +1968,7 @@ m1d1p
 m210297
 m3tafl0ps
 maalgara
+maanas261558
 macabreska
 macbook99
 macchesssa
@@ -2050,6 +2065,7 @@ martyriko
 marv1362
 masibo
 maske2
+masterbooboo
 masterdean00
 mastermatthew52
 mastersandi
@@ -2129,6 +2145,7 @@ michelangelo111
 mickey222
 mickeyren1
 mickscan
+midgardsormur
 midnight_rambler
 midnightluxury
 miguellamas67
@@ -2196,6 +2213,7 @@ momobenni
 monadjib
 mondfell
 monkeywithgun
+monsoeren
 montfort
 montyspringer
 mookjw
@@ -2300,6 +2318,7 @@ ngb1066
 nhaygoodjr
 nichabodnik
 nichaki
+nichols_ted
 nick38389
 nicolagullo
 nicolapre
@@ -2311,6 +2330,7 @@ nikin51
 nikolay1970
 nikoz10
 nilap1978
+nilocra_the_white
 nimavi
 nimbleknight
 nimos01
@@ -2350,6 +2370,7 @@ nuncle
 nuran93
 nurdinhas
 nurn191
+nuzniy24
 nvow
 nvqcharles2000
 nyimyoaung
@@ -2410,6 +2431,7 @@ oscarpetherick
 osher12345
 osmanomeragic
 ossie57
+osten8
 oszapo62
 oth42
 ottgm
@@ -2438,6 +2460,7 @@ pal05
 pal1n0
 paleologos11
 palidan5
+pallsigurdsson1
 palmeros48
 pam234
 panader1s
@@ -2518,8 +2541,10 @@ petipion
 petitesirah217
 petkoshah
 petobalaz6996
+petr_zacek
 petraberts
 petrolifero
+petromich1967
 petya31
 pevans666
 pezza64
@@ -2532,6 +2557,7 @@ philbart
 philbgolf
 philcorrin
 philidor_legacy
+philipboyle
 philome0
 philthepowerful
 phiupan
@@ -2906,6 +2932,7 @@ senseievan
 sentinel2021
 seoul2seoul
 sepesh
+sequenser
 serg_booker2020
 sergei1960
 sergeledan
@@ -2993,6 +3020,7 @@ snop2000
 snotnosterbol
 snowdroid
 snowpumacat
+snowshinedog
 soeren164
 soetewey
 sof_minsk
@@ -3166,6 +3194,7 @@ tesseract87
 tetus48
 tewald
 tex_knigit
+texwillernavajo
 texwilson
 tgunther
 th3m4ster
@@ -3383,6 +3412,7 @@ vladimir_borisov
 vladont
 vododo
 vonkater
+vortic1left
 votka7
 vova346
 vrchessvr
@@ -3481,9 +3511,11 @@ xavilanz
 xb21
 xekinjok
 xj4g
+xmartyo
 xose1953
 xx360n0r0ok3xx
 xy2012
+xyz7
 xzzroot
 yablon10
 yaccoff
