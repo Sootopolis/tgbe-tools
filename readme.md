@@ -24,6 +24,7 @@
         1. [Club - Members](#club---members)
         2. [Club - Club Matches](#club---club-matches)
     3. [Club Match](#club-match)
+        1. [Club Match - Board](#club-match---board)
 
 4. [The Programs](#the-programs)
 
@@ -312,6 +313,26 @@ The relevant endpoints are listed as follows, with simplifications to omit irrel
       ]
     }
   }   
+}
+```
+
+#### Club Match - Board
+
+```
+{
+  "games": [ // 1 or 2 games
+    { // the first game 
+      "pgn": str, // portable game notation, a record of all the moves in the game
+      "white": { // data of the player who plays as white
+        "result": str, // outcome of the game (specified if lost or drawn)
+        "username": str // player's username
+      },
+      "black": { // data of the player who plays as white
+        "result": str, // outcome of the game (specified if lost or drawn)
+        "username": str // player's username
+      }
+    }
+  ]   
 }
 ```
 
