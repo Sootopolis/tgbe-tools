@@ -491,6 +491,13 @@ A problem with this caching method, as mentioned earlier, is that records must b
 
 #### Scanning
 
+Throughout the scanning process, two progress bars (using the `tqdm` module) visualise the progress in terms of both players scanned verses length of candidates and players found invitable verses the user-defined target. This allows the user to see if the program is going through too many players in vain. 
+
+The user can trigger KeyboardInterrupt at will to end the execution and take the current results. In that case, the following line is added to the script to avoid a bug of the module which duplicates the first progress bar upon KeyboardInterrupt (https://github.com/tqdm/tqdm/issues/1345)
+```
+invitables_bar.display("", -3)
+```
+
 The part is organised around the API endpoints accessed and the checks performed based on the information in the endpoints.
 
 [Club](#club)
@@ -570,6 +577,7 @@ API endpoint(s) involved:
 
 * [Club - Club Matches](#club---club-matches)
 * [Club Match](#club-match)
+* [Club Match - Board](#club-match---board)
 
 #### Functions
 
