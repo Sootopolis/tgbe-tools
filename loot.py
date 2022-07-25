@@ -108,8 +108,8 @@ if not candidates:
     raise SystemExit
 
 # make progress bars
-candidates_bar = tqdm(total=len(candidates), desc="candidates", position=0, colour="blue", unit=" players")
-invitables_bar = tqdm(total=target, desc="invitables", position=1, colour="yellow", unit=" players")
+candidates_bar = tqdm(total=len(candidates), desc="candidates", position=0, colour="blue", unit="players")
+invitables_bar = tqdm(total=target, desc="invitables", position=1, colour="yellow", unit="players")
 
 # examine players
 invitable = []
