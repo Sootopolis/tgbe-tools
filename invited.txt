@@ -14,6 +14,7 @@
 210tony
 2blackrooks
 3angels
+45mann
 4king_knight
 4knights50
 501soldier
@@ -26,6 +27,7 @@
 777_s_777
 9988tom
 99mark99
+9l_partyzan
 _magus
 a-marinho
 a_bloom
@@ -60,7 +62,9 @@ adamratak
 adebola
 adiiii83
 adrian3vhk
+adrian_dor
 adrian_dorantes_c
+adrianvede
 adriatik1409
 advancedpawn6
 aendayana77
@@ -190,6 +194,7 @@ andy195018
 andychess4321
 andylay
 angelina-sh
+angelliffer
 angelo140
 angelopoet
 angelvelasquez
@@ -238,6 +243,7 @@ arixegal
 arkady_chernobrovkin
 arkivian
 arlens25
+armin1975
 arnekvam
 arnesmekens
 arnoldali
@@ -252,6 +258,7 @@ asap2800
 asenovvv
 ash177
 ashadowspartan
+ashstriker41
 asifucare
 askeladden
 asoupdragon
@@ -285,6 +292,7 @@ azorath1
 azuljack
 azuredragon9
 b_griffin
+babayu_s
 babyangel10
 bacchus_on_crack
 backranktoaster
@@ -520,6 +528,7 @@ captaintsuina
 cara_pils
 carbon
 cardinal56
+cardosorafael
 cardsure
 carioca50rn
 cariocabotafogo
@@ -561,6 +570,8 @@ cembalo
 cerberus274
 cesardegroot
 cesaroscco
+cezar17
+cezarmk5
 cfdeng
 cgiorgos1
 chair-man
@@ -626,6 +637,7 @@ childhoods-end
 chillychess2010
 chinguunb
 chinogarcia57
+chippysleftfoot
 chockeyboy
 chocpot
 chorlton69
@@ -693,6 +705,7 @@ contessaserbelloni
 controlfreakaus
 coolhandlukexx
 corkiethedog
+cosmin1975
 couldchuck
 countrylife123
 countyourpawns
@@ -761,6 +774,7 @@ danielpalabuykov
 danman24
 dannynorwood
 dannyrowles
+danoit
 danthesloth
 daredevil_2512
 darindd
@@ -862,6 +876,7 @@ djarlo
 djemir
 djpossum
 dkab101
+dknighter
 dkuberek
 dlittle231
 dlo998
@@ -1229,6 +1244,7 @@ generouslord
 genius610
 genjul
 gent00
+geo_krt
 geographos
 geordieed
 george_2908
@@ -1492,6 +1508,7 @@ iraj-hajebabaee
 iraq_lion
 irish_assasin
 irisha_1411
+irishguy58
 irishwaterspaniel
 irispu
 iron_helmet
@@ -1522,6 +1539,7 @@ izeno
 izovat
 iztacoyolt
 izzylxxiv
+j-costi
 j2fischb
 j41lvl3
 j_ludwig
@@ -1772,6 +1790,7 @@ kastelanin
 kaszassandor
 kathang_diwa
 kautilya68
+kawaii_index
 kaymishra
 kaysin99
 kayuu23
@@ -2017,6 +2036,7 @@ lpiedra
 lrjbman
 luarsoleil
 lubosm
+luciantm
 lucibot
 luciferbitterman
 luckyhappychappy
@@ -2622,6 +2642,7 @@ pawny-devil
 pb-hal
 pc4eo
 pcaligiu
+pcont
 pcrocker33
 pd_chess4life
 pdatzira
@@ -2632,6 +2653,7 @@ pedro_mateo
 pejoko
 pelikaan
 pelouche
+pendyala1
 peoncolorado
 pepe-le-pew3
 pepp7
@@ -2748,6 +2770,7 @@ pumas91
 pumly
 putneypawn
 putrizabous
+pvaly58
 pwarther
 pwna8
 px150
@@ -2892,6 +2915,7 @@ robdonchess
 robe10
 robe178
 robert12000
+robert_georgescu
 robertgerrard
 robertharris
 robertkeitz111
@@ -2986,6 +3010,7 @@ saintsavedby-grace
 sajjadakbar
 sajmon91
 salargh222
+salemaestro
 salexharrison4151
 sallycc
 salpingidis
@@ -3300,6 +3325,7 @@ talwrntom
 tamer35_5
 tamer619
 tamirsoliman
+tananicu
 taner
 tangar312
 tango6925
@@ -3376,6 +3402,7 @@ theluckywanderer
 themanwithno_name
 theo_paparrigo
 thepackster82
+thequietman1
 therandomhedgehog
 thesteelman
 theterrbear
@@ -3407,6 +3434,7 @@ timpaulchess
 timschoeniger
 timur111181
 tinmantwo
+tio_dean
 tiredoldman-original
 titi58
 titulintti
@@ -3419,6 +3447,7 @@ tolodoxadrez
 toloei
 tomahhawk
 tomas1313
+tomasarad
 tomciop
 tomdraug
 tomengelhardt
@@ -3520,6 +3549,7 @@ vamshi219
 vande_2004
 vaneasa
 vanteves28
+vaquero1860
 vasilispolena
 vasu_polu
 vblock101
@@ -3528,6 +3558,7 @@ vegandelight
 verheugdro
 vernalfire
 vernalobos
+verns2
 verylate
 vespasian33
 vgtkach
