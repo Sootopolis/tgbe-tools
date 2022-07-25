@@ -1,13 +1,4 @@
-def type_names():
-    names = []
-    print("input names:")
-    while True:
-        name = input().lower().split()
-        if name:
-            names += name
-        else:
-            break
-    return names
+from components import type_names
 
 
 while True:
