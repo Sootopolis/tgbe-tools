@@ -116,6 +116,7 @@ aleksandralehin
 aleksandrleo
 alekvatagin
 alex1951
+alex451
 alex_bohn
 alexakkerman
 alexander-d-knudsen
@@ -265,6 +266,7 @@ asoupdragon
 atalr
 atamolos
 athanasios
+athco
 atos666
 aufenix
 aungaungtun
@@ -317,7 +319,9 @@ barrybarker
 barryjconnor
 bart_l
 bartholomaeus
+bartre1
 batica
+batistebosc
 batomp00
 battleman
 bauernsalat72
@@ -368,6 +372,7 @@ bigeasymike
 bigfluffything
 bigfootsquatchmaster
 bightigh
+bilal155
 bill2
 bill3347
 billforchess
@@ -568,6 +573,7 @@ cdelanoval
 ceffin
 cembalo
 cerberus274
+cesarcebria
 cesardegroot
 cesaroscco
 cezar17
@@ -579,6 +585,7 @@ chakqs
 champ-68
 chankyaneti68
 chanman21
+chanquete
 chaosramda
 charenteaddick
 charlescandycampbell
@@ -698,6 +705,7 @@ columbo2008
 comrade44
 concordat
 conde28
+condrioma
 conkai
 connilliysdan
 conspiranoic
@@ -750,6 +758,7 @@ dabigduck
 daddy996
 daddynina
 daedae513
+dafermel74
 dagomontoya
 daharma
 daitweeds
@@ -803,6 +812,7 @@ daviddavids88
 davideranalli
 davidheise
 davidlondon
+davidr222
 davidsfm
 davidtoebast
 davirite
@@ -870,6 +880,7 @@ dinim
 diogenes_of_sinope33
 diomanu59
 dirk_brijs
+divad53
 divyansh22
 dj50
 djarlo
@@ -913,6 +924,7 @@ dr_ibrahimbahy
 dr_not_nyc
 dr_risiko
 draco112358
+draganspajic
 dragon826
 dragon_luz
 dragonb12
@@ -927,6 +939,7 @@ drcippy
 dreamerdreamer
 drecic
 dreydar
+drgambito
 drgwestboca
 dright
 drogon72
@@ -1284,6 +1297,7 @@ gladstonewanderer
 glasshrapnal
 glasspring
 glengen
+glockster64
 glomik
 gmacandcheese
 gmartinp
@@ -1406,6 +1420,7 @@ henrikusr
 henry_bl
 hercher
 heredog
+hermes_of_eriador
 hesamodin_mokhtari
 hfdamac3
 hg206
@@ -1459,6 +1474,7 @@ huntera88
 hunterjaed
 hybridi
 hydro79
+hydrocyanicacid
 i5ao
 iain72
 iainctredway
@@ -1496,6 +1512,7 @@ imbackagain14
 imhbro
 imperialdalek
 imro74
+ims666
 inaki77
 incommunicado417
 independent2
@@ -1583,6 +1600,7 @@ januszd
 jarel1
 jarethosborne
 jaromirprochazka
+jasknes77
 jaswant_s
 jaumei
 javierfernandezbarrero
@@ -1604,6 +1622,7 @@ jean_de_louvre
 jebent
 jebusdatolo
 jechaffins
+jediel73
 jedraszekp
 jefferson_chess_br
 jeffjmcintire
@@ -2321,6 +2340,7 @@ mojimbo_6
 mojoworking
 mokry88
 moleff2020
+molpeter84
 momobenni
 monadjib
 mondfell
@@ -2433,6 +2453,7 @@ neville2016
 newfischer78
 ngb1066
 nhaygoodjr
+nicandrocastaneda
 nichabodnik
 nichaki
 nichols_ted
@@ -2691,6 +2712,7 @@ philcorrin
 philidor_legacy
 philipboyle
 philome0
+philoupolos
 philthepowerful
 phiupan
 phoebus7200
@@ -2898,6 +2920,7 @@ risosir
 ristoalexander
 river2horses
 rivermonster60
+rizvanbaku
 rj240616
 rjbue
 rjcc_paul
@@ -3079,6 +3102,7 @@ sectumsemprax
 seft
 segismund
 sehsei1983
+sejupep
 selzure
 senseievan
 sentinel2021
@@ -3093,6 +3117,7 @@ serigalaganteng
 setevoi
 settheorist
 sevadas
+sevans86
 shah_mate79
 shaharaim
 shahzor
@@ -3119,6 +3144,7 @@ shrikeatb4
 shsh1010
 shuberts
 shumaaher
+shumbor
 shuwaht
 sicilian_sharp
 sidonianknight
@@ -3150,6 +3176,7 @@ skenda69
 skibass
 skidre
 skillfultaxi
+skoogc
 skorpionbg
 skripkochess
 skypiercer
@@ -3294,6 +3321,7 @@ superprog
 surangad
 surfsnook
 susanadualte
+sushilramrakhyani
 suzumija
 svetlayordanova
 sveto
@@ -3546,9 +3574,11 @@ valeksk
 valeriobc
 valery1957a
 vamshi219
+van_bob
 vande_2004
 vaneasa
 vanteves28
+vaqif07
 vaquero1860
 vasilispolena
 vasu_polu
@@ -3721,6 +3751,7 @@ yonitheavenger
 yorkshirepud
 you-win-sum
 youcefal
+youliyouli
 youmademerealise
 young123
 yourdantrifonov
