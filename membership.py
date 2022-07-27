@@ -3,15 +3,15 @@ import json
 from json.decoder import JSONDecodeError
 from datetime import datetime
 from components import *
-
-
 # types of membership changes to be dealt with:
 # 1. someone left (username doesn't appear in new record, player id not equal to anyone only in new record)
 # 2. someone came (username doesn't appear in old record, player id not equal to anyone only in old record)
 # 3. someone left and returned (only timestamp changes)
 # 4. someone changed name (username doesn't appear in old record, player id equal to someone only in old record)
+#    TODO: the program is currently not tackling this very well
 # 5. someone left, returned, and changed name at some point (username doesn't appear in old record, timestamp changes,
 #    player id equal to someone only in old record)
+#    TODO: the program is currently not tackling this at all
 
 url = "https://api.chess.com/pub/club/the-great-british-empire/members"
 response = requests.get(url)
