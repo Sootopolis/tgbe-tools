@@ -1,0 +1,21 @@
+{
+  "club": "the-great-british-empire",
+  "email": "yuzhuo.w@gmail.com",
+  "username": "wallace_wang",
+  "avoid_admins": 1,
+  "ignore_expired_invited": 1,
+  "clear_uninvitable_cache": 1,
+  "invited_expiry": 180,
+  "uninvitable_expiry": 30,
+  "timeout_expiry": 90,
+  "min_cm": 12,
+  "min_cm_ongoing": 2,
+  "max_ongoing": 110,
+  "max_clubs": 35,
+  "min_elo": 1000,
+  "max_elo": 2300,
+  "max_hours_per_move": 18,
+  "max_hours_offline": 48,
+  "min_score_rate": 0.45,
+  "max_score_rate": 0.85
+}
