@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 from dateutil.relativedelta import relativedelta
 import requests
 from requests.structures import CaseInsensitiveDict
-from components import *
+from components_old import *
 from tqdm import tqdm
 
 target = int(input("number of players to invite: "))

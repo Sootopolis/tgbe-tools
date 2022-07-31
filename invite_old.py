@@ -1,4 +1,4 @@
-from components import type_names
+from components_old import type_names
 
 
 while True:

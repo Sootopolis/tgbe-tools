@@ -2,7 +2,7 @@ import requests
 import json
 from json.decoder import JSONDecodeError
 from datetime import datetime
-from components import *
+from components_old import *
 # types of membership changes to be dealt with:
 # 1. someone left (username doesn't appear in new record, player id not equal to anyone only in new record)
 # 2. someone came (username doesn't appear in old record, player id not equal to anyone only in old record)
