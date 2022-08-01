@@ -2,14 +2,50 @@ import csv
 import json
 from json import JSONDecodeError
 # from collections import namedtuple
-from pprint import pp
+# from pprint import pp
 
 
-# Parameter = namedtuple("Parameter", ["default", "desc"])
+class Player:
+
+    def __init__(self, username: str, player_id: int = 0, timestamp: int = 0):
+        self.username = username
+        self.player_id = player_id
+        self.timestamp = timestamp
+
+    def __repr__(self):
+        return self.username
+
+    # two Player objects are considered equal if they share the same username,
+    # player_id (if both are specified), and timestamp (if both are specified)
+    def __eq__(self, other):
+        if not isinstance(other, Player):
+            return False
+        if self.username != other.username:
+            return False
+        if (
+            self.player_id and
+            other.player_id and
+            self.player_id != other.player_id
+        ):
+            return False
+        if (
+            self.timestamp and
+            other.timestamp and
+            self.timestamp != other.timestamp
+        ):
+            return False
+        return True
+
+    # define hash so that Player objects can be in sets
+    # usernames are not unique identifiers
+    # but is the only attribute that a Player is guaranteed to have
+    # as new members will lack player_id for the sake of runtime
+    def __hash__(self):
+        return hash(self.username)
 
 
+# creates a setup object
 class Setup:
-
     # initialise each parameter to a tuple containing its default value and description
     # they will later be overwritten with either the default values or user inputs
     # it may not be optimal practice, but i find it easier to hard coded them here
@@ -28,15 +64,15 @@ class Setup:
             "your chess.com username (so that chess.com can message you regarding your api usage)"
         )
         self.avoid_admins = (
-            1,
+            True,
             "AVOID inviting admins? (1 = true, 0 = false)"
         )
         self.allow_re_invitations = (
-            1,
+            True,
             "allow re-invitation? (1 = true, 0 = false)"
         )
         self.clear_uninvitable_cache = (
-            1,
+            True,
             "clear expired uninvitable cache before looting? (1 = true, 0 = False)"
         )
         self.re_invite = (
@@ -94,14 +130,16 @@ class Setup:
 
     # a method to overwrite attributes with default values or user inputs
     def setup(self):
-
         def input_default(parameter):
             default, desc = getattr(self, parameter)
             t = type(default)
             print(desc)
             value = input("value [default = {}]: ".format(default))
             if value:
-                setattr(self, parameter, t(value))
+                if isinstance(default, bool):
+                    setattr(self, parameter, bool(int(value)))
+                else:
+                    setattr(self, parameter, t(value))
             else:
                 setattr(self, parameter, default)
 
@@ -109,21 +147,20 @@ class Setup:
         n = len(parameters)
         print("for each parameter, enter without input to use default value")
         for i in range(3):
-            print("\n{} / n".format(i + 1))
+            print("\n{} / {}".format(i + 1, n))
             input_default(parameters[i])
         print("\nthe remaining parameters are relevant to loot.py only")
         for i in range(3, 17):
-            print("\n{} / n".format(i + 1))
+            print("\n{} / {}".format(i + 1, n))
             input_default(parameters[i])
         print("\nfor the next 2 parameters:")
         print("score rate = (wins + 0.5 * draws) / games")
         for i in range(17, 19):
-            print("\n{} / n".format(i + 1))
+            print("\n{} / {}".format(i + 1, n))
             input_default(parameters[i])
-
         # store setup in setup.json
         with open("setup.json", "w") as stream:
-            json.dump(vars(self), stream)
+            json.dump(vars(self), stream, indent=2)
         print("\nsetup updated")
 
 
@@ -140,6 +177,7 @@ def get_setup() -> Setup:
     return setup
 
 
+# this generates http header
 def generate_headers(username: str = "", email: str = "") -> dict:
     headers = {"Accept": "application/json"}
     if username:
@@ -149,10 +187,12 @@ def generate_headers(username: str = "", email: str = "") -> dict:
     return headers
 
 
+# this prints stuff in bold
 def print_bold(s: str, end="\n", sep=" "):
     print("\033[1m" + s + "\033[0m", end=end, sep=sep)
 
 
+# this inputs names separated by either white spaces or new lines
 def type_names() -> list[str]:
     names = []
     print("input names:")
