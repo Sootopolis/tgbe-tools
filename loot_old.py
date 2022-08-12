@@ -242,7 +242,7 @@ try:
             content["games"].reverse()
 
             # check each game
-            for game in content["games"][::-1]:
+            for game in content["games"]:
                 if "match" in game:
                     if datetime.fromtimestamp(game["end_time"]) <= archive_datetime:
                         continue
