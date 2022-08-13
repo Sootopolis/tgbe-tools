@@ -1,6 +1,5 @@
 import json
 from json import JSONDecodeError
-from collections import deque
 from datetime import datetime, timedelta, timezone
 
 
@@ -121,11 +120,11 @@ class Setup:
     allow_re_invitations = 1
     clear_uninvitable_cache = 1
     re_invite = 180
-    uninvitable_exp = 30
-    timeout_exp = 90
+    uninvitable_expiry = 30
+    timeout_expiry = 90
     max_clubs = 30
-    max_hours_per_move = 18
-    max_hours_offline = 48
+    max_move_time = 18
+    max_offline = 48
     min_cm = 12
     min_cm_ongoing = 2
     max_ongoing = 100
@@ -178,6 +177,11 @@ class Setup:
         for key, value in data.items():
             setattr(self, key, value)
         self.club = Club(self.club)
+        self.re_invite = int(timedelta(days=self.re_invite).total_seconds())
+        self.uninvitable_expiry = int(timedelta(days=self.uninvitable_expiry).total_seconds())
+        self.timeout_expiry = int(timedelta(days=self.timeout_expiry).total_seconds())
+        self.max_offline = int(timedelta(hours=self.max_offline).total_seconds())
+        self.max_move_time = int(timedelta(hours=self.max_move_time).total_seconds())
 
 
 # this prints stuff in bold
@@ -198,36 +202,36 @@ def type_names() -> list[str]:
     return names
 
 
-class Times:
-    __dt = datetime.now(tz=timezone.utc)
-    now = int(__dt.timestamp())
-
-    # for potw
-    this_week = __dt.replace(hour=9, minute=0, second=0, microsecond=0)
-    __days = __dt.weekday()
-    if __days < 3:
-        __days = -(__days + 4)
-    elif __days > 3:
-        __days = __days - 3
-    elif __dt < this_week:
-        __days = -7
-    else:
-        __days = 0
-    this_week += timedelta(days=__days)
-    last_week = this_week - timedelta(days=7)
-    next_week = this_week + timedelta(days=7)
-    this_week = this_week.timestamp()
-    last_week = last_week.timestamp()
-    next_week = next_week.timestamp()
-
-    # for loot.py
-    months = []
-    last90 = __dt - timedelta(days=90)
-    while last90 <= __dt:
-        months.append("{}/{:>02}".format(last90.year, last90.month))
-        last90 = last90.replace(month=(last90.month + 1))
-    months.reverse()
-    last90 = int((__dt - timedelta(days=90)).timestamp())
+# class Times:
+#     __dt = datetime.now(tz=timezone.utc)
+#     now = int(__dt.timestamp())
+#
+#     # for potw
+#     this_week = __dt.replace(hour=9, minute=0, second=0, microsecond=0)
+#     __days = __dt.weekday()
+#     if __days < 3:
+#         __days = -(__days + 4)
+#     elif __days > 3:
+#         __days = __days - 3
+#     elif __dt < this_week:
+#         __days = -7
+#     else:
+#         __days = 0
+#     this_week += timedelta(days=__days)
+#     last_week = this_week - timedelta(days=7)
+#     next_week = this_week + timedelta(days=7)
+#     this_week = this_week.timestamp()
+#     last_week = last_week.timestamp()
+#     next_week = next_week.timestamp()
+#
+#     # for loot.py
+#     months = []
+#     last90 = __dt - timedelta(days=90)
+#     while last90 <= __dt:
+#         months.append("{}/{:>02}".format(last90.year, last90.month))
+#         last90 = last90.replace(month=(last90.month + 1))
+#     months.reverse()
+#     last90 = int((__dt - timedelta(days=90)).timestamp())
 
 
 result_codes = {
@@ -311,8 +315,8 @@ class Board:
             username: str,
             white_result: str = "",
             black_result: str = "",
-            white_endtime: int|None = None,
-            black_endtime: int|None = None
+            white_endtime: int | None = None,
+            black_endtime: int | None = None
     ):
         self.match_id = match_id
         self.board = board
@@ -332,6 +336,12 @@ class Club:
 
     def get_matches(self):
         return "https://api.chess.com/pub/club/{}/matches".format(self.name)
+
+    def get_profile(self):
+        return "https://api.chess.com/pub/club/{}".format(self.name)
+
+    def __repr__(self):
+        return self.name
 
 
 def get_player_page(username: str):
