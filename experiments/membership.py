@@ -180,8 +180,8 @@ for member in record_members:
         member.username,
         member.player_id,
         member.timestamp,
-        member.is_closed,
-        member.is_former
+        int(member.is_closed),
+        int(member.is_former)
     ])
 for member in former_members.values():
     members.append([
