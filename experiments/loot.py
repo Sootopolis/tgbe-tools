@@ -33,10 +33,9 @@ with open("uninvitables.csv") as stream:
     uninvitables = dict()
     if setup.clear_uninvitable_cache:
         for username, timestamp in reader:
-            timestamp = int(timestamp)
-            if timestamp <= now_timestamp:
+            if int(timestamp) <= now_timestamp - setup.uninvitable_expiry:
                 continue
-            uninvitables[username] = timestamp
+            uninvitables[username] = int(timestamp)
     else:
         for username, timestamp in reader:
             uninvitables[username] = int(timestamp)
