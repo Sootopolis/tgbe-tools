@@ -1,8 +1,6 @@
 import requests
 from components import *
 import csv
-from tabulate import tabulate
-from tqdm import tqdm
 
 # get members in local record
 record_members = set()
@@ -190,8 +188,8 @@ for member in former_members.values():
         member.username,
         member.player_id,
         member.timestamp,
-        member.is_closed,
-        member.is_former
+        int(member.is_closed),
+        int(member.is_former)
     ])
 members.sort()
 
