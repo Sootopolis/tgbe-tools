@@ -33,10 +33,9 @@ with open("uninvitables.csv") as stream:
     uninvitables = dict()
     if setup.clear_uninvitable_cache:
         for username, timestamp in reader:
-            timestamp = int(timestamp)
-            if timestamp <= now_timestamp:
+            if int(timestamp) <= now_timestamp:
                 continue
-            uninvitables[username] = timestamp
+            uninvitables[username] = int(timestamp)
     else:
         for username, timestamp in reader:
             uninvitables[username] = int(timestamp)
@@ -259,11 +258,11 @@ try:
                 if len(invitables) >= target:
                     break
 
+    candidates_bar.close()
+    invitables_bar.close()
+
 # allows keyboard interrupt
 except KeyboardInterrupt:
-    pass
-# closes
-finally:
     candidates_bar.close()
     invitables_bar.close()
     # this is to avoid a bug where KeyboardInterrupt causes the first bar to duplicate
