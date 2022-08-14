@@ -1,10 +1,11 @@
-import requests
-from components import Setup, Member, Club, print_bold
-from datetime import datetime, timedelta, timezone
-from dateutil.relativedelta import relativedelta
 import csv
+from datetime import datetime, timedelta, timezone
+
+import requests
+from dateutil.relativedelta import relativedelta
 from tqdm import tqdm
 
+from components import Setup, Member, Club, print_bold
 
 # load setup
 setup = Setup()

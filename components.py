@@ -1,7 +1,6 @@
 import json
-import typing
+from datetime import timedelta
 from json import JSONDecodeError
-from datetime import datetime, timedelta, timezone
 
 
 class Member:
@@ -9,10 +8,10 @@ class Member:
     def __init__(
             self,
             username: str,
-            player_id: int = 0,
-            timestamp: int = 0,
-            is_closed: bool = False,
-            is_former: bool = False
+            player_id: int | str = 0,
+            timestamp: int | str = 0,
+            is_closed: bool | str = False,
+            is_former: bool | str = False
     ):
         self.username = username.lower()
         self.player_id = int(player_id)
@@ -333,7 +332,7 @@ def print_bold(s: str, end="\n", sep=" "):
     print("\033[1m" + s + "\033[0m", end=end, sep=sep)
 
 
-def get_player_page(username: str):
+def get_player_profile(username: str):
     return "https://www.chess.com/member/{}".format(username)
 
 

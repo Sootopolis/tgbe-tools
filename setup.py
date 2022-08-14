@@ -1,6 +1,4 @@
-from components import Setup, print_bold
-import json
-
+from components import Setup
 
 setup = Setup()
 # parameters = list(vars(setup).keys())

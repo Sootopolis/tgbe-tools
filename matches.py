@@ -1,7 +1,5 @@
-from components import Setup, Member, Club, ClubMatch, print_bold
-import requests
 import csv
-from tqdm import tqdm
+from components import Setup
 
 # load setup
 setup = Setup()

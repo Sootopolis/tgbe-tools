@@ -1,6 +1,6 @@
-import requests
-from components import Setup, Member, get_player_page, print_bold
 import csv
+import requests
+from components import Setup, Member, get_player_profile, print_bold
 
 # get members in local record
 record_members = set()
@@ -139,33 +139,33 @@ if left:
 if rejoined:
     print("players who have left and returned:")
     for username in rejoined:
-        print(username, get_player_page(username))
+        print(username, get_player_profile(username))
 if closed:
     print("players whose accounts are closed:")
     for username in closed:
-        print(username, get_player_page(username))
+        print(username, get_player_profile(username))
 if reopened:
     print("players whose accounts were closed and are reopened:")
     for username in closed:
-        print(username, get_player_page(username))
+        print(username, get_player_profile(username))
 if renamed:
     print("players who have changed their usernames:")
     for old_name, new_name in renamed:
-        print(old_name, "->", new_name, get_player_page(new_name))
+        print(old_name, "->", new_name, get_player_profile(new_name))
 if renamed_left:
     print("players who have changed their usernames")
     print("and either left or closed their accounts:")
     for old_name, new_name in renamed_left:
-        print(old_name, "->", new_name, get_player_page(new_name))
+        print(old_name, "->", new_name, get_player_profile(new_name))
 if renamed_rejoined:
     print("players who have changed their usernames, left, and rejoined:")
     for old_name, new_name in renamed_rejoined:
-        print(old_name, "->", new_name, get_player_page(new_name))
+        print(old_name, "->", new_name, get_player_profile(new_name))
 if renamed_reopened:
     print("players whose accounts were closed and are reopened")
     print("and who have changed their usernames:")
     for old_name, new_name in renamed_reopened:
-        print(old_name, "->", new_name, get_player_page(new_name))
+        print(old_name, "->", new_name, get_player_profile(new_name))
 if came:
     print("players who have joined:")
     for player in came.values():
@@ -188,21 +188,9 @@ if (
 
 members = []
 for member in record_members:
-    members.append([
-        member.username,
-        member.player_id,
-        member.timestamp,
-        int(member.is_closed),
-        int(member.is_former)
-    ])
+    members.append(member.to_csv_row())
 for member in former_members.values():
-    members.append([
-        member.username,
-        member.player_id,
-        member.timestamp,
-        int(member.is_closed),
-        int(member.is_former)
-    ])
+    members.append(member.to_csv_row())
 members.sort()
 
 with open("members.csv", "w") as stream:
