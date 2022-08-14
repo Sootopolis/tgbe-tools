@@ -172,7 +172,19 @@ if came:
         print(player.username, player.get_page())
         record_members.add(player)
 
-print_bold("total number: {}".format(len(latest_members)))
+if (
+    __name__ == "__main__" or
+    left or
+    rejoined or
+    closed or
+    reopened or
+    renamed or
+    renamed_left or
+    renamed_rejoined or
+    renamed_reopened or
+    came
+):
+    print_bold("total number: {}".format(len(latest_members)))
 
 members = []
 for member in record_members:
