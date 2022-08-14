@@ -73,19 +73,19 @@ while True:
     command = input("Enter command - Input(I), Output(O), Check(C), Quit(Q):\n").upper()
     if command == "I":
         usernames = clever_input()
-        with open("../invited.txt", "r") as file:
+        with open("april 2022/invited.txt", "r") as file:
             invited = file.readline().strip().split()
-        with open("../invited.txt", "w") as file:
+        with open("april 2022/invited.txt", "w") as file:
             file.write(names_input(usernames, invited))
         print()
     elif command == "O":
-        with open("../invited.txt", "r") as file:
+        with open("april 2022/invited.txt", "r") as file:
             invited = file.readline().strip().split()
         print("Current list: ({})".format(len(invited)))
         print(*invited) if len(invited) else print("(None)")
         print()
     elif command == "C":
-        with open("../invited.txt", "r") as file:
+        with open("april 2022/invited.txt", "r") as file:
             invited = file.readline().strip().split()
         usernames = clever_input()
         check_duplicates(usernames, invited)
