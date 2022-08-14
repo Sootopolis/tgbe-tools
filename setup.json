@@ -6,7 +6,7 @@
   "ignore_expired_invited": 1,
   "clear_uninvitable_cache": 1,
   "invited_expiry": 180,
-  "uninvitable_expiry": 30,
+  "scanned_expiry": 30,
   "timeout_expiry": 90,
   "min_cm": 12,
   "min_cm_ongoing": 2,

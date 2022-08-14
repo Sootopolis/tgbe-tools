@@ -1,5 +1,5 @@
 import requests
-from components import *
+from components import Setup, Member, get_player_page, print_bold
 import csv
 
 # get members in local record
@@ -9,7 +9,7 @@ with open("members.csv") as stream:
     reader = csv.reader(stream)
     header = next(reader)
     for username, player_id, timestamp, is_closed, is_former in reader:
-        player = Player(
+        player = Member(
             username=username,
             player_id=int(player_id),
             timestamp=int(timestamp),
@@ -38,7 +38,7 @@ for category in ("weekly", "monthly", "all_time"):
     for entry in content[category]:
         username = entry["username"]
         timestamp = entry["joined"]
-        latest_members.add(Player(
+        latest_members.add(Member(
             username=username,
             timestamp=timestamp,
             is_closed=False,
@@ -78,9 +78,9 @@ renamed_reopened = []
 
 # figure out specifics of lost members
 for player_id in list(left.keys()):
-    L: Player = left[player_id]
+    L: Member = left[player_id]
     if player_id in came:
-        C: Player = came[player_id]
+        C: Member = came[player_id]
         if L.username == C.username:
             rejoined.append(L.username)
             L.timestamp = C.timestamp
@@ -108,10 +108,10 @@ session.close()
 
 # figure out specifics of new members
 for player_id in list(came.keys()):
-    C: Player = came[player_id]
+    C: Member = came[player_id]
     if player_id not in former_members:
         continue
-    F: Player = former_members[player_id]
+    F: Member = former_members[player_id]
     if C.username != F.username:
         if F.is_closed:
             renamed_reopened.append((F.username, C.username))
@@ -135,7 +135,7 @@ for player_id in list(came.keys()):
 if left:
     print("players who have left:")
     for player in left.values():
-        print(player.username, player.get_page())
+        print(player.username, player.get_homepage())
 if rejoined:
     print("players who have left and returned:")
     for username in rejoined:
@@ -169,7 +169,7 @@ if renamed_reopened:
 if came:
     print("players who have joined:")
     for player in came.values():
-        print(player.username, player.get_page())
+        print(player.username, player.get_homepage())
         record_members.add(player)
 
 if (

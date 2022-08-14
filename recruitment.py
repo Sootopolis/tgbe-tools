@@ -1,5 +1,6 @@
 import requests
-from components import *
+from components import Setup, Member, Club, print_bold
+from datetime import datetime, timedelta, timezone
 from dateutil.relativedelta import relativedelta
 import csv
 from tqdm import tqdm
@@ -94,7 +95,7 @@ for category in content:
             username in no_invite or
             (
                     username in invited and
-                    invited[username] + setup.re_invite >= now_timestamp
+                    invited[username] + setup.invited_expiry >= now_timestamp
             )
         ):
             continue
@@ -111,7 +112,7 @@ invitables = []
 
 try:
     for username in candidates:
-        player = Player(username)
+        player = Member(username)
         candidates_bar.update()
 
         # get player profile and eliminate players offline for too long
@@ -119,7 +120,7 @@ try:
         if response.status_code != 200:
             continue
         if now_timestamp - response.json()["last_online"] > setup.max_offline:
-            uninvitables[username] = now_timestamp + setup.uninvitable_expiry
+            uninvitables[username] = now_timestamp + setup.scanned_expiry
             continue
 
         # get player clubs and eliminates players in too many clubs
@@ -127,7 +128,7 @@ try:
         if response.status_code != 200:
             continue
         if len(response.json()["clubs"]) > setup.max_clubs:
-            uninvitables[username] = now_timestamp + setup.uninvitable_expiry
+            uninvitables[username] = now_timestamp + setup.scanned_expiry
             continue
 
         # get player stats
@@ -138,12 +139,12 @@ try:
 
         # eliminate players who do not play daily
         if "chess_daily" not in content:
-            uninvitables[username] = now_timestamp + setup.uninvitable_expiry
+            uninvitables[username] = now_timestamp + setup.scanned_expiry
             continue
 
         # eliminate players who move too slow
         if content["chess_daily"]["record"]["time_per_move"] > setup.max_move_time:
-            uninvitables[username] = now_timestamp + setup.uninvitable_expiry
+            uninvitables[username] = now_timestamp + setup.scanned_expiry
             continue
 
         # eliminate players not in rating range
@@ -151,7 +152,7 @@ try:
             content["chess_daily"]["last"]["rating"] < setup.min_elo or
             content["chess_daily"]["last"]["rating"] > setup.max_elo
         ):
-            uninvitables[username] = now_timestamp + setup.uninvitable_expiry
+            uninvitables[username] = now_timestamp + setup.scanned_expiry
             continue
 
         # eliminates players who lose or win too much
@@ -164,7 +165,7 @@ try:
         #     draws += content["chess960_daily"]["record"]["draw"]
         score_rate = (wins + draws / 2) / (wins + losses + draws)
         if score_rate < setup.min_score_rate or score_rate > setup.max_score_rate:
-            uninvitables[username] = now_timestamp + setup.uninvitable_expiry
+            uninvitables[username] = now_timestamp + setup.scanned_expiry
             continue
 
         # streamlines later procedures for players without any timeout
@@ -178,7 +179,7 @@ try:
 
         # eliminate players with too many daily games ongoing
         if len(games) > setup.max_ongoing:
-            uninvitables[username] = now_timestamp + setup.uninvitable_expiry
+            uninvitables[username] = now_timestamp + setup.scanned_expiry
             continue
 
         # eliminate players with too few club match games ongoing
@@ -187,7 +188,7 @@ try:
             if "match" in game:
                 played += 1
         if played < setup.min_cm_ongoing:
-            uninvitables[username] = now_timestamp + setup.uninvitable_expiry
+            uninvitables[username] = now_timestamp + setup.scanned_expiry
             continue
 
         # invite players with no timeout and enough club match games ongoing
@@ -251,7 +252,7 @@ try:
             if not no_timeout:
                 uninvitables[username] = now_timestamp + setup.timeout_expiry
             elif played < setup.min_cm:
-                uninvitables[username] = now_timestamp + setup.uninvitable_expiry
+                uninvitables[username] = now_timestamp + setup.scanned_expiry
             else:
                 invitables.append(username)
                 invitables_bar.update()
