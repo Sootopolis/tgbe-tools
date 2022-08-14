@@ -8,16 +8,10 @@ former_members = dict()
 with open("members.csv") as stream:
     reader = csv.reader(stream)
     header = next(reader)
-    for username, player_id, timestamp, is_closed, is_former in reader:
-        player = Member(
-            username=username,
-            player_id=int(player_id),
-            timestamp=int(timestamp),
-            is_closed=bool(int(is_closed)),
-            is_former=bool(int(is_former))
-        )
+    for row in reader:
+        player = Member(*row)
         if player.is_former or player.is_closed:
-            former_members[player_id] = player
+            former_members[player.player_id] = player
         else:
             record_members.add(player)
 
