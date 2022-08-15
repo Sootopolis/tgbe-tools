@@ -171,17 +171,6 @@ class ClubMatch:
     #     return int(self.match_url) >= int(other.match_url)
 
 
-# class Game:
-#
-#     def __init__(self, result: str = "", end_time: int = 0):
-#         self.result = result
-#         self.end_time = end_time
-#
-#     def finish(self, result: str, end_time: int):
-#         self.result = result
-#         self.end_time = end_time
-
-
 class Game:
 
     def __init__(self, result: str = "", end_time: int = 0):
@@ -325,6 +314,50 @@ class Setup:
         self.timeout_expiry = int(timedelta(days=self.timeout_expiry).total_seconds())
         self.max_offline = int(timedelta(hours=self.max_offline).total_seconds())
         self.max_move_time = int(timedelta(hours=self.max_move_time).total_seconds())
+
+
+class Candidate:
+
+    def __init__(
+            self,
+            username: str,
+            player_id: int | str = 0,
+            expiry: int | str = 0,
+            invited: bool | str = False,
+            joined: bool | str = False
+    ):
+        self.username = username.lower()
+        self.player_id = int(player_id)
+        self.expiry = int(expiry)
+        self.invited = bool(int(invited))
+        self.joined = bool(int(joined))
+
+    def to_csv_row(self):
+        return [
+            self.username,
+            str(self.player_id),
+            str(self.expiry),
+            str(int(self.invited)),
+            str(int(self.joined))
+        ]
+
+    def get_profile(self):
+        return "https://api.chess.com/pub/player/{}".format(self.username)
+
+    def get_homepage(self):
+        return "https://www.chess.com/member/{}".format(self.username)
+
+    def __repr__(self):
+        return self.username
+
+    def __hash__(self):
+        return hash(self.username)
+
+    def __eq__(self, other):
+        return self.username == other.username
+
+    def __lt__(self, other):
+        return self.username <= other.username
 
 
 # this prints stuff in bold
