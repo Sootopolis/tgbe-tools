@@ -3,26 +3,15 @@ from datetime import timedelta
 from json import JSONDecodeError
 
 
-class Member:
+class Player:
 
     def __init__(
             self,
             username: str,
-            player_id: int | str = 0,
-            timestamp: int | str = 0,
-            is_closed: bool | str = False,
-            is_former: bool | str = False
+            player_id: int | str = 0
     ):
-        self.username = username.lower()
-        self.player_id = int(player_id)
-        self.timestamp = int(timestamp)
-        self.is_closed = bool(int(is_closed))
-        self.is_former = bool(int(is_former))
-        # self.__W = 0
-        # self.__D = 0
-        # self.__L = 0
-        # self.__last_activity = 0
-        # self.__last_point = 0
+        self.username = username
+        self.player_id = player_id
 
     def get_profile(self):
         return "https://api.chess.com/pub/player/{}".format(self.username)
@@ -41,6 +30,48 @@ class Member:
 
     def get_archive(self, month: str):
         return "https://api.chess.com/pub/player/{}/games/{}".format(self.username, month)
+
+    def __repr__(self):
+        return self.username
+
+    def __hash__(self):
+        return hash(self.username)
+
+    def __eq__(self, other):
+        return self.username == other.username
+
+    def __lt__(self, other):
+        return self.username < other.username
+
+    def __gt__(self, other):
+        return self.username > other.username
+
+    def __le__(self, other):
+        return self.username <= other.username
+
+    def __ge__(self, other):
+        return self.username >= other.username
+
+
+class Member(Player):
+
+    def __init__(
+            self,
+            username: str,
+            player_id: int | str = 0,
+            timestamp: int | str = 0,
+            is_closed: bool | str = False,
+            is_former: bool | str = False
+    ):
+        super().__init__(username=username, player_id=player_id)
+        self.timestamp = int(timestamp)
+        self.is_closed = bool(int(is_closed))
+        self.is_former = bool(int(is_former))
+        # self.__W = 0
+        # self.__D = 0
+        # self.__L = 0
+        # self.__last_activity = 0
+        # self.__last_point = 0
 
     def to_csv_row(self):
         return [
@@ -68,14 +99,9 @@ class Member:
     #     if timestamp:
     #         self.__last_activity = max(self.__last_activity, timestamp)
 
-    def __repr__(self):
-        return self.username
-
-    # two Player objects are considered equal if they share the same username,
+    # two Member objects are considered equal if they share the same username,
     # player_id (if both are specified), and timestamp (if both are specified)
     def __eq__(self, other):
-        if not isinstance(other, Member):
-            raise TypeError("comparing a Player instance with a non-Player instance")
         if self.username != other.username:
             return False
         if (
@@ -86,38 +112,37 @@ class Member:
             return False
         if (
                 self.timestamp and
+                hasattr(other, "timestamp") and
                 other.timestamp and
                 self.timestamp != other.timestamp
         ):
             return False
         return True
 
-    # def __lt__(self, other):
-    #     if not isinstance(other, Player):
-    #         raise TypeError("comparing a Player instance with a non-Player instance")
-    #     return self.username < other.username
 
-    # def __le__(self, other):
-    #     if not isinstance(other, Player):
-    #         raise TypeError("comparing a Player instance with a non-Player instance")
-    #     return self.username <= other.username
+class Candidate(Player):
 
-    # def __gt__(self, other):
-    #     if not isinstance(other, Player):
-    #         raise TypeError("comparing a Player instance with a non-Player instance")
-    #     return self.username > other.username
+    def __init__(
+            self,
+            username: str,
+            player_id: int | str = 0,
+            expiry: int | str = 0,
+            invited: bool | str = False,
+            joined: bool | str = False
+    ):
+        super().__init__(username=username, player_id=player_id)
+        self.expiry = int(expiry)
+        self.invited = bool(int(invited))
+        self.joined = bool(int(joined))
 
-    # def __ge__(self, other):
-    #     if not isinstance(other, Player):
-    #         raise TypeError("comparing a Player instance with a non-Player instance")
-    #     return self.username >= other.username
-
-    # define hash so that Player objects can be in sets
-    # usernames are not unique identifiers
-    # but is the only attribute that a Player is guaranteed to have
-    # as new members will lack player_id for the sake of runtime
-    def __hash__(self):
-        return hash(self.username)
+    def to_csv_row(self):
+        return [
+            self.username,
+            str(self.player_id),
+            str(self.expiry),
+            str(int(self.invited)),
+            str(int(self.joined))
+        ]
 
 
 class ClubMatch:
@@ -314,50 +339,6 @@ class Setup:
         self.timeout_expiry = int(timedelta(days=self.timeout_expiry).total_seconds())
         self.max_offline = int(timedelta(hours=self.max_offline).total_seconds())
         self.max_move_time = int(timedelta(hours=self.max_move_time).total_seconds())
-
-
-class Candidate:
-
-    def __init__(
-            self,
-            username: str,
-            player_id: int | str = 0,
-            expiry: int | str = 0,
-            invited: bool | str = False,
-            joined: bool | str = False
-    ):
-        self.username = username.lower()
-        self.player_id = int(player_id)
-        self.expiry = int(expiry)
-        self.invited = bool(int(invited))
-        self.joined = bool(int(joined))
-
-    def to_csv_row(self):
-        return [
-            self.username,
-            str(self.player_id),
-            str(self.expiry),
-            str(int(self.invited)),
-            str(int(self.joined))
-        ]
-
-    def get_profile(self):
-        return "https://api.chess.com/pub/player/{}".format(self.username)
-
-    def get_homepage(self):
-        return "https://www.chess.com/member/{}".format(self.username)
-
-    def __repr__(self):
-        return self.username
-
-    def __hash__(self):
-        return hash(self.username)
-
-    def __eq__(self, other):
-        return self.username == other.username
-
-    def __lt__(self, other):
-        return self.username <= other.username
 
 
 # this prints stuff in bold

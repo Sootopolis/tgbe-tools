@@ -1,11 +1,9 @@
 import csv
 from datetime import datetime, timedelta, timezone
-
 import requests
 from dateutil.relativedelta import relativedelta
 from tqdm import tqdm
-
-from components import Setup, Member, Club, print_bold
+from components import Setup, Candidate, Club, print_bold
 
 # load setup
 setup = Setup()
@@ -18,29 +16,15 @@ if not club.name:
     raise SystemExit("club name not provided")
 
 # find yyyy/mm
-now = datetime.now(timezone.utc)
-now_timestamp = int(now.timestamp())
-ninty = now - timedelta(days=90)
+now_datetime = datetime.now(timezone.utc)
+now = int(now_datetime.timestamp())
+ninty = now_datetime - timedelta(days=90)
 months = []
-while ninty <= now:
+while ninty <= now_datetime:
     months.append("{}/{:>02}".format(ninty.year, ninty.month))
     ninty += relativedelta(months=+1)
 months.reverse()
-ninty = now - timedelta(days=90)
-
-# get and clear uninvitable cache
-with open("uninvitables.csv") as stream:
-    reader = csv.reader(stream)
-    header_uninvitables = next(reader)
-    uninvitables = dict()
-    if setup.clear_uninvitable_cache:
-        for username, timestamp in reader:
-            if int(timestamp) <= now_timestamp:
-                continue
-            uninvitables[username] = int(timestamp)
-    else:
-        for username, timestamp in reader:
-            uninvitables[username] = int(timestamp)
+ninty = now_datetime - timedelta(days=90)
 
 # get members and former members in record
 with open("members.csv") as stream:
@@ -50,13 +34,41 @@ with open("members.csv") as stream:
     for entry in reader:
         members.add(entry[0])
 
-# get invited players in record
-with open("invited.csv") as stream:
+# # get and clear uninvitable cache
+# with open("uninvitables.csv") as stream:
+#     reader = csv.reader(stream)
+#     header_uninvitables = next(reader)
+#     uninvitables = dict()
+#     if setup.clear_uninvitable_cache:
+#         for username, timestamp in reader:
+#             if int(timestamp) <= now:
+#                 continue
+#             uninvitables[username] = int(timestamp)
+#     else:
+#         for username, timestamp in reader:
+#             uninvitables[username] = int(timestamp)
+
+# # get invited players in record
+# with open("invited.csv") as stream:
+#     reader = csv.reader(stream)
+#     header_invited = next(reader)
+#     invited = dict()
+#     for username, timestamp in reader:
+#         invited[username] = int(timestamp)
+
+# get scanned and invited players in record and clear scanned cache
+with open("scanned.csv") as stream:
     reader = csv.reader(stream)
-    header_invited = next(reader)
-    invited = dict()
-    for username, timestamp in reader:
-        invited[username] = int(timestamp)
+    scanned_header = next(reader)
+    scanned_usernames = dict()
+    scanned_player_ids = dict()
+    for entry in reader:
+        player = Candidate(*entry)
+        if not player.invited and player.expiry <= now:
+            continue
+        scanned_usernames[player.username] = player
+        if player.player_id:
+            scanned_player_ids[player.player_id] = player
 
 # get players in do_not_invite.csv
 with open("do_not_invite.csv") as stream:
@@ -68,41 +80,37 @@ with open("do_not_invite.csv") as stream:
 
 # start session
 session = requests.session()
-session.headers.update({
-    "Accept": "application/json",
-    "from": setup.email
-})
+session.headers.update(setup.headers())
 
 # check if victim club exists and get the victim club's admins
 response = session.get(club.get_profile())
 if response.status_code != 200:
     raise SystemExit("cannot find club: {}".format(club.name))
-content = response.json()
-admins = set(content["admin"])
+admins = set(response.json()["admin"])
 
 # get candidate players
 response = session.get(club.get_members())
 if response.status_code != 200:
     raise SystemExit("failed to get member list - {}".format(response.status_code))
-content = response.json()
+content: dict = response.json()
 candidates = []
 for category in content:
     for entry in content[category]:
-        username: str = entry["username"].lower()
-        if (
-            username in members or
-            username in uninvitables or
-            username in admins or
-            username in no_invite or
-            (
-                    username in invited and
-                    invited[username] + setup.invited_expiry >= now_timestamp
-            )
-        ):
+        candidate = Candidate(username=entry["username"])
+        if candidate.username in members:
             continue
-        candidates.append(username)
+        if candidate.username in admins:
+            continue
+        if candidate.username in no_invite:
+            continue
+        if candidate.username in scanned_usernames:
+            player = scanned_usernames[candidate.username]
+            if player.invited and player.expiry > now:
+                continue
+            candidate = player
+        candidates.append(candidate)
 if not candidates:
-    raise SystemExit("no players to scan")
+    raise SystemExit("no candidates to examine")
 
 # make progress bars
 candidates_bar = tqdm(total=len(candidates), desc="candidates", position=0, colour="blue")
@@ -112,40 +120,60 @@ invitables_bar = tqdm(total=target, desc="invitables", position=1, colour="yello
 invitables = []
 
 try:
-    for username in candidates:
-        player = Member(username)
+    for candidate in candidates:
         candidates_bar.update()
 
-        # get player profile and eliminate players offline for too long
-        response = session.get(player.get_profile())
+        # get player profile
+        response = session.get(candidate.get_profile())
         if response.status_code != 200:
             continue
-        if now_timestamp - response.json()["last_online"] > setup.max_offline:
-            uninvitables[username] = now_timestamp + setup.scanned_expiry
+        content = response.json()
+
+        # make sure not to examine recently invited players
+        # even if they've changed names
+        if candidate.username not in scanned_usernames:
+            candidate.player_id = content["player_id"]
+            if candidate.player_id in scanned_player_ids:
+                player = scanned_player_ids[candidate.player_id]
+                scanned_usernames.pop(player.username)
+                # update username and keep all other attributes
+                player.username = candidate.username
+                candidate = player
+                scanned_usernames[candidate.username] = candidate
+                if candidate.expiry > now:
+                    continue
+
+        # eliminate players offline for too long
+        if now - content["last_online"] > setup.max_offline:
+            candidate.expiry = now + setup.scanned_expiry
+            scanned_usernames[candidate.username] = candidate
             continue
 
         # get player clubs and eliminates players in too many clubs
-        response = session.get(player.get_clubs())
+        response = session.get(candidate.get_clubs())
         if response.status_code != 200:
             continue
         if len(response.json()["clubs"]) > setup.max_clubs:
-            uninvitables[username] = now_timestamp + setup.scanned_expiry
+            candidate.expiry = now + setup.scanned_expiry
+            scanned_usernames[candidate.username] = candidate
             continue
 
         # get player stats
-        response = session.get(player.get_stats())
+        response = session.get(candidate.get_stats())
         if response.status_code != 200:
             continue
         content = response.json()
 
         # eliminate players who do not play daily
         if "chess_daily" not in content:
-            uninvitables[username] = now_timestamp + setup.scanned_expiry
+            candidate.expiry = now + setup.scanned_expiry
+            scanned_usernames[candidate.username] = candidate
             continue
 
         # eliminate players who move too slow
         if content["chess_daily"]["record"]["time_per_move"] > setup.max_move_time:
-            uninvitables[username] = now_timestamp + setup.scanned_expiry
+            candidate.expiry = now + setup.scanned_expiry
+            scanned_usernames[candidate.username] = candidate
             continue
 
         # eliminate players not in rating range
@@ -153,7 +181,8 @@ try:
             content["chess_daily"]["last"]["rating"] < setup.min_elo or
             content["chess_daily"]["last"]["rating"] > setup.max_elo
         ):
-            uninvitables[username] = now_timestamp + setup.scanned_expiry
+            candidate.expiry = now + setup.scanned_expiry
+            scanned_usernames[candidate.username] = candidate
             continue
 
         # eliminates players who lose or win too much
@@ -166,21 +195,23 @@ try:
         #     draws += content["chess960_daily"]["record"]["draw"]
         score_rate = (wins + draws / 2) / (wins + losses + draws)
         if score_rate < setup.min_score_rate or score_rate > setup.max_score_rate:
-            uninvitables[username] = now_timestamp + setup.scanned_expiry
+            candidate.expiry = now + setup.scanned_expiry
+            scanned_usernames[candidate.username] = candidate
             continue
 
         # streamlines later procedures for players without any timeout
         no_timeout = content["chess_daily"]["record"]["timeout_percent"] == 0
 
         # get player ongoing games
-        response = session.get(player.get_games())
+        response = session.get(candidate.get_games())
         if response.status_code != 200:
             continue
         games: list = response.json()["games"]
 
         # eliminate players with too many daily games ongoing
         if len(games) > setup.max_ongoing:
-            uninvitables[username] = now_timestamp + setup.scanned_expiry
+            candidate.expiry = now + setup.scanned_expiry
+            scanned_usernames[candidate.username] = candidate
             continue
 
         # eliminate players with too few club match games ongoing
@@ -189,12 +220,13 @@ try:
             if "match" in game:
                 played += 1
         if played < setup.min_cm_ongoing:
-            uninvitables[username] = now_timestamp + setup.scanned_expiry
+            candidate.expiry = now + setup.scanned_expiry
+            scanned_usernames[candidate.username] = candidate
             continue
 
         # invite players with no timeout and enough club match games ongoing
         if no_timeout and played > setup.min_cm:
-            invitables.append(username)
+            invitables.append(candidate)
             invitables_bar.update()
             if len(invitables) >= target:
                 break
@@ -206,7 +238,7 @@ try:
 
         # get player monthly archives
         for month in months:
-            response = session.get(player.get_archive(month))
+            response = session.get(candidate.get_archive(month))
             if response.status_code != 200:
                 break
             games: list = response.json()["games"]
@@ -215,9 +247,11 @@ try:
             # we traverse backwards, and once we see a game before 90 days
             # we can break out
             for game in games[::-1]:
-                game: dict
-                if game["end_time"] < int(ninty.timestamp()):
+                end_time: int = game["end_time"]
+                if end_time < int(ninty.timestamp()):
                     no_timeout = scan_complete = True
+                    candidate.expiry = end_time + setup.timeout_expiry
+                    scanned_usernames[candidate.username] = candidate
                     break
 
                 # invite players without timeout once they have enough club match games
@@ -231,7 +265,7 @@ try:
                     else:
                         continue
 
-                if game["white"]["username"].lower() == username:
+                if game["white"]["username"].lower() == candidate.username:
                     colour = "white"
                 else:
                     colour = "black"
@@ -251,11 +285,12 @@ try:
 
         if scan_complete:
             if not no_timeout:
-                uninvitables[username] = now_timestamp + setup.timeout_expiry
+                continue
             elif played < setup.min_cm:
-                uninvitables[username] = now_timestamp + setup.scanned_expiry
+                candidate.expiry = now + setup.scanned_expiry
+                scanned_usernames[candidate.username] = candidate
             else:
-                invitables.append(username)
+                invitables.append(candidate)
                 invitables_bar.update()
                 if len(invitables) >= target:
                     break
@@ -273,27 +308,36 @@ except KeyboardInterrupt:
 
 session.close()
 
-with open("uninvitables.csv", "w") as stream:
-    writer = csv.writer(stream)
-    writer.writerow(header_uninvitables)
-    writer.writerows(sorted([[u, t] for u, t in uninvitables.items()]))
+# with open("uninvitables.csv", "w") as stream:
+#     writer = csv.writer(stream)
+#     writer.writerow(header_uninvitables)
+#     writer.writerows(sorted([[u, t] for u, t in uninvitables.items()]))
 
 if invitables:
     print_bold("players invitable ({}):".format(len(invitables)))
-    for username in invitables:
-        print_bold(username, end=" ")
+    for candidate in invitables:
+        print_bold(candidate.username, end=" ")
     print()
     confirmed = input("input 'Y' to invite these players: ")
     if confirmed == "Y":
-        timestamp = int(datetime.now(timezone.utc).timestamp())
-        for username in invitables:
-            invited[username] = timestamp
-        with open("invited.csv", "w") as stream:
-            writer = csv.writer(stream)
-            writer.writerow(header_invited)
-            writer.writerows(sorted([[u, t] for u, t in invited.items()]))
+        now = int(datetime.now(timezone.utc).timestamp())
+        for candidate in invitables:
+            candidate.expiry = now + setup.invited_expiry
+            candidate.invited = True
+            scanned_usernames[candidate.username] = candidate
+        # with open("invited.csv", "w") as stream:
+        #     writer = csv.writer(stream)
+        #     writer.writerow(header_invited)
+        #     writer.writerows(sorted([[u, t] for u, t in invited.items()]))
         print("{} players invited".format(len(invitables)))
     else:
         print("confirmation failed - please do it manually")
 else:
     print("no invitable player found")
+
+with open("scanned.csv", "w") as stream:
+    writer = csv.writer(stream)
+    writer.writerow(scanned_header)
+    for username in sorted(scanned_usernames.keys()):
+        candidate = scanned_usernames[username]
+        writer.writerow(candidate.to_csv_row())
