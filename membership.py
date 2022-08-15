@@ -19,7 +19,7 @@ with open("members.csv") as stream:
 setup = Setup()
 setup.load()
 session = requests.session()
-session.headers.update({"from": setup.email})
+session.headers.update(setup.headers())
 
 # get the latest members from api
 latest_members = set()
