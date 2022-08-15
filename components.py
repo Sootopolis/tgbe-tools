@@ -119,6 +119,9 @@ class Member(Player):
             return False
         return True
 
+    def __hash__(self):
+        return hash(self.username)
+
 
 class Candidate(Player):
 
