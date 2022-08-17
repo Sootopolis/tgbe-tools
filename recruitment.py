@@ -11,7 +11,7 @@ setup.load()
 
 # set target number and victim club
 target = int(input("number of players to invite: "))
-club = Club(input("enter club name as in url; leave empty to quit: ").strip())
+club = Club(input("enter club name as in url; leave empty to quit: ").strip(" /").split("/")[-1])
 if not club.name:
     raise SystemExit("club name not provided")
 
@@ -104,10 +104,9 @@ for category in content:
         if candidate.username in no_invite:
             continue
         if candidate.username in scanned_usernames:
-            player = scanned_usernames[candidate.username]
-            if player.invited and player.expiry > now:
+            if scanned_usernames[candidate.username].expiry > now:
                 continue
-            candidate = player
+            candidate = scanned_usernames[candidate.username]
         candidates.append(candidate)
 if not candidates:
     raise SystemExit("no candidates to examine")
@@ -250,8 +249,6 @@ try:
                 end_time: int = game["end_time"]
                 if end_time < int(ninty.timestamp()):
                     no_timeout = scan_complete = True
-                    candidate.expiry = end_time + setup.timeout_expiry
-                    scanned_usernames[candidate.username] = candidate
                     break
 
                 # invite players without timeout once they have enough club match games
@@ -259,18 +256,21 @@ try:
                     continue
                 played += 1
                 if no_timeout:
-                    if played > setup.min_cm:
+                    if played >= setup.min_cm:
                         scan_complete = True
                         break
                     else:
                         continue
 
+                # eliminate players with match timeout
                 if game["white"]["username"].lower() == candidate.username:
                     colour = "white"
                 else:
                     colour = "black"
                 if game[colour]["result"] == "timeout":
                     scan_complete = True
+                    candidate.expiry = end_time + setup.timeout_expiry
+                    scanned_usernames[candidate.username] = candidate
                     break
 
             # if the player has already been found invitable or not,
@@ -283,17 +283,18 @@ try:
         else:
             no_timeout = scan_complete = True
 
-        if scan_complete:
-            if not no_timeout:
-                continue
-            elif played < setup.min_cm:
-                candidate.expiry = now + setup.scanned_expiry
-                scanned_usernames[candidate.username] = candidate
-            else:
-                invitables.append(candidate)
-                invitables_bar.update()
-                if len(invitables) >= target:
-                    break
+        if not scan_complete:
+            continue
+        if not no_timeout:
+            continue
+        if played < setup.min_cm:
+            candidate.expiry = now + setup.scanned_expiry
+            scanned_usernames[candidate.username] = candidate
+        else:
+            invitables.append(candidate)
+            invitables_bar.update()
+            if len(invitables) >= target:
+                break
 
     candidates_bar.close()
     invitables_bar.close()
@@ -339,5 +340,4 @@ with open("scanned.csv", "w") as stream:
     writer = csv.writer(stream)
     writer.writerow(scanned_header)
     for username in sorted(scanned_usernames.keys()):
-        candidate = scanned_usernames[username]
-        writer.writerow(candidate.to_csv_row())
+        writer.writerow(scanned_usernames[username].to_csv_row())
