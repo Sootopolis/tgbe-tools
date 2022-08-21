@@ -349,7 +349,7 @@ def print_bold(s: str, end="\n", sep=" "):
     print("\033[1m" + s + "\033[0m", end=end, sep=sep)
 
 
-def get_player_profile(username: str):
+def get_player_homepage(username: str):
     return "https://www.chess.com/member/{}".format(username)
 
 

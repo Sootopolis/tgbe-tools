@@ -1,13 +1,13 @@
 import csv
 import requests
-from components import Setup, Member, get_player_profile, print_bold
+from components import Setup, Member, Candidate, get_player_homepage, print_bold
 
 # get members in local record
 record_members = set()
 former_members = dict()
 with open("members.csv") as stream:
     reader = csv.reader(stream)
-    header = next(reader)
+    header_members = next(reader)
     for row in reader:
         player = Member(*row)
         if player.is_former or player.is_closed:
@@ -86,15 +86,16 @@ for player_id in list(left.keys()):
             L.username = C.username
             L.timestamp = C.timestamp
         came.pop(player_id)
-        left.pop(player_id)
     else:
         response = session.get(L.get_profile())
         if response.status_code != 200:
             renamed_left.append(L.username)
             L.is_former = True
+            left.pop(player_id)
         elif response.json()["status"][:6] == "closed":
             closed.append(L.username)
             L.is_closed = True
+            left.pop(player_id)
         else:
             L.is_former = True
 
@@ -133,33 +134,33 @@ if left:
 if rejoined:
     print("players who have left and returned:")
     for username in rejoined:
-        print(username, get_player_profile(username))
+        print(username, get_player_homepage(username))
 if closed:
     print("players whose accounts are closed:")
     for username in closed:
-        print(username, get_player_profile(username))
+        print(username, get_player_homepage(username))
 if reopened:
     print("players whose accounts were closed and are reopened:")
     for username in closed:
-        print(username, get_player_profile(username))
+        print(username, get_player_homepage(username))
 if renamed:
     print("players who have changed their usernames:")
     for old_name, new_name in renamed:
-        print(old_name, "->", new_name, get_player_profile(new_name))
+        print(old_name, "->", new_name, get_player_homepage(new_name))
 if renamed_left:
     print("players who have changed their usernames")
     print("and either left or closed their accounts:")
     for old_name, new_name in renamed_left:
-        print(old_name, "->", new_name, get_player_profile(new_name))
+        print(old_name, "->", new_name, get_player_homepage(new_name))
 if renamed_rejoined:
     print("players who have changed their usernames, left, and rejoined:")
     for old_name, new_name in renamed_rejoined:
-        print(old_name, "->", new_name, get_player_profile(new_name))
+        print(old_name, "->", new_name, get_player_homepage(new_name))
 if renamed_reopened:
     print("players whose accounts were closed and are reopened")
     print("and who have changed their usernames:")
     for old_name, new_name in renamed_reopened:
-        print(old_name, "->", new_name, get_player_profile(new_name))
+        print(old_name, "->", new_name, get_player_homepage(new_name))
 if came:
     print("players who have joined:")
     for player in came.values():
@@ -182,12 +183,30 @@ if (
 
 members = []
 for member in record_members:
-    members.append(member.to_csv_row())
+    members.append(member)
 for member in former_members.values():
-    members.append(member.to_csv_row())
+    members.append(member)
 members.sort()
 
 with open("members.csv", "w") as stream:
     writer = csv.writer(stream)
-    writer.writerow(header)
-    writer.writerows(members)
+    writer.writerow(header_members)
+    for member in members:
+        writer.writerow(member.to_csv_row())
+
+candidates = []
+with open("scanned.csv") as stream:
+    reader = csv.reader(stream)
+    header_scanned = next(reader)
+    for row in reader:
+        candidate = Candidate(*row)
+        if candidate.player_id in came:
+            candidate.joined = True
+            candidate.expiry = 9999999999
+        candidates.append(candidate)
+
+with open("scanned.csv", "w") as stream:
+    writer = csv.writer(stream)
+    writer.writerow(header_scanned)
+    for candidate in candidates:
+        writer.writerow(candidate.to_csv_row())
