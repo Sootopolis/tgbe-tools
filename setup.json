@@ -9,7 +9,7 @@
   "scanned_expiry": 30,
   "timeout_expiry": 90,
   "min_cm": 12,
-  "min_cm_ongoing": 2,
+  "min_cm_ongoing": 1,
   "max_ongoing": 110,
   "max_clubs": 35,
   "min_elo": 1000,
