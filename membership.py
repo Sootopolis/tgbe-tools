@@ -24,7 +24,7 @@ session.headers.update(setup.headers())
 # get the latest members from api
 latest_members = set()
 url = setup.club.get_members()
-response = session.get(url)
+response = session.get(url, timeout=10)
 if response.status_code != 200:
     raise SystemExit("cannot get member list - {}".format(response.status_code))
 content = response.json()
