@@ -1,6 +1,7 @@
 import csv
 from datetime import datetime, timedelta, timezone
 import requests
+from requests.exceptions import RequestException
 from dateutil.relativedelta import relativedelta
 from tqdm import tqdm
 from components import Setup, Candidate, Club, print_bold
@@ -82,16 +83,25 @@ with open("do_not_invite.csv") as stream:
 session = requests.session()
 session.headers.update(setup.headers())
 
+# request timeout time when scanning individual players
+timeout = 5
+
 # check if victim club exists and get the victim club's admins
-response = session.get(club.get_profile())
+try:
+    response = session.get(club.get_profile(), timeout=10)
+except RequestException:
+    raise SystemExit("request timed out when retrieving club profile")
 if response.status_code != 200:
     raise SystemExit("cannot find club: {}".format(club.name))
 admins = set(response.json()["admin"])
 
 # get candidate players
-response = session.get(club.get_members())
+try:
+    response = session.get(club.get_members(), timeout=10)
+except RequestException:
+    raise SystemExit("request timed out when retrieving club member list")
 if response.status_code != 200:
-    raise SystemExit("failed to get member list - {}".format(response.status_code))
+    raise SystemExit("cannot get member list: {}".format(response.status_code))
 content: dict = response.json()
 candidates = []
 for category in content:
@@ -123,7 +133,10 @@ try:
         candidates_bar.update()
 
         # get player profile
-        response = session.get(candidate.get_profile())
+        try:
+            response = session.get(candidate.get_profile(), timeout=timeout)
+        except RequestException:
+            continue
         if response.status_code != 200:
             continue
         content = response.json()
@@ -149,7 +162,10 @@ try:
             continue
 
         # get player clubs and eliminates players in too many clubs
-        response = session.get(candidate.get_clubs())
+        try:
+            response = session.get(candidate.get_clubs(), timeout=timeout)
+        except RequestException:
+            continue
         if response.status_code != 200:
             continue
         if len(response.json()["clubs"]) > setup.max_clubs:
@@ -158,7 +174,10 @@ try:
             continue
 
         # get player stats
-        response = session.get(candidate.get_stats())
+        try:
+            response = session.get(candidate.get_stats(), timeout=timeout)
+        except RequestException:
+            continue
         if response.status_code != 200:
             continue
         content = response.json()
@@ -202,7 +221,10 @@ try:
         no_timeout = content["chess_daily"]["record"]["timeout_percent"] == 0
 
         # get player ongoing games
-        response = session.get(candidate.get_games())
+        try:
+            response = session.get(candidate.get_games(), timeout=timeout)
+        except RequestException:
+            continue
         if response.status_code != 200:
             continue
         games: list = response.json()["games"]
@@ -237,7 +259,10 @@ try:
 
         # get player monthly archives
         for month in months:
-            response = session.get(candidate.get_archive(month))
+            try:
+                response = session.get(candidate.get_archive(month), timeout=timeout)
+            except RequestException:
+                break
             if response.status_code != 200:
                 break
             games: list = response.json()["games"]
