@@ -62,18 +62,21 @@ class Member(Player):
             timestamp: int | str = 0,
             is_closed: bool | str = False,
             is_former: bool | str = False
+            # wins: int | str = 0,
+            # losses: int | str = 0,
+            # draws: int | str = 0,
+            # points: float | str = 0.0
     ):
         super().__init__(username=username, player_id=player_id)
         self.timestamp = int(timestamp)
         self.is_closed = bool(int(is_closed))
         self.is_former = bool(int(is_former))
-        # self.__W = 0
-        # self.__D = 0
-        # self.__L = 0
-        # self.__last_activity = 0
-        # self.__last_point = 0
+        self.wins = 0
+        self.losses = 0
+        self.draws = 0
+        self.points = 0.0
 
-    def to_csv_row(self):
+    def to_members_row(self):
         return [
             self.username,
             str(self.player_id),
@@ -81,6 +84,25 @@ class Member(Player):
             str(int(self.is_closed)),
             str(int(self.is_former))
         ]
+
+    def to_potw_row(self):
+        return [
+            self.username,
+            str(self.wins),
+            str(self.losses),
+            str(self.draws),
+            str(self.points)
+        ]
+
+    def load_stats(self, wins, losses, draws, points):
+        self.wins = int(wins)
+        self.losses = int(losses)
+        self.draws = int(draws)
+        self.points = float(points)
+        try:
+            assert self.wins + self.draws / 2 == self.points
+        except AssertionError:
+            raise SystemExit(f"{self.username}'s stats don't add up")
 
     # def win(self, timestamp: int = 0):
     #     self.__W += 1
@@ -221,8 +243,12 @@ class Board:
             board: str,
             member: Member,
             opponent: str,
-            white: Game = Game(),
-            black: Game = Game(),
+            # white: Game = Game(),
+            # black: Game = Game(),
+            white_res = "",
+            white_end = 0,
+            black_res = "",
+            black_end = 0,
             we_cheated: bool = False,
             op_cheated: bool = False
     ):
@@ -230,16 +256,22 @@ class Board:
         self.board = board
         self.member = member
         self.opponent = opponent
-        self.white = white
-        self.black = black
+        self.white_res = white_res
+        self.white_end = white_end
+        self.black_res = black_res
+        self.black_end = black_end
         self.we_cheated = we_cheated
         self.op_cheated = op_cheated
 
     def finish(self, is_white: bool, result: str, end_time: int):
         if is_white:
-            self.white.finish(result, end_time)
+            # self.white.finish(result, end_time)
+            self.white_res = result
+            self.white_end = end_time
         else:
-            self.black.finish(result, end_time)
+            # self.black.finish(result, end_time)
+            self.black_res = result
+            self.black_end = end_time
 
     def __repr__(self):
         return self.club_match.match_id + "/" + self.board

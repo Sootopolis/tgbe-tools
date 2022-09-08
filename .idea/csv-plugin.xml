@@ -17,6 +17,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/invited.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/members.csv">
           <value>
             <Attribute>
@@ -24,7 +31,28 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/potw.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/potw_prev.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/scanned.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/uninvitables.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
