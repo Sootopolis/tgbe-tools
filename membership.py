@@ -192,7 +192,7 @@ with open("members.csv", "w") as stream:
     writer = csv.writer(stream)
     writer.writerow(header_members)
     for member in members:
-        writer.writerow(member.to_csv_row())
+        writer.writerow(member.to_members_row())
 
 candidates = []
 with open("scanned.csv") as stream:
