@@ -128,7 +128,7 @@ for player_id in list(came.keys()):
 
 # print results
 if left:
-    print("players who have left:")
+    print("goners:")
     for player in left.values():
         print(player.username, player.get_homepage())
 if rejoined:
@@ -162,7 +162,7 @@ if renamed_reopened:
     for old_name, new_name in renamed_reopened:
         print(old_name, "->", new_name, get_player_homepage(new_name))
 if came:
-    print("players who have joined:")
+    print("newbies:")
     for player in came.values():
         print(player.username, player.get_homepage())
         record_members.add(player)
@@ -194,19 +194,21 @@ with open("members.csv", "w") as stream:
     for member in members:
         writer.writerow(member.to_members_row())
 
-candidates = []
-with open("scanned.csv") as stream:
-    reader = csv.reader(stream)
-    header_scanned = next(reader)
-    for row in reader:
-        candidate = Candidate(*row)
-        if candidate.player_id in came:
-            candidate.joined = True
-            candidate.expiry = 9999999999
-        candidates.append(candidate)
+if came:
 
-with open("scanned.csv", "w") as stream:
-    writer = csv.writer(stream)
-    writer.writerow(header_scanned)
-    for candidate in candidates:
-        writer.writerow(candidate.to_csv_row())
+    candidates = []
+    with open("scanned.csv") as stream:
+        reader = csv.reader(stream)
+        header_scanned = next(reader)
+        for row in reader:
+            candidate = Candidate(*row)
+            if candidate.player_id in came:
+                candidate.joined = True
+                candidate.expiry = 9999999999
+            candidates.append(candidate)
+
+    with open("scanned.csv", "w") as stream:
+        writer = csv.writer(stream)
+        writer.writerow(header_scanned)
+        for candidate in candidates:
+            writer.writerow(candidate.to_csv_row())
