@@ -24,6 +24,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/matches.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/members.csv">
           <value>
             <Attribute>
@@ -39,6 +46,13 @@
           </value>
         </entry>
         <entry key="/potw_prev.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/recent_boards.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
