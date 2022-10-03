@@ -1,5 +1,5 @@
 import json
-from datetime import timedelta
+from datetime import datetime, timedelta
 from json import JSONDecodeError
 
 
@@ -11,7 +11,7 @@ class Player:
             player_id: int | str = 0
     ):
         self.username = username
-        self.player_id = player_id
+        self.player_id = int(player_id)
 
     def get_profile(self):
         return "https://api.chess.com/pub/player/{}".format(self.username)
@@ -174,20 +174,25 @@ class ClubMatch:
 
     def __init__(
             self,
-            match_id: str,
-            status: str,
+            match_id: str,  # this is the url of the api page of the match
             boards: int | str,
             end_time: int | str = 0,
             cheaters: list[str] | str = ""
     ):
         self.match_id = match_id
-        self.status = status
         self.boards = int(boards)
         self.end_time = int(end_time)
         if isinstance(cheaters, str):
             self.cheaters = cheaters.split()
         else:
             self.cheaters = cheaters
+
+    def to_csv_row(self):
+        return [
+            self.match_id,
+            str(self.boards),
+            str.sel
+        ]
 
     def __repr__(self):
         return self.match_id
@@ -200,25 +205,25 @@ class ClubMatch:
             raise TypeError("comparing a ClubMatch instance with a non-ClubMatch instance")
         return self.match_id == other.match_id
 
-    # def __lt__(self, other):
-    #     if not isinstance(other, ClubMatch):
-    #         raise TypeError("comparing a ClubMatch instance with a non-ClubMatch instance")
-    #     return int(self.match_url) < int(other.match_url)
+    def __lt__(self, other):
+        if not isinstance(other, ClubMatch):
+            raise TypeError("comparing a ClubMatch instance with a non-ClubMatch instance")
+        return int(self.match_id) < int(other.match_id)
 
-    # def __gt__(self, other):
-    #     if not isinstance(other, ClubMatch):
-    #         raise TypeError("comparing a ClubMatch instance with a non-ClubMatch instance")
-    #     return int(self.match_url) > int(other.match_url)
+    def __gt__(self, other):
+        if not isinstance(other, ClubMatch):
+            raise TypeError("comparing a ClubMatch instance with a non-ClubMatch instance")
+        return int(self.match_id) > int(other.match_id)
 
-    # def __le__(self, other):
-    #     if not isinstance(other, ClubMatch):
-    #         raise TypeError("comparing a ClubMatch instance with a non-ClubMatch instance")
-    #     return int(self.match_url) <= int(other.match_url)
+    def __le__(self, other):
+        if not isinstance(other, ClubMatch):
+            raise TypeError("comparing a ClubMatch instance with a non-ClubMatch instance")
+        return int(self.match_id) <= int(other.match_id)
 
-    # def __ge__(self, other):
-    #     if not isinstance(other, ClubMatch):
-    #         raise TypeError("comparing a ClubMatch instance with a non-ClubMatch instance")
-    #     return int(self.match_url) >= int(other.match_url)
+    def __ge__(self, other):
+        if not isinstance(other, ClubMatch):
+            raise TypeError("comparing a ClubMatch instance with a non-ClubMatch instance")
+        return int(self.match_id) >= int(other.match_id)
 
 
 class Game:
@@ -239,20 +244,20 @@ class Board:
 
     def __init__(
             self,
-            club_match: ClubMatch,
+            match_id: ClubMatch,
             board: str,
             member: Member,
             opponent: str,
             # white: Game = Game(),
             # black: Game = Game(),
-            white_res = "",
-            white_end = 0,
-            black_res = "",
-            black_end = 0,
+            white_res="",
+            white_end=0,
+            black_res="",
+            black_end=0,
             we_cheated: bool = False,
             op_cheated: bool = False
     ):
-        self.club_match = club_match
+        self.match_id = match_id
         self.board = board
         self.member = member
         self.opponent = opponent
@@ -274,7 +279,7 @@ class Board:
             self.black_end = end_time
 
     def __repr__(self):
-        return self.club_match.match_id + "/" + self.board
+        return self.match_id.match_id + "/" + self.board
 
     def __hash__(self):
         return hash(repr(self))

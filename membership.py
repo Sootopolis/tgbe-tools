@@ -85,6 +85,7 @@ for player_id in list(left.keys()):
             L.username = C.username
             L.timestamp = C.timestamp
         came.pop(player_id)
+        left.pop(player_id)
     else:
         response = session.get(L.get_profile())
         if response.status_code != 200:
