@@ -51,12 +51,10 @@ came = latest_members - record_members
 for player in came:
     response = session.get(player.get_profile())
     if response.status_code != 200:
-        print("cannot get player_id for {} - error code {}".format(player.username, response.status_code))
-        player_id = 0
+        raise SystemExit("cannot get player_id for {} - error code {}".format(player.username, response.status_code))
     else:
         content = response.json()
-        player_id = content["player_id"]
-    player.player_id = player_id
+        player.player_id = content["player_id"]
 
 left = {player.player_id: player for player in left}
 came = {player.player_id: player for player in came}
