@@ -150,8 +150,8 @@ if renamed:
 if renamed_left:
     print("players who have changed their usernames")
     print("and either left or closed their accounts:")
-    for old_name, new_name in renamed_left:
-        print(old_name, "->", new_name, get_player_homepage(new_name))
+    for username in renamed_left:
+        print(username, get_player_homepage(username))
 if renamed_rejoined:
     print("players who have changed their usernames, left, and rejoined:")
     for old_name, new_name in renamed_rejoined:
