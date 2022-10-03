@@ -1,6 +1,7 @@
 import csv
 import requests
 from components import Setup, Member, Candidate, get_player_homepage, print_bold
+from datetime import datetime, timezone
 
 # get members in local record
 record_members = set()
@@ -180,6 +181,7 @@ if (
     came
 ):
     print_bold("total number: {}".format(len(latest_members)))
+    print(datetime.now(tz=timezone.utc))
 
 members = []
 for member in record_members:
