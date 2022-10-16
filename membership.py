@@ -136,20 +136,19 @@ if rejoined:
     for username in rejoined:
         print(username, get_player_homepage(username))
 if closed:
-    print("players whose accounts are closed:")
+    print("account closures:")
     for username in closed:
         print(username, get_player_homepage(username))
 if reopened:
-    print("players whose accounts were closed and are reopened:")
+    print("accounts closed and reopened:")
     for username in closed:
         print(username, get_player_homepage(username))
 if renamed:
-    print("players who have changed their usernames:")
+    print("username changes:")
     for old_name, new_name in renamed:
         print(old_name, "->", new_name, get_player_homepage(new_name))
 if renamed_left:
-    print("players who have changed their usernames")
-    print("and either left or closed their accounts:")
+    print("players who have changed their usernames and either left or closed their accounts:")
     for username in renamed_left:
         print(username, get_player_homepage(username))
 if renamed_rejoined:
@@ -157,8 +156,7 @@ if renamed_rejoined:
     for old_name, new_name in renamed_rejoined:
         print(old_name, "->", new_name, get_player_homepage(new_name))
 if renamed_reopened:
-    print("players whose accounts were closed and are reopened")
-    print("and who have changed their usernames:")
+    print("players whose accounts were closed and are reopened and who have changed their usernames:")
     for old_name, new_name in renamed_reopened:
         print(old_name, "->", new_name, get_player_homepage(new_name))
 if came:
