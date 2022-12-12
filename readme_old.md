@@ -139,6 +139,8 @@ The club's membership grew from 395 to 470 with my effort during 2020-21. Since 
 with members leaving, closing their accounts, or being removed by the admins. I know that with my programming knowledge
 I can revive the club's membership.
 
+### Chess.com glitches
+
 ## The API
 
 To look for a way to automate the tasks so that I can still contribute to the club, I joined
@@ -348,6 +350,8 @@ I decided that the following use cases are to be fulfilled:
   * find inactivity
   * find POTW
 * automate everything (except "loot")
+
+The programs will
 
 ### Update Membership
 
@@ -599,6 +603,10 @@ A key challenge of the implementation of this idea is data storage.
 Recall that in the previous use case, I am using a JSON file `scanned.json` (which probably is not the best format, but I do need it to be a dictionary when the program reads the data, which JSON is) to store cache of players who are deemed uninvitable at the time of scanning. There are around 30,000 entries into the JSON file. It is a large number, but its size is still somewhat contained, as some old records will expire on each execution of the program.
 
 Here, however, I must either think of some way to store data in a way that records can be deleted after a while without wreaking havoc, or find a better way to store data altogether, or both.
+
+#### Solution
+
+An object-oriented approach is taken to tackle this problem. 
 
 ### Automate
 
