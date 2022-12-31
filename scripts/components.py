@@ -4,12 +4,7 @@ from json import JSONDecodeError
 
 
 class Player:
-
-    def __init__(
-            self,
-            username: str,
-            player_id: int | str = 0
-    ):
+    def __init__(self, username: str, player_id: int | str = 0):
         self.username = username
         self.player_id = int(player_id)
 
@@ -29,7 +24,9 @@ class Player:
         return "https://api.chess.com/pub/player/{}/games".format(self.username)
 
     def get_archive(self, month: str):
-        return "https://api.chess.com/pub/player/{}/games/{}".format(self.username, month)
+        return "https://api.chess.com/pub/player/{}/games/{}".format(
+            self.username, month
+        )
 
     def __repr__(self):
         return self.username
@@ -54,18 +51,17 @@ class Player:
 
 
 class Member(Player):
-
     def __init__(
-            self,
-            username: str,
-            player_id: int | str = 0,
-            timestamp: int | str = 0,
-            is_closed: bool | str = False,
-            is_former: bool | str = False
-            # wins: int | str = 0,
-            # losses: int | str = 0,
-            # draws: int | str = 0,
-            # points: float | str = 0.0
+        self,
+        username: str,
+        player_id: int | str = 0,
+        timestamp: int | str = 0,
+        is_closed: bool | str = False,
+        is_former: bool | str = False
+        # wins: int | str = 0,
+        # losses: int | str = 0,
+        # draws: int | str = 0,
+        # points: float | str = 0.0
     ):
         super().__init__(username=username, player_id=player_id)
         self.timestamp = int(timestamp)
@@ -82,7 +78,7 @@ class Member(Player):
             str(self.player_id),
             str(self.timestamp),
             str(int(self.is_closed)),
-            str(int(self.is_former))
+            str(int(self.is_former)),
         ]
 
     def to_potw_row(self):
@@ -91,7 +87,7 @@ class Member(Player):
             str(self.wins),
             str(self.losses),
             str(self.draws),
-            str(self.points)
+            str(self.points),
         ]
 
     def load_stats(self, wins, losses, draws, points):
@@ -126,17 +122,13 @@ class Member(Player):
     def __eq__(self, other):
         if self.username != other.username:
             return False
-        if (
-                self.player_id and
-                other.player_id and
-                self.player_id != other.player_id
-        ):
+        if self.player_id and other.player_id and self.player_id != other.player_id:
             return False
         if (
-                self.timestamp and
-                hasattr(other, "timestamp") and
-                other.timestamp and
-                self.timestamp != other.timestamp
+            self.timestamp
+            and hasattr(other, "timestamp")
+            and other.timestamp
+            and self.timestamp != other.timestamp
         ):
             return False
         return True
@@ -146,14 +138,13 @@ class Member(Player):
 
 
 class Candidate(Player):
-
     def __init__(
-            self,
-            username: str,
-            player_id: int | str = 0,
-            expiry: int | str = 0,
-            invited: bool | str = False,
-            joined: bool | str = False
+        self,
+        username: str,
+        player_id: int | str = 0,
+        expiry: int | str = 0,
+        invited: bool | str = False,
+        joined: bool | str = False,
     ):
         super().__init__(username=username, player_id=player_id)
         self.expiry = int(expiry)
@@ -166,18 +157,17 @@ class Candidate(Player):
             str(self.player_id),
             str(self.expiry),
             str(int(self.invited)),
-            str(int(self.joined))
+            str(int(self.joined)),
         ]
 
 
 class ClubMatch:
-
     def __init__(
-            self,
-            match_id: str,  # this is the url of the api page of the match
-            boards: int | str,
-            end_time: int | str = 0,
-            cheaters: list[str] | str = ""
+        self,
+        match_id: str,  # this is the url of the api page of the match
+        boards: int | str,
+        end_time: int | str = 0,
+        cheaters: list[str] | str = "",
     ):
         self.match_id = match_id
         self.boards = int(boards)
@@ -191,7 +181,9 @@ class ClubMatch:
         return [
             self.match_id,
             str(self.boards),
-            str.sel
+            str(self.boards),
+            str(self.end_time),
+            str(self.cheaters),
         ]
 
     def __repr__(self):
@@ -202,32 +194,41 @@ class ClubMatch:
 
     def __eq__(self, other):
         if not isinstance(other, ClubMatch):
-            raise TypeError("comparing a ClubMatch instance with a non-ClubMatch instance")
+            raise TypeError(
+                "comparing a ClubMatch instance with a non-ClubMatch instance"
+            )
         return self.match_id == other.match_id
 
     def __lt__(self, other):
         if not isinstance(other, ClubMatch):
-            raise TypeError("comparing a ClubMatch instance with a non-ClubMatch instance")
+            raise TypeError(
+                "comparing a ClubMatch instance with a non-ClubMatch instance"
+            )
         return int(self.match_id) < int(other.match_id)
 
     def __gt__(self, other):
         if not isinstance(other, ClubMatch):
-            raise TypeError("comparing a ClubMatch instance with a non-ClubMatch instance")
+            raise TypeError(
+                "comparing a ClubMatch instance with a non-ClubMatch instance"
+            )
         return int(self.match_id) > int(other.match_id)
 
     def __le__(self, other):
         if not isinstance(other, ClubMatch):
-            raise TypeError("comparing a ClubMatch instance with a non-ClubMatch instance")
+            raise TypeError(
+                "comparing a ClubMatch instance with a non-ClubMatch instance"
+            )
         return int(self.match_id) <= int(other.match_id)
 
     def __ge__(self, other):
         if not isinstance(other, ClubMatch):
-            raise TypeError("comparing a ClubMatch instance with a non-ClubMatch instance")
+            raise TypeError(
+                "comparing a ClubMatch instance with a non-ClubMatch instance"
+            )
         return int(self.match_id) >= int(other.match_id)
 
 
 class Game:
-
     def __init__(self, result: str = "", end_time: int = 0):
         self.result = result
         self.end_time = end_time
@@ -241,21 +242,20 @@ class Game:
 
 
 class Board:
-
     def __init__(
-            self,
-            match_id: ClubMatch,
-            board: str,
-            member: Member,
-            opponent: str,
-            # white: Game = Game(),
-            # black: Game = Game(),
-            white_res="",
-            white_end=0,
-            black_res="",
-            black_end=0,
-            we_cheated: bool = False,
-            op_cheated: bool = False
+        self,
+        match_id: ClubMatch,
+        board: str,
+        member: Member,
+        opponent: str,
+        # white: Game = Game(),
+        # black: Game = Game(),
+        white_res="",
+        white_end=0,
+        black_res="",
+        black_end=0,
+        we_cheated: bool = False,
+        op_cheated: bool = False,
     ):
         self.match_id = match_id
         self.board = board
@@ -308,9 +308,8 @@ class Club:
 
 
 class Setup:
-
     def __init__(self):
-        self.club = ""
+        self.club = Club("")
         self.email = ""
         self.username = ""
         self.avoid_admins = 1
@@ -367,18 +366,26 @@ class Setup:
         try:
             with open("setup.json") as stream:
                 data = json.load(stream)
+            for key, value in data.items():
+                setattr(self, key, value)
+            self.club = Club(self.club)
+            self.invited_expiry = int(
+                timedelta(days=self.invited_expiry).total_seconds()
+            )
+            self.scanned_expiry = int(
+                timedelta(days=self.scanned_expiry).total_seconds()
+            )
+            self.timeout_expiry = int(
+                timedelta(days=self.timeout_expiry).total_seconds()
+            )
+            self.max_offline = int(timedelta(hours=self.max_offline).total_seconds())
+            self.max_move_time = int(
+                timedelta(hours=self.max_move_time).total_seconds()
+            )
         except FileNotFoundError:
             print("setup.json not found")
         except JSONDecodeError:
             print("setup.json is empty")
-        for key, value in data.items():
-            setattr(self, key, value)
-        self.club = Club(self.club)
-        self.invited_expiry = int(timedelta(days=self.invited_expiry).total_seconds())
-        self.scanned_expiry = int(timedelta(days=self.scanned_expiry).total_seconds())
-        self.timeout_expiry = int(timedelta(days=self.timeout_expiry).total_seconds())
-        self.max_offline = int(timedelta(hours=self.max_offline).total_seconds())
-        self.max_move_time = int(timedelta(hours=self.max_move_time).total_seconds())
 
 
 # this prints stuff in bold

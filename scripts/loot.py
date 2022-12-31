@@ -1,4 +1,5 @@
 import csv
+from pathlib import Path
 from datetime import datetime, timedelta, timezone
 import requests
 from requests.exceptions import RequestException
@@ -10,11 +11,17 @@ from components import Setup, Candidate, Club, print_bold
 setup = Setup()
 setup.load()
 
-# set target number and victim club
-target = int(input("number of players to invite: "))
-club = Club(input("enter club name as in url; leave empty to quit: ").strip(" /").split("/")[-1])
+try:
+    target = int(input("number of players to invite: "))
+except ValueError:
+    raise SystemExit("value must be integer")
+
+# take either the club url or the club name as in the url
+club = Club(input("club url, or club name as in url: ").strip(" /").split("/")[-1])
 if not club.name:
     raise SystemExit("club name not provided")
+
+records = Path().resolve() / "records"
 
 # find yyyy/mm
 now_datetime = datetime.now(timezone.utc)
@@ -28,37 +35,15 @@ months.reverse()
 ninty = now_datetime - timedelta(days=90)
 
 # get members and former members in record
-with open("members.csv") as stream:
+with open(records / "members.csv") as stream:
     reader = csv.reader(stream)
     next(reader)
     members = set()
     for entry in reader:
         members.add(entry[0])
 
-# # get and clear uninvitable cache
-# with open("uninvitables.csv") as stream:
-#     reader = csv.reader(stream)
-#     header_uninvitables = next(reader)
-#     uninvitables = dict()
-#     if setup.clear_uninvitable_cache:
-#         for username, timestamp in reader:
-#             if int(timestamp) <= now:
-#                 continue
-#             uninvitables[username] = int(timestamp)
-#     else:
-#         for username, timestamp in reader:
-#             uninvitables[username] = int(timestamp)
-
-# # get invited players in record
-# with open("invited.csv") as stream:
-#     reader = csv.reader(stream)
-#     header_invited = next(reader)
-#     invited = dict()
-#     for username, timestamp in reader:
-#         invited[username] = int(timestamp)
-
 # get scanned and invited players in record and clear scanned cache
-with open("scanned.csv") as stream:
+with open(records / "scanned.csv") as stream:
     reader = csv.reader(stream)
     scanned_header = next(reader)
     scanned_usernames = dict()
@@ -72,7 +57,7 @@ with open("scanned.csv") as stream:
             scanned_player_ids[player.player_id] = player
 
 # get players in do_not_invite.csv
-with open("do_not_invite.csv") as stream:
+with open(records / "do_not_invite.csv") as stream:
     reader = csv.reader(stream)
     next(reader)
     no_invite = set()
@@ -122,7 +107,9 @@ if not candidates:
     raise SystemExit("no candidates to examine")
 
 # make progress bars
-candidates_bar = tqdm(total=len(candidates), desc="candidates", position=0, colour="blue")
+candidates_bar = tqdm(
+    total=len(candidates), desc="candidates", position=0, colour="blue"
+)
 invitables_bar = tqdm(total=target, desc="invitables", position=1, colour="yellow")
 
 # start looting
@@ -196,8 +183,8 @@ try:
 
         # eliminate players not in rating range
         if (
-            content["chess_daily"]["last"]["rating"] < setup.min_elo or
-            content["chess_daily"]["last"]["rating"] > setup.max_elo
+            content["chess_daily"]["last"]["rating"] < setup.min_elo
+            or content["chess_daily"]["last"]["rating"] > setup.max_elo
         ):
             candidate.expiry = now + setup.scanned_expiry
             scanned_usernames[candidate.username] = candidate
@@ -334,11 +321,6 @@ except KeyboardInterrupt:
 
 session.close()
 
-# with open("uninvitables.csv", "w") as stream:
-#     writer = csv.writer(stream)
-#     writer.writerow(header_uninvitables)
-#     writer.writerows(sorted([[u, t] for u, t in uninvitables.items()]))
-
 if invitables:
     print_bold("players invitable ({}):".format(len(invitables)))
     for candidate in invitables:
@@ -351,17 +333,13 @@ if invitables:
             candidate.expiry = now + setup.invited_expiry
             candidate.invited = True
             scanned_usernames[candidate.username] = candidate
-        # with open("invited.csv", "w") as stream:
-        #     writer = csv.writer(stream)
-        #     writer.writerow(header_invited)
-        #     writer.writerows(sorted([[u, t] for u, t in invited.items()]))
         print("{} players invited".format(len(invitables)))
     else:
         print("confirmation failed - please do it manually")
 else:
     print("no invitable player found")
 
-with open("scanned.csv", "w") as stream:
+with open(records / "scanned.csv", "w") as stream:
     writer = csv.writer(stream)
     writer.writerow(scanned_header)
     for username in sorted(scanned_usernames.keys()):
