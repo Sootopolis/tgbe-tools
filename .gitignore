@@ -1,4 +1,2 @@
-/temp.py
-/archive/
-/.idea/
 /__pycache__/
+.DS_Store
