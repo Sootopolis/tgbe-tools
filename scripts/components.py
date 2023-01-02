@@ -1,5 +1,5 @@
 import json
-from datetime import datetime, timedelta
+from datetime import timedelta
 from json import JSONDecodeError
 
 
@@ -15,13 +15,19 @@ class Player:
         return "https://www.chess.com/member/{}".format(self.username)
 
     def get_clubs(self):
-        return "https://api.chess.com/pub/player/{}/clubs".format(self.username)
+        return "https://api.chess.com/pub/player/{}/clubs".format(
+            self.username
+        )
 
     def get_stats(self):
-        return "https://api.chess.com/pub/player/{}/stats".format(self.username)
+        return "https://api.chess.com/pub/player/{}/stats".format(
+            self.username
+        )
 
     def get_games(self):
-        return "https://api.chess.com/pub/player/{}/games".format(self.username)
+        return "https://api.chess.com/pub/player/{}/games".format(
+            self.username
+        )
 
     def get_archive(self, month: str):
         return "https://api.chess.com/pub/player/{}/games/{}".format(
@@ -122,7 +128,11 @@ class Member(Player):
     def __eq__(self, other):
         if self.username != other.username:
             return False
-        if self.player_id and other.player_id and self.player_id != other.player_id:
+        if (
+            self.player_id
+            and other.player_id
+            and self.player_id != other.player_id
+        ):
             return False
         if (
             self.timestamp
@@ -286,7 +296,9 @@ class Board:
 
     def __eq__(self, other):
         if not isinstance(other, Board):
-            raise TypeError("comparing a Board instance with a non-Board instance")
+            raise TypeError(
+                "comparing a Board instance with a non-Board instance"
+            )
         return repr(self) == repr(other)
 
 
@@ -345,7 +357,9 @@ class Setup:
 
         parameters = list(vars(self).keys())
         n = len(parameters)
-        print_bold("for each parameter, enter without input to use default value")
+        print_bold(
+            "for each parameter, enter without input to use default value"
+        )
         for i in range(n):
             print("{} / {}".format(i + 1, n))
             input_default(parameters[i])
@@ -378,7 +392,9 @@ class Setup:
             self.timeout_expiry = int(
                 timedelta(days=self.timeout_expiry).total_seconds()
             )
-            self.max_offline = int(timedelta(hours=self.max_offline).total_seconds())
+            self.max_offline = int(
+                timedelta(hours=self.max_offline).total_seconds()
+            )
             self.max_move_time = int(
                 timedelta(hours=self.max_move_time).total_seconds()
             )
