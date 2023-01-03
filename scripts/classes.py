@@ -90,3 +90,19 @@ class Candidate(Player):
     expiring: int
     invited: bool = False
     joined: bool = False
+
+
+@dataclass
+class GameResult:
+    win = "win"
+    checkmate = "checkmated"
+    agreement = "agreed"
+    repetition = "repetition"
+    timeout = "timeout"
+    resignation = "resigned"
+    stalemate = "stalemate"
+    loss = "lose"
+    insufficient_material = "insufficient"
+    fifty = "50move"
+    abandonment = "abandoned"
+    timevsinsufficient = "timevsinsufficient"
