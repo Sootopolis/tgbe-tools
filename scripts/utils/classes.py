@@ -1,4 +1,5 @@
 from dataclasses import dataclass, field
+from enum import Enum
 
 
 @dataclass
@@ -163,5 +164,41 @@ class Config:
         return headers
 
 
-c = Config()
-print(c.invited_expiry)
+@dataclass
+class Colour(Enum):
+
+    black = 30
+    red = 31
+    green = 32
+    yellow = 33
+    blue = 34
+    magenta = 35
+    cyan = 36
+    white = 37
+    black_bg = 30
+    red_bg = 31
+    green_bg = 32
+    yellow_bg = 33
+    blue_bg = 34
+    magenta_bg = 35
+    cyan_bg = 36
+    white_bg = 37
+    bright_black = 90
+    bright_red = 91
+    bright_green = 92
+    bright_yellow = 93
+    bright_blue = 94
+    bright_magenta = 95
+    bright_cyan = 96
+    bright_white = 97
+    bright_black_bg = 90
+    bright_red_bg = 91
+    bright_green_bg = 92
+    bright_yellow_bg = 93
+    bright_blue_bg = 94
+    bright_magenta_bg = 95
+    bright_cyan_bg = 96
+    bright_white_bg = 97
+
+
+print(Colour.cyan.name)
