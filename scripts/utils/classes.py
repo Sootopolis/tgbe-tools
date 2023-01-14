@@ -1,4 +1,4 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
 
 @dataclass
@@ -58,10 +58,10 @@ class Member(Player):
     wins: int = 0
     losses: int = 0
     draws: int = 0
-    points: float = 0.0
+    points: float = field(init=False)
 
     def __post_init__(self):
-        assert self.wins + self.draws / 2 == self.points
+        self.points = self.wins + self.draws / 2
 
     def __hash__(self):
         return hash(self.username)
