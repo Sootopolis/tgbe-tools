@@ -12,7 +12,11 @@ setup.load()
 
 # set target number and victim club
 target = int(input("number of players to invite: "))
-club = Club(input("enter club name as in url; leave empty to quit: ").strip(" /").split("/")[-1])
+club = Club(
+    input("enter club name as in url; leave empty to quit: ")
+    .strip(" /")
+    .split("/")[-1]
+)
 if not club.name:
     raise SystemExit("club name not provided")
 
@@ -122,8 +126,12 @@ if not candidates:
     raise SystemExit("no candidates to examine")
 
 # make progress bars
-candidates_bar = tqdm(total=len(candidates), desc="candidates", position=0, colour="blue")
-invitables_bar = tqdm(total=target, desc="invitables", position=1, colour="yellow")
+candidates_bar = tqdm(
+    total=len(candidates), desc="candidates", position=0, colour="blue"
+)
+invitables_bar = tqdm(
+    total=target, desc="invitables", position=1, colour="yellow"
+)
 
 # start looting
 invitables = []
@@ -189,15 +197,18 @@ try:
             continue
 
         # eliminate players who move too slow
-        if content["chess_daily"]["record"]["time_per_move"] > setup.max_move_time:
+        if (
+            content["chess_daily"]["record"]["time_per_move"]
+            > setup.max_move_time
+        ):
             candidate.expiry = now + setup.scanned_expiry
             scanned_usernames[candidate.username] = candidate
             continue
 
         # eliminate players not in rating range
         if (
-            content["chess_daily"]["last"]["rating"] < setup.min_elo or
-            content["chess_daily"]["last"]["rating"] > setup.max_elo
+            content["chess_daily"]["last"]["rating"] < setup.min_elo
+            or content["chess_daily"]["last"]["rating"] > setup.max_elo
         ):
             candidate.expiry = now + setup.scanned_expiry
             scanned_usernames[candidate.username] = candidate
@@ -212,7 +223,10 @@ try:
         #     losses += content["chess960_daily"]["record"]["loss"]
         #     draws += content["chess960_daily"]["record"]["draw"]
         score_rate = (wins + draws / 2) / (wins + losses + draws)
-        if score_rate < setup.min_score_rate or score_rate > setup.max_score_rate:
+        if (
+            score_rate < setup.min_score_rate
+            or score_rate > setup.max_score_rate
+        ):
             candidate.expiry = now + setup.scanned_expiry
             scanned_usernames[candidate.username] = candidate
             continue
@@ -260,7 +274,9 @@ try:
         # get player monthly archives
         for month in months:
             try:
-                response = session.get(candidate.get_archive(month), timeout=timeout)
+                response = session.get(
+                    candidate.get_archive(month), timeout=timeout
+                )
             except RequestException:
                 break
             if response.status_code != 200:
@@ -361,7 +377,7 @@ if invitables:
 else:
     print("no invitable player found")
 
-with open("scanned.csv", "w") as stream:
+with open("scanned.csv", "w", newline="\n") as stream:
     writer = csv.writer(stream)
     writer.writerow(scanned_header)
     for username in sorted(scanned_usernames.keys()):

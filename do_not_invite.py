@@ -18,15 +18,23 @@ while True:
     username = input("input username, enter blank to quit: ").lower()
     if not username:
         break
-    content = session.get("https://api.chess.com/pub/player/{}".format(username)).json()
+    content = session.get(
+        "https://api.chess.com/pub/player/{}".format(username)
+    ).json()
     if "code" in content:
         print("username does not exist")
     else:
         player_id = content["player_id"]
-        is_nice = int(bool(input("is the player 'nice'? blank for false, anything for true: ")))
+        is_nice = int(
+            bool(
+                input(
+                    "is the player 'nice'? blank for false, anything for true: "
+                )
+            )
+        )
         usernames[username] = [player_id, is_nice]
 
-with open("do_not_invite.csv", "w") as stream:
+with open("do_not_invite.csv", "w", newline="\n") as stream:
     writer = csv.writer(stream)
     writer.writerow(header)
     for username in sorted(usernames.keys()):

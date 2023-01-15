@@ -1,6 +1,12 @@
 import csv
 import requests
-from components import Setup, Member, Candidate, get_player_homepage, print_bold
+from components import (
+    Setup,
+    Member,
+    Candidate,
+    get_player_homepage,
+    print_bold,
+)
 from datetime import datetime, timezone
 
 # get members in local record
@@ -27,18 +33,22 @@ latest_members = set()
 url = setup.club.get_members()
 response = session.get(url, timeout=10)
 if response.status_code != 200:
-    raise SystemExit("cannot get member list - {}".format(response.status_code))
+    raise SystemExit(
+        "cannot get member list - {}".format(response.status_code)
+    )
 content = response.json()
 for category in ("weekly", "monthly", "all_time"):
     for entry in content[category]:
         username = entry["username"]
         timestamp = entry["joined"]
-        latest_members.add(Member(
-            username=username,
-            timestamp=timestamp,
-            is_closed=False,
-            is_former=False
-        ))
+        latest_members.add(
+            Member(
+                username=username,
+                timestamp=timestamp,
+                is_closed=False,
+                is_former=False,
+            )
+        )
 
 # compare members
 # two members are considered equal if the username,
@@ -51,7 +61,11 @@ came = latest_members - record_members
 for player in came:
     response = session.get(player.get_profile())
     if response.status_code != 200:
-        raise SystemExit("cannot get player_id for {} - error code {}".format(player.username, response.status_code))
+        raise SystemExit(
+            "cannot get player_id for {} - error code {}".format(
+                player.username, response.status_code
+            )
+        )
     else:
         content = response.json()
         player.player_id = content["player_id"]
@@ -148,7 +162,9 @@ if renamed:
     for old_name, new_name in renamed:
         print(old_name, "->", new_name, get_player_homepage(new_name))
 if renamed_left:
-    print("players who have changed their usernames and either left or closed their accounts:")
+    print(
+        "players who have changed their usernames and either left or closed their accounts:"
+    )
     for username in renamed_left:
         print(username, get_player_homepage(username))
 if renamed_rejoined:
@@ -156,7 +172,9 @@ if renamed_rejoined:
     for old_name, new_name in renamed_rejoined:
         print(old_name, "->", new_name, get_player_homepage(new_name))
 if renamed_reopened:
-    print("players whose accounts were closed and are reopened and who have changed their usernames:")
+    print(
+        "players whose accounts were closed and are reopened and who have changed their usernames:"
+    )
     for old_name, new_name in renamed_reopened:
         print(old_name, "->", new_name, get_player_homepage(new_name))
 if came:
@@ -166,16 +184,16 @@ if came:
         record_members.add(player)
 
 if (
-    __name__ == "__main__" or
-    left or
-    rejoined or
-    closed or
-    reopened or
-    renamed or
-    renamed_left or
-    renamed_rejoined or
-    renamed_reopened or
-    came
+    __name__ == "__main__"
+    or left
+    or rejoined
+    or closed
+    or reopened
+    or renamed
+    or renamed_left
+    or renamed_rejoined
+    or renamed_reopened
+    or came
 ):
     print_bold("total number: {}".format(len(latest_members)))
     print(datetime.now(tz=timezone.utc))
@@ -187,7 +205,7 @@ for member in former_members.values():
     members.append(member)
 members.sort()
 
-with open("members.csv", "w") as stream:
+with open("members.csv", "w", newline="\n") as stream:
     writer = csv.writer(stream)
     writer.writerow(header_members)
     for member in members:
@@ -206,7 +224,7 @@ if came:
                 candidate.expiry = 9999999999
             candidates.append(candidate)
 
-    with open("scanned.csv", "w") as stream:
+    with open("scanned.csv", "w", newline="\n") as stream:
         writer = csv.writer(stream)
         writer.writerow(header_scanned)
         for candidate in candidates:
