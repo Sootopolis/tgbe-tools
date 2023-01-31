@@ -155,7 +155,7 @@ if closed:
         print(username, get_player_homepage(username))
 if reopened:
     print("accounts closed and reopened:")
-    for username in closed:
+    for username in reopened:
         print(username, get_player_homepage(username))
 if renamed:
     print("username changes:")
