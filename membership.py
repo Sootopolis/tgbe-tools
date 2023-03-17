@@ -214,7 +214,6 @@ with open("members.csv", "w", newline="\n") as stream:
         writer.writerow(member.to_members_row())
 
 if came:
-
     candidates = []
     with open("scanned.csv") as stream:
         reader = csv.reader(stream)
