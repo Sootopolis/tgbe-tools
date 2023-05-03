@@ -65,8 +65,8 @@ with open("members.csv") as stream:
 with open("scanned.csv") as stream:
     reader = csv.reader(stream)
     scanned_header = next(reader)
-    scanned_usernames = dict()
-    scanned_player_ids = dict()
+    scanned_usernames: dict[str, Candidate] = dict()
+    scanned_player_ids: dict[int, Candidate] = dict()
     for entry in reader:
         player = Candidate(*entry)
         if not player.invited and player.expiry <= now:
@@ -107,7 +107,7 @@ except RequestException:
 if response.status_code != 200:
     raise SystemExit("cannot get member list: {}".format(response.status_code))
 content: dict = response.json()
-candidates = []
+candidates: list[Candidate] = []
 for category in content:
     for entry in content[category]:
         candidate = Candidate(username=entry["username"])
