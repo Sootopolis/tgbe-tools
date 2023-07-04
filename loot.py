@@ -232,7 +232,9 @@ try:
             continue
 
         # streamlines later procedures for players without any timeout
-        no_timeout = content["chess_daily"]["record"]["timeout_percent"] == 0
+        no_timeout: bool = (
+            content["chess_daily"]["record"]["timeout_percent"] == 0
+        )
 
         # get player ongoing games
         try:
