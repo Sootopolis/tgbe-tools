@@ -371,7 +371,7 @@ class Setup:
         # if self.username:
         #     headers["User-Agent"] = self.username
         if self.email:
-            headers["From"] = self.email
+            headers["User-Agent"] = self.email
         return headers
 
     def load(self):
